@@ -165,7 +165,7 @@
                     Foreground="DarkGray">
                     VisualGGPK2
                 </Run>
-                <Label FontSize="10" Foreground="#FF2E7ED4">UI</Label>
+                <Label FontSize="11" Foreground="#FF2E7ED4">UI</Label>
             </ui:TextBlock>
 
             <ui:Button
@@ -382,9 +382,9 @@
                     FontSize="20"
                     ToolTipService.ToolTip="open Epic" />
 
-                <ui:ToggleSwitch
+                <ui:Button
                     x:Name="AllowGameOpen"
-                    Width="40"
+                    Width="35"
                     Height="30"
                     Margin="0,120,0,0"
                     Padding="0,0,0,0"
@@ -392,7 +392,9 @@
                     VerticalAlignment="Center"
                     HorizontalContentAlignment="Center"
                     Click="AllowGameOpen_Click"
-                    ToolTipService.ToolTip="open game" />
+                    FontSize="20"
+                    Icon="{ui:SymbolIcon DesktopCheckmark24}"
+                    ToolTipService.ToolTip="allow game to be opened" />
             </StackPanel>
 
 
@@ -447,15 +449,13 @@
                 Margin="2"
                 Background="White"
                 ClipToBounds="True"
-                MouseWheel="ImageView_MouseWheel"
                 Visibility="Hidden">
                 <Image
                     x:Name="Image"
                     Canvas.Left="0"
                     Canvas.Top="0"
                     RenderOptions.BitmapScalingMode="NearestNeighbor"
-                    SnapsToDevicePixels="True"
-                    Stretch="Uniform" />
+                    Stretch="None" />
             </Canvas>
 
             <ui:TextBlock
