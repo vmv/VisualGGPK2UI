@@ -11,3 +11,16 @@ C:\Users\Administrator\source\repos\devAPS\LibDat2\obj\Debug\net7.0\LibDat2.dll
 C:\Users\Administrator\source\repos\devAPS\LibDat2\obj\Debug\net7.0\refint\LibDat2.dll
 C:\Users\Administrator\source\repos\devAPS\LibDat2\obj\Debug\net7.0\LibDat2.xml
 C:\Users\Administrator\source\repos\devAPS\LibDat2\obj\Debug\net7.0\ref\LibDat2.dll
+C:\Users\Administrator\source\repos\VisualGGPK2UI\LibDat2\bin\Debug\net7.0\DatDefinitions.json
+C:\Users\Administrator\source\repos\VisualGGPK2UI\LibDat2\bin\Debug\net7.0\LibDat2.deps.json
+C:\Users\Administrator\source\repos\VisualGGPK2UI\LibDat2\bin\Debug\net7.0\LibDat2.dll
+C:\Users\Administrator\source\repos\VisualGGPK2UI\LibDat2\bin\Debug\net7.0\LibDat2.xml
+C:\Users\Administrator\source\repos\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\LibDat2.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\LibDat2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\source\repos\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\LibDat2.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\LibDat2.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\LibDat2.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\LibDat2.dll
+C:\Users\Administrator\source\repos\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\refint\LibDat2.dll
+C:\Users\Administrator\source\repos\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\LibDat2.xml
+C:\Users\Administrator\source\repos\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\ref\LibDat2.dll

@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Administrator\source\repos\devAPS\VisualGGPK2\obj\Debug\net7.0-windows\
+C:\Users\Administrator\source\repos\VisualGGPK2UI\VisualGGPK2\obj\Debug\net7.0-windows\
 VisualGGPK2
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-C:\Users\Administrator\source\repos\devAPS\VisualGGPK2\App.xaml
+C:\Users\Administrator\source\repos\VisualGGPK2UI\VisualGGPK2\App.xaml
 4-788110262
-
+1-1220538126
 10-1236695656
-213-690054746
+214210223821
 BackgroundDialog.xaml;ErrorWindow.xaml;MainWindow.xaml;VersionSelector.xaml;
 
 False
