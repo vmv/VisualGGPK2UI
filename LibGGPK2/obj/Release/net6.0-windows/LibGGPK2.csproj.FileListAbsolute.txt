@@ -1,0 +1,10 @@
+C:\Users\Administrator\source\repos\devAPS\LibGGPK2\bin\Release\net6.0-windows\LibGGPK2.deps.json
+C:\Users\Administrator\source\repos\devAPS\LibGGPK2\bin\Release\net6.0-windows\LibGGPK2.dll
+C:\Users\Administrator\source\repos\devAPS\LibGGPK2\bin\Release\net6.0-windows\LibBundle.dll
+C:\Users\Administrator\source\repos\devAPS\LibGGPK2\obj\Release\net6.0-windows\LibGGPK2.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\devAPS\LibGGPK2\obj\Release\net6.0-windows\LibGGPK2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\source\repos\devAPS\LibGGPK2\obj\Release\net6.0-windows\LibGGPK2.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\devAPS\LibGGPK2\obj\Release\net6.0-windows\LibGGPK2.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\devAPS\LibGGPK2\obj\Release\net6.0-windows\LibGGPK2.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\devAPS\LibGGPK2\obj\Release\net6.0-windows\LibGGPK2.csproj.CopyComplete
+C:\Users\Administrator\source\repos\devAPS\LibGGPK2\obj\Release\net6.0-windows\LibGGPK2.dll

@@ -1,0 +1,10 @@
+C:\Users\Administrator\source\repos\devAPS\DirectXTexWrapper\bin\Release\x64\Ijwhost.dll
+C:\Users\Administrator\source\repos\devAPS\DirectXTexWrapper\bin\Release\x64\DirectXTexWrapper.deps.json
+C:\Users\Administrator\source\repos\devAPS\DirectXTexWrapper\bin\Release\x64\DirectXTexWrapper.runtimeconfig.json
+C:\Users\Administrator\source\repos\devAPS\DirectXTexWrapper\obj\Release\x64\DirectXTexWrapper.vcxproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\devAPS\DirectXTexWrapper\obj\Release\x64\DirectXTexWrapper.genruntimeconfig.cache
+C:\Users\Administrator\source\repos\VisualGGPK2UI\DirectXTexWrapper\bin\Release\x64\Ijwhost.dll
+C:\Users\Administrator\source\repos\VisualGGPK2UI\DirectXTexWrapper\bin\Release\x64\DirectXTexWrapper.deps.json
+C:\Users\Administrator\source\repos\VisualGGPK2UI\DirectXTexWrapper\bin\Release\x64\DirectXTexWrapper.runtimeconfig.json
+C:\Users\Administrator\source\repos\VisualGGPK2UI\DirectXTexWrapper\obj\Release\x64\DirectXTexWrapper.vcxproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\VisualGGPK2UI\DirectXTexWrapper\obj\Release\x64\DirectXTexWrapper.genruntimeconfig.cache

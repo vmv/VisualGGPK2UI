@@ -1,0 +1,8 @@
+C:\Users\Administrator\source\repos\devAPS\LibBundle\bin\x64\Debug\net7.0\LibBundle.deps.json
+C:\Users\Administrator\source\repos\devAPS\LibBundle\bin\x64\Debug\net7.0\LibBundle.dll
+C:\Users\Administrator\source\repos\devAPS\LibBundle\obj\x64\Debug\net7.0\LibBundle.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\devAPS\LibBundle\obj\x64\Debug\net7.0\LibBundle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\source\repos\devAPS\LibBundle\obj\x64\Debug\net7.0\LibBundle.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\devAPS\LibBundle\obj\x64\Debug\net7.0\LibBundle.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\devAPS\LibBundle\obj\x64\Debug\net7.0\LibBundle.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\devAPS\LibBundle\obj\x64\Debug\net7.0\LibBundle.dll

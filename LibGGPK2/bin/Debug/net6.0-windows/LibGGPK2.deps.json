@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "LibGGPK2/0.16.0": {
+        "dependencies": {
+          "LibBundle": "2.7.0"
+        },
+        "runtime": {
+          "LibGGPK2.dll": {}
+        }
+      },
+      "LibBundle/2.7.0": {
+        "runtime": {
+          "LibBundle.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LibGGPK2/0.16.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LibBundle/2.7.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

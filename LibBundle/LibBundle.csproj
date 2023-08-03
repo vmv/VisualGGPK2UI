@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Authors>aianlinb</Authors>
+    <Copyright>Copyright © 2020-2023 aianlinb</Copyright>
+    <Version>2.7.0</Version>
+    <Platforms>x64;x86</Platforms>
+    <PlatformTarget Condition="'Platforms' == 'x64'">x64</PlatformTarget>
+    <PlatformTarget Condition="'Platforms' == 'x86'">x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>embedded</DebugType>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+</Project>

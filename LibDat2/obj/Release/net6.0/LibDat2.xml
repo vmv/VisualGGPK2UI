@@ -1,0 +1,592 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LibDat2</name>
+    </assembly>
+    <members>
+        <member name="F:LibDat2.DatContainer.DatDefinitions">
+            <summary>
+            Structure definition of dat files
+            </summary>
+        </member>
+        <member name="F:LibDat2.DatContainer.SchemaMinDatDefinitions">
+            <summary>
+            DatDefinitions from schema.min.json
+            </summary>
+        </member>
+        <member name="F:LibDat2.DatContainer.SchemaMin">
+            <summary>
+            Whether the current using DatDefinitions is from schema.min.json
+            </summary>
+        </member>
+        <member name="M:LibDat2.DatContainer.DownloadSchemaMin">
+            <summary>
+            Download schema.min.json into <see cref="F:LibDat2.DatContainer.SchemaMinDatDefinitions"/>
+            </summary>
+        </member>
+        <member name="F:LibDat2.DatContainer.FieldDefinitions">
+            <summary>
+            Definition of fields in this dat
+            Left: Name of field, Right: Type of field data
+            </summary>
+        </member>
+        <member name="F:LibDat2.DatContainer.Name">
+            <summary>
+            Name of the dat file
+            </summary>
+        </member>
+        <member name="F:LibDat2.DatContainer.FieldDatas">
+            <summary>
+            List of record content of the dat file
+            </summary>
+        </member>
+        <member name="F:LibDat2.DatContainer.Exception">
+            <summary>
+            Store the first error that occurred during reading
+            </summary>
+        </member>
+        <member name="F:LibDat2.DatContainer.tmp">
+            <summary>
+            Used to dispose the FileStream created when calling <see cref="M:LibDat2.DatContainer.#ctor(System.String,System.Boolean)"/>
+            </summary>
+        </member>
+        <member name="M:LibDat2.DatContainer.#ctor(System.String,System.Boolean)">
+            <summary>
+            Parses the dat file contents from a file.
+            Check for <see cref="F:LibDat2.DatContainer.Exception"/> to see if the read fails.
+            </summary>
+            <param name="filePath">Path of a dat file</param>
+            <param name="SchemaMin">Whether to use schema.min.json</param>
+        </member>
+        <member name="M:LibDat2.DatContainer.#ctor(System.Byte[],System.String,System.Boolean)">
+            <summary>
+            Parses the dat file contents from a binary data.
+            Check for <see cref="F:LibDat2.DatContainer.Exception"/> to see if the read fails.
+            </summary>
+            <param name="fileData">Binary data of a dat file</param>
+            <param name="fileName">Name of the dat file with extension</param>
+            <param name="SchemaMin">Whether to use schema.min.json</param>
+        </member>
+        <member name="M:LibDat2.DatContainer.#ctor(System.IO.Stream,System.String,System.Boolean)">
+            <summary>
+            Parses the dat file contents from a stream.
+            Check for <see cref="F:LibDat2.DatContainer.Exception"/> to see if the read fails.
+            </summary>
+            <param name="stream">Contents of a dat file</param>
+            <param name="fileName">Name of the dat file</param>
+            <param name="SchemaMin">Whether to use schema.min.json</param>
+        </member>
+        <member name="F:LibDat2.DatContainer.ReferenceDatas">
+            <summary>
+            Set of IReferenceData of the dat file last read/save
+            </summary>
+        </member>
+        <member name="F:LibDat2.DatContainer.ReferenceDataOffsets">
+            <summary>
+            Used to find IReferenceData with the actual data in string representation
+            </summary>
+        </member>
+        <member name="F:LibDat2.DatContainer.x64">
+            <summary>
+            Whether the pointer length is 64 bits, otherwise is 32 bits
+            </summary>
+        </member>
+        <member name="F:LibDat2.DatContainer.UTF32">
+            <summary>
+            Whether the strings is save as UTF-32, otherwise is UTF-16
+            </summary>
+        </member>
+        <member name="F:LibDat2.DatContainer.DataSectionOffset">
+            <summary>
+            The begin offset of DataSection(Which contains pointed values and starts with 0xBBBBBBBBBBBBBBBB)
+            </summary>
+        </member>
+        <member name="F:LibDat2.DatContainer.CurrentOffset">
+            <summary>
+            Temporary record the offset in DataSection while writing to a dat file
+            </summary>
+        </member>
+        <member name="M:LibDat2.DatContainer.#ctor(System.String,System.Collections.Generic.List{LibDat2.Types.IFieldData[]},System.Boolean)">
+            <summary>
+            Create a DatContainer instance with existing data
+            </summary>
+            <param name="fieldDatas">Contents of a dat file</param>
+            <param name="fileName">Name of the dat file</param>
+            <param name="SchemaMin">Whether to use schema.min.json</param>
+        </member>
+        <member name="M:LibDat2.DatContainer.Save(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Save the dat file with the modified <see cref="F:LibDat2.DatContainer.FieldDatas"/>
+            </summary>
+        </member>
+        <member name="M:LibDat2.DatContainer.Save(System.Boolean,System.Boolean)">
+            <summary>
+            Save the dat file with the modified <see cref="F:LibDat2.DatContainer.FieldDatas"/>
+            </summary>
+        </member>
+        <member name="M:LibDat2.DatContainer.Save(System.IO.Stream,System.Boolean,System.Boolean)">
+            <summary>
+            Save the dat file with the modified <see cref="F:LibDat2.DatContainer.FieldDatas"/>
+            The position of the stream must be 0
+            </summary>
+        </member>
+        <member name="M:LibDat2.DatContainer.ToCsv">
+            <summary>
+            Convert <see cref="F:LibDat2.DatContainer.FieldDatas"/> to csv format
+            </summary>
+            <returns>Content of the csv file</returns>
+        </member>
+        <member name="M:LibDat2.DatContainer.FromCsv(System.String)">
+            <summary>
+            Read <see cref="F:LibDat2.DatContainer.FieldDatas"/> from content of a csv file
+            </summary>
+        </member>
+        <member name="M:LibDat2.DatContainer.GetActualRecordLength(System.IO.BinaryReader,System.Int32)">
+            <summary>
+            Get the length of records in the dat file
+            </summary>
+        </member>
+        <member name="M:LibDat2.DatContainer.CalculateRecordLength(System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
+            <summary>
+            Calculate the expected length of records in the dat file
+            </summary>
+        </member>
+        <member name="M:LibDat2.DatContainer.ReloadDefinitions">
+            <summary>
+            Reload DatDefinitions from DatDefinitions.json.
+            This won't affect the existing instances of <see cref="T:LibDat2.DatContainer"/>.
+            </summary>
+        </member>
+        <member name="M:LibDat2.DatContainer.ReloadDefinitions(System.String)">
+            <summary>
+            Reload DatDefinitions from a file.
+            This won't affect the existing instances of <see cref="T:LibDat2.DatContainer"/>.
+            </summary>
+        </member>
+        <member name="M:LibDat2.DatContainer.ReloadDefinitions(System.ReadOnlyMemory{System.Byte})">
+            <summary>
+            Reload DatDefinitions from binaries.
+            This won't affect the existing instances of <see cref="T:LibDat2.DatContainer"/>.
+            </summary>
+        </member>
+        <member name="M:LibDat2.DatContainer.ReloadDefinitions(System.IO.Stream)">
+            <summary>
+            Reload DatDefinitions from stream.
+            This won't affect the existing instances of <see cref="T:LibDat2.DatContainer"/>.
+            </summary>
+        </member>
+        <member name="P:LibDat2.Types.ArrayData`1.TypeOfValue">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.ArrayData`1.Read(System.IO.BinaryReader,LibDat2.DatContainer,System.String)">
+            <summary>
+            Read a <see cref="T:LibDat2.Types.ArrayData`1"/> from a dat file
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.ArrayData`1.Read(System.IO.BinaryReader)">
+            <summary>
+            Read the pointer and call <see cref="M:LibDat2.Types.ArrayData`1.ReadInDataSection(System.IO.BinaryReader)"/>.
+            This won't check the <see cref="F:LibDat2.DatContainer.ReferenceDatas"/>, use <see cref="M:LibDat2.Types.ArrayData`1.Read(System.IO.BinaryReader,LibDat2.DatContainer,System.String)"/> instead.
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.ArrayData`1.ReadInDataSection(System.IO.BinaryReader)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.ArrayData`1.Write(System.IO.BinaryWriter)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.ArrayData`1.WriteInDataSection(System.IO.BinaryWriter)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.ArrayData`1.FromString(System.String,LibDat2.DatContainer,System.String)">
+            <summary>
+            Read a <see cref="T:LibDat2.Types.ArrayData`1"/> from its value in string representation
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.ArrayData`1.FromString(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.ArrayData`1.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.ArrayData`1.CalculateLength">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.BooleanData.Read(System.IO.BinaryReader)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.BooleanData.Write(System.IO.BinaryWriter)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.BooleanData.FromString(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="F:LibDat2.Types.FieldDataBase`1.Dat">
+            <summary>
+            <see cref="T:LibDat2.DatContainer"/> which created this instance
+            </summary>
+        </member>
+        <member name="P:LibDat2.Types.FieldDataBase`1.Value">
+            <summary>
+            Data of this field
+            </summary>
+        </member>
+        <member name="P:LibDat2.Types.FieldDataBase`1.LibDat2#Types#IFieldData#Value">
+            <inheritdoc/>
+        </member>
+        <member name="P:LibDat2.Types.FieldDataBase`1.StringValue">
+            <summary>
+            <see cref="P:LibDat2.Types.FieldDataBase`1.Value"/> in string representation.
+            Equals to <see cref="M:LibDat2.Types.FieldDataBase`1.ToString"/> and <see cref="M:LibDat2.Types.FieldDataBase`1.FromString(System.String)"/>
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.FieldDataBase`1.#ctor(LibDat2.DatContainer)">
+            <summary>
+            Create an instance of <see cref="T:LibDat2.Types.FieldDataBase`1"/>
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.FieldDataBase`1.Read(System.IO.BinaryReader)">
+            <summary>
+            Read the <see cref="P:LibDat2.Types.FieldDataBase`1.Value"/> from a dat file
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.FieldDataBase`1.Write(System.IO.BinaryWriter)">
+            <summary>
+            Write the <see cref="P:LibDat2.Types.FieldDataBase`1.Value"/> to a dat file
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.FieldDataBase`1.FromString(System.String)">
+            <summary>
+            Read the <see cref="P:LibDat2.Types.FieldDataBase`1.Value"/> from its string representation
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.FieldDataBase`1.ToString">
+            <summary>
+            Get the string representation of the <see cref="P:LibDat2.Types.FieldDataBase`1.Value"/>
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.Float32Data.Read(System.IO.BinaryReader)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.Float32Data.Write(System.IO.BinaryWriter)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.Float32Data.FromString(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.Float32Data.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.Float64Data.Read(System.IO.BinaryReader)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.Float64Data.Write(System.IO.BinaryWriter)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.Float64Data.FromString(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.Float64Data.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.ForeignRowData.Read(System.IO.BinaryReader)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.ForeignRowData.Write(System.IO.BinaryWriter)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.ForeignRowData.FromString(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.ForeignRowData.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="P:LibDat2.Types.IArrayData.TypeOfValue">
+            <summary>
+            FieldType of value in array
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.IArrayData.Read(System.IO.BinaryReader,System.String,LibDat2.DatContainer)">
+            <summary>
+            Read a <see cref="T:LibDat2.Types.IArrayData"/> from a dat file
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.IArrayData.FromString(System.String,System.String,LibDat2.DatContainer)">
+            <summary>
+            Create an instance of <see cref="T:LibDat2.Types.IFieldData"/> from its value in string representation
+            </summary>
+        </member>
+        <member name="P:LibDat2.Types.IFieldData.Value">
+            <summary>
+            Data of this field
+            </summary>
+        </member>
+        <member name="P:LibDat2.Types.IFieldData.StringValue">
+            <summary>
+            <see cref="P:LibDat2.Types.IFieldData.Value"/> in string representation.
+            Equals to <see cref="M:LibDat2.Types.IFieldData.ToString"/> and <see cref="M:LibDat2.Types.IFieldData.FromString(System.String)"/>
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.IFieldData.SizeOfType(System.String,System.Boolean)">
+            <summary>
+            Get the length in dat file of a type of field
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.IFieldData.Read(System.IO.BinaryReader,System.String,LibDat2.DatContainer)">
+            <summary>
+            Read a <see cref="T:LibDat2.Types.IFieldData"/> from a dat file.
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.IFieldData.FromString(System.String,System.String,LibDat2.DatContainer)">
+            <summary>
+            Create an instance of <see cref="T:LibDat2.Types.IFieldData"/> from its value in string representation
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.IFieldData.Read(System.IO.BinaryReader)">
+            <summary>
+            Read the value from a dat file
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.IFieldData.Write(System.IO.BinaryWriter)">
+            <summary>
+            Write the value to a dat file
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.IFieldData.FromString(System.String)">
+            <summary>
+            Read the value from its string representation
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.IFieldData.ToString">
+            <summary>
+            Get the string representation of the value
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.Int16Data.Read(System.IO.BinaryReader)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.Int16Data.Write(System.IO.BinaryWriter)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.Int16Data.FromString(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.Int32Data.Read(System.IO.BinaryReader)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.Int32Data.Write(System.IO.BinaryWriter)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.Int32Data.FromString(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.Int64Data.Read(System.IO.BinaryReader)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.Int64Data.Write(System.IO.BinaryWriter)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.Int64Data.FromString(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.Int64Data.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.Int8Data.Read(System.IO.BinaryReader)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.Int8Data.Write(System.IO.BinaryWriter)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.Int8Data.FromString(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="P:LibDat2.Types.IPairData.TypeOfValue">
+            <summary>
+            FieldType of value in array
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.IPairData.Read(System.IO.BinaryReader,System.String,LibDat2.DatContainer)">
+            <summary>
+            Read a <see cref="T:LibDat2.Types.IArrayData"/> from a dat file
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.IPairData.FromString(System.String,System.String,LibDat2.DatContainer)">
+            <summary>
+            Create an instance of <see cref="T:LibDat2.Types.IFieldData"/> from its value in string representation
+            </summary>
+        </member>
+        <member name="P:LibDat2.Types.IReferenceData.Offset">
+            <summary>
+            Position of data in DataSection
+            </summary>
+        </member>
+        <member name="P:LibDat2.Types.IReferenceData.Length">
+            <summary>
+            Length of data in DataSection
+            </summary>
+        </member>
+        <member name="P:LibDat2.Types.IReferenceData.EndOffset">
+            <summary>
+            Position of end of data in DataSection
+            </summary>
+            <returns><see cref="P:LibDat2.Types.IReferenceData.Offset"/> + <see cref="P:LibDat2.Types.IReferenceData.Length"/></returns>
+        </member>
+        <member name="M:LibDat2.Types.IReferenceData.Read(System.IO.BinaryReader)">
+            <summary>
+            Read the pointer and call <see cref="M:LibDat2.Types.ReferenceDataBase`1.ReadInDataSection(System.IO.BinaryReader)"/>.
+            This won't check the <see cref="F:LibDat2.DatContainer.ReferenceDatas"/>, use <see cref="M:LibDat2.Types.StringData.Read(System.IO.BinaryReader,LibDat2.DatContainer)"/> or <see cref="M:LibDat2.Types.ArrayData`1.Read(System.IO.BinaryReader,LibDat2.DatContainer,System.String)"/> instead.
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.IReferenceData.Write(System.IO.BinaryWriter)">
+            <summary>
+            Write the pointer and call WriteInDataSection(BinaryWriter)
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.IReferenceData.FromString(System.String)">
+            <summary>
+            Read the <see cref="P:LibDat2.Types.IFieldData.Value"/> from its string representation
+            This won't check the <see cref="F:LibDat2.DatContainer.ReferenceDatas"/>, use <see cref="M:LibDat2.Types.StringData.FromString(System.String,LibDat2.DatContainer)"/> or <see cref="M:LibDat2.Types.ArrayData`1.FromString(System.String,LibDat2.DatContainer,System.String)"/> instead.
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.IReferenceData.CalculateLength">
+            <summary>
+            Calculate the length of data in DataSection with current <see cref="P:LibDat2.Types.IFieldData.Value"/>
+            </summary>
+        </member>
+        <member name="P:LibDat2.Types.PairData`1.TypeOfValue">
+            <summary>
+            FieldType of value in pair
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.PairData`1.Read(System.IO.BinaryReader)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.PairData`1.Write(System.IO.BinaryWriter)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.PairData`1.FromString(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="P:LibDat2.Types.ReferenceDataBase`1.Offset">
+            <inheritdoc/>
+        </member>
+        <member name="P:LibDat2.Types.ReferenceDataBase`1.Length">
+            <inheritdoc/>
+        </member>
+        <member name="P:LibDat2.Types.ReferenceDataBase`1.EndOffset">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.ReferenceDataBase`1.Read(System.IO.BinaryReader)">
+            <summary>
+            Read the pointer and call <see cref="M:LibDat2.Types.ReferenceDataBase`1.ReadInDataSection(System.IO.BinaryReader)"/>.
+            This won't check the <see cref="F:LibDat2.DatContainer.ReferenceDatas"/>, use <see cref="M:LibDat2.Types.StringData.Read(System.IO.BinaryReader,LibDat2.DatContainer)"/> or <see cref="M:LibDat2.Types.ArrayData`1.Read(System.IO.BinaryReader,LibDat2.DatContainer,System.String)"/> instead.
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.ReferenceDataBase`1.ReadInDataSection(System.IO.BinaryReader)">
+            <summary>
+            Read the value from the DataSection
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.ReferenceDataBase`1.Write(System.IO.BinaryWriter)">
+            <summary>
+            Write the pointer and call <see cref="M:LibDat2.Types.ReferenceDataBase`1.WriteInDataSection(System.IO.BinaryWriter)"/>
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.ReferenceDataBase`1.WriteInDataSection(System.IO.BinaryWriter)">
+            <summary>
+            Write the value to the DataSection
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.ReferenceDataBase`1.CalculateLength">
+            <summary>
+            Calculate the length of data in DataSection with current <see cref="P:LibDat2.Types.FieldDataBase`1.Value"/>
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.RowData.Read(System.IO.BinaryReader)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.RowData.Write(System.IO.BinaryWriter)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.RowData.FromString(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.RowData.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.StringData.Read(System.IO.BinaryReader,LibDat2.DatContainer)">
+            <summary>
+            Read a <see cref="T:LibDat2.Types.StringData"/> from a dat file
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.StringData.ReadInDataSection(System.IO.BinaryReader)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.StringData.WriteInDataSection(System.IO.BinaryWriter)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.StringData.FromString(System.String,LibDat2.DatContainer)">
+            <summary>
+            Read a <see cref="T:LibDat2.Types.StringData"/> from its value in string representation
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.StringData.FromString(System.String)">
+            <summary>
+            Read the <see cref="P:LibDat2.Types.IFieldData.Value"/> from its string representation
+            This won't check the <see cref="F:LibDat2.DatContainer.ReferenceDatas"/>, use <see cref="M:LibDat2.Types.StringData.FromString(System.String,LibDat2.DatContainer)"/> instead.
+            </summary>
+        </member>
+        <member name="M:LibDat2.Types.StringData.CalculateLength">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.UInt16Data.Read(System.IO.BinaryReader)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.UInt16Data.Write(System.IO.BinaryWriter)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.UInt16Data.FromString(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.UInt32Data.Read(System.IO.BinaryReader)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.UInt32Data.Write(System.IO.BinaryWriter)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.UInt32Data.FromString(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.UInt64Data.Read(System.IO.BinaryReader)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.UInt64Data.Write(System.IO.BinaryWriter)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.UInt64Data.FromString(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.UInt64Data.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.UInt8Data.Read(System.IO.BinaryReader)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.UInt8Data.Write(System.IO.BinaryWriter)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.UInt8Data.FromString(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.ValueStringData.Read(System.IO.BinaryReader)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.ValueStringData.Write(System.IO.BinaryWriter)">
+            <inheritdoc/>
+        </member>
+        <member name="M:LibDat2.Types.ValueStringData.FromString(System.String)">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

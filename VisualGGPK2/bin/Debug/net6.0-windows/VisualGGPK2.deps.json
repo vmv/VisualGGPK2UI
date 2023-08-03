@@ -1,0 +1,98 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "VisualGGPK2/0.16.1": {
+        "dependencies": {
+          "BrotliSharpLib": "0.3.3",
+          "DirectXTexWrapper": "1.0.0",
+          "LibDat2": "0.16.1",
+          "LibGGPK2": "0.16.0"
+        },
+        "runtime": {
+          "VisualGGPK2.dll": {}
+        }
+      },
+      "BrotliSharpLib/0.3.3": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/BrotliSharpLib.dll": {
+            "assemblyVersion": "0.3.2.0",
+            "fileVersion": "0.3.3.0"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {},
+      "DirectXTexWrapper/1.0.0": {
+        "runtime": {
+          "DirectXTexWrapper.dll": {}
+        }
+      },
+      "LibBundle/2.7.0": {
+        "runtime": {
+          "LibBundle.dll": {}
+        }
+      },
+      "LibDat2/0.16.1": {
+        "runtime": {
+          "LibDat2.dll": {}
+        }
+      },
+      "LibGGPK2/0.16.0": {
+        "dependencies": {
+          "LibBundle": "2.7.0"
+        },
+        "runtime": {
+          "LibGGPK2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "VisualGGPK2/0.16.1": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BrotliSharpLib/0.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/z74VNg6etlQK/N1mSD5Tz2qQUZqc3RMiuv2F8Q/MOfvg4l7a6lDYhQQTPd9s9saSokh1GqUD7JTuunOiQid8w==",
+      "path": "brotlisharplib/0.3.3",
+      "hashPath": "brotlisharplib.0.3.3.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+    },
+    "DirectXTexWrapper/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LibBundle/2.7.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LibDat2/0.16.1": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LibGGPK2/0.16.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

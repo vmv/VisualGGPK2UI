@@ -1,0 +1,5 @@
+﻿  DirectXTexWrapper.cpp
+  .NETCoreApp,Version=v6.0.AssemblyAttributes.cpp
+  Generating Code...
+  DirectXTexWrapper.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  DirectXTexWrapper.vcxproj -> C:\Users\Administrator\source\repos\devAPS\DirectXTexWrapper\bin\Debug\x64\DirectXTexWrapper.dll

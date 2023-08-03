@@ -1,0 +1,5 @@
+C:\Users\Administrator\source\repos\devAPS\DirectXTexWrapper\bin\Debug\x64\Ijwhost.dll
+C:\Users\Administrator\source\repos\devAPS\DirectXTexWrapper\bin\Debug\x64\DirectXTexWrapper.deps.json
+C:\Users\Administrator\source\repos\devAPS\DirectXTexWrapper\bin\Debug\x64\DirectXTexWrapper.runtimeconfig.json
+C:\Users\Administrator\source\repos\devAPS\DirectXTexWrapper\obj\Debug\x64\DirectXTexWrapper.vcxproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\devAPS\DirectXTexWrapper\obj\Debug\x64\DirectXTexWrapper.genruntimeconfig.cache
