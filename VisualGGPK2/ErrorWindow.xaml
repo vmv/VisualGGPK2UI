@@ -10,70 +10,78 @@
     WindowStartupLocation="CenterScreen"
     WindowStyle="None">
     <Grid>
-        <ui:TitleBar
-            Grid.Column="3"
-            Height="40"
-            Background="WhiteSmoke"
-            BorderBrush="Black"
-            Foreground="Black" />
-        <TextBox
-            x:Name="ErrorBox"
-            Margin="0,0,0,35"
-            Padding="2"
-            AcceptsReturn="True"
-            HorizontalScrollBarVisibility="Auto"
-            IsReadOnly="True"
-            ScrollViewer.CanContentScroll="True"
-            Text="Loading Exception . . ."
-            TextWrapping="Wrap"
-            VerticalScrollBarVisibility="Auto" />
-        <StackPanel
-            Height="460"
-            Margin="0,40,0,0"
-            Orientation="Horizontal">
-            <Button
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <TextBox
+                x:Name="ErrorBox"
+                Grid.Row="0"
+                Padding="2"
+                AcceptsReturn="True"
+                HorizontalScrollBarVisibility="Auto"
+                IsReadOnly="True"
+                ScrollViewer.CanContentScroll="True"
+                Text="Loading Exception . . ."
+                TextWrapping="Wrap"
+                VerticalScrollBarVisibility="Auto" />
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".25*" />
+                <ColumnDefinition Width=".25*" />
+                <ColumnDefinition Width=".25*" />
+                <ColumnDefinition Width=".25*" />
+            </Grid.ColumnDefinitions>
+            <ui:Button
                 x:Name="ButtonCopy"
+                Grid.Column="0"
                 Width="100"
                 Height="30"
-                Margin="30,0,0,2"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Bottom"
+                Margin="0,0,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
                 Click="OnCopyClick"
                 Content="Copy"
                 IsEnabled="False"
                 ToolTipService.ToolTip="copy" />
-            <Button
+            <ui:Button
                 x:Name="ButtonGitHub"
+                Grid.Column="1"
                 Width="100"
                 Height="30"
-                Margin="30,0,0,2"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
                 Click="OnGitHubClick"
                 Content="GitHub"
                 ToolTipService.ToolTip="open GitHub webpage" />
-            <Button
+            <ui:Button
                 x:Name="ButtonResume"
+                Grid.Column="2"
                 Width="100"
                 Height="30"
-                Margin="30,0,0,2"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Bottom"
+                Margin="0,0,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
                 Click="OnResumeClick"
                 Content="Resume"
                 IsEnabled="False"
                 ToolTipService.ToolTip="resume" />
-            <Button
+            <ui:Button
                 x:Name="ButtonStop"
+                Grid.Column="3"
                 Width="100"
                 Height="30"
-                Margin="30,0,0,2"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Bottom"
+                Margin="0,0,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
                 Click="OnStopClick"
                 Content="Stop"
                 IsEnabled="False"
                 ToolTipService.ToolTip="stop" />
-        </StackPanel>
+        </Grid>
     </Grid>
 </Window>
