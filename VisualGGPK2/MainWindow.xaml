@@ -127,7 +127,7 @@
                 KeyDown="FilterBox_KeyDown"
                 OpacityMask="Black"
                 PlaceholderText=".aoc"
-                ToolTipService.ToolTip="filter by file extension (.pet$)" />
+                ToolTipService.ToolTip="filter by file extension (.pet)" />
 
             <CheckBox
                 x:Name="RegexCheckBox"
@@ -165,7 +165,7 @@
                     Foreground="DarkGray">
                     VisualGGPK2
                 </Run>
-                <Label FontSize="11" Foreground="#FF2E7ED4">UI</Label>
+                <Label FontSize="12" Foreground="#FF2E7ED4">UI</Label>
             </ui:TextBlock>
 
             <ui:Button
@@ -308,7 +308,6 @@
             <GridSplitter Grid.Column="1" Width="5" />
 
             <StackPanel Grid.Column="0" Orientation="Vertical">
-
                 <ui:TextBlock
                     Grid.Column="0"
                     Margin="0,150,0,0"
@@ -318,7 +317,6 @@
                         open
                     </Run>
                 </ui:TextBlock>
-
                 <ui:Button
                     x:Name="Official"
                     Grid.Column="0"
@@ -332,7 +330,6 @@
                     Content="O"
                     FontSize="20"
                     ToolTipService.ToolTip="open Official" />
-
                 <ui:Button
                     x:Name="Steam"
                     Grid.Column="0"
@@ -345,7 +342,6 @@
                     Content="S"
                     FontSize="20"
                     ToolTipService.ToolTip="open Steam" />
-
                 <ui:Button
                     x:Name="Garena"
                     Grid.Column="0"
@@ -358,7 +354,6 @@
                     Content="G"
                     FontSize="20"
                     ToolTipService.ToolTip="open Garena" />
-
                 <ui:Button
                     x:Name="Tencent"
                     Grid.Column="0"
@@ -371,7 +366,6 @@
                     Content="T"
                     FontSize="20"
                     ToolTipService.ToolTip="open Tencent" />
-
                 <ui:Button
                     x:Name="Epic"
                     Grid.Column="0"
@@ -384,7 +378,6 @@
                     Content="E"
                     FontSize="20"
                     ToolTipService.ToolTip="open Epic" />
-
                 <ui:Button
                     x:Name="AllowGameOpen"
                     Width="35"
@@ -399,7 +392,6 @@
                     Icon="{ui:SymbolIcon DesktopCheckmark24}"
                     ToolTipService.ToolTip="allow game to be opened" />
             </StackPanel>
-
 
             <ui:AutoSuggestBox
                 x:Name="SearchBox"
@@ -432,6 +424,8 @@
                 HorizontalContentAlignment="Left"
                 VerticalContentAlignment="Top"
                 Background="{x:Null}"
+                BorderBrush="#FFD8D8D8"
+                BorderThickness="1,1,0,0"
                 FontFamily="Verdana"
                 FontSize="14"
                 Foreground="Black"

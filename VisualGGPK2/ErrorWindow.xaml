@@ -6,9 +6,10 @@
     Title="ErrorWindow"
     Width="560"
     Height="500"
+    BorderBrush="#FF2E7ED4"
     Closing="OnClosing"
     WindowStartupLocation="CenterScreen"
-    WindowStyle="None" BorderBrush="#FF2E7ED4">
+    WindowStyle="None">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
