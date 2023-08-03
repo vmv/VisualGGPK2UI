@@ -476,10 +476,9 @@
                 Visibility="Hidden">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30" />
-                    <RowDefinition MinHeight="20" />
-                    <RowDefinition MinHeight="20" />
+                    <RowDefinition MinHeight="30" />
+                    <RowDefinition MinHeight="30" />
                 </Grid.RowDefinitions>
-                
                 <StackPanel Orientation="Horizontal">
                     <CheckBox
                         x:Name="SchemaMin"
@@ -491,15 +490,13 @@
                         IsChecked="True"
                         ToolTipService.ToolTip="Use schema.min.json"
                         Unchecked="OnSchemaMinChecked" />
-                    <Button
-                        Width="80"
-                        Height="30"
-                        Margin="80,0,0,0"
+                    <Separator
+                        Height="25"
+                        Margin="5,0,0,0"
                         HorizontalAlignment="Left"
-                        BorderBrush="#FF2E7ED4"
-                        Click="OnSaveDatClicked"
-                        Content="Save"
-                        ToolTipService.ToolTip="save" />
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        BorderThickness="1,0,1,0" />
                     <Button
                         Width="80"
                         Height="30"
@@ -524,13 +521,28 @@
                         Click="OnCSVClicked"
                         Content="Export"
                         ToolTipService.ToolTip="Export to .csv" />
-
+                    <Separator
+                        Height="25"
+                        Margin="5,0,0,0"
+                        HorizontalAlignment="Left"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        BorderThickness="1,0,1,0" />
+                    <Button
+                        Width="80"
+                        Height="30"
+                        Margin="10,0,0,0"
+                        HorizontalAlignment="Left"
+                        BorderBrush="#FF2E7ED4"
+                        Click="OnSaveDatClicked"
+                        Content="Save"
+                        ToolTipService.ToolTip="save" />
                 </StackPanel>
 
                 <DataGrid
                     x:Name="DatTable"
                     Grid.Row="1"
-                    Margin="0,2,0,2"
+                    Margin="0,5,0,2"
                     AutoGenerateColumns="False"
                     CanUserAddRows="False"
                     CanUserDeleteRows="False"
@@ -539,7 +551,6 @@
                 <DataGrid
                     x:Name="DatReferenceDataTable"
                     Grid.Row="2"
-                    Margin="0,2,0,0"
                     AutoGenerateColumns="False"
                     CanUserAddRows="False"
                     CanUserDeleteRows="False"
@@ -548,7 +559,7 @@
                     VirtualizingPanel.VirtualizationMode="Standard" />
                 <GridSplitter
                     Grid.Row="1"
-                    Height="2"
+                    Height="5"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Bottom" />
             </Grid>
