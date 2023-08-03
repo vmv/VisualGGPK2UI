@@ -14,11 +14,11 @@
   "project": {
     "version": "0.16.1",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Documents\\GitHub\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj",
       "projectName": "LibDat2",
-      "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj",
+      "projectPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Documents\\GitHub\\VisualGGPK2UI\\LibDat2\\obj\\",
+      "outputPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibDat2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
