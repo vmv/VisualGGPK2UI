@@ -328,6 +328,7 @@
                     Padding="0,0,0,0"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
+                    Click="International_Click"
                     Content="O"
                     FontSize="20"
                     ToolTipService.ToolTip="open Official" />
@@ -353,6 +354,7 @@
                     Margin="0,10,0,0"
                     Padding="0,0,0,0"
                     HorizontalAlignment="Center"
+                    Click="Garena_Click"
                     Content="G"
                     FontSize="20"
                     ToolTipService.ToolTip="open Garena" />
@@ -365,6 +367,7 @@
                     Margin="0,10,0,0"
                     Padding="0,0,0,0"
                     HorizontalAlignment="Center"
+                    Click="Tencent_Click"
                     Content="T"
                     FontSize="20"
                     ToolTipService.ToolTip="open Tencent" />
@@ -675,171 +678,5 @@
                 FontSize="12"
                 IsReadOnly="True" />
         </Grid>
-
-
-
-
-
-
-
-        <Grid Width="0" Height="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="280" MinWidth="10" />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <!--<ui:TextBox
-                x:Name="FilterBox"
-                Height="30"
-                Margin="0,0,61,0"
-                VerticalAlignment="Top"
-                VerticalContentAlignment="Center"
-                FontSize="18"
-                KeyDown="FilterBox_KeyDown" />-->
-            <!--<Button
-                x:Name="FilterButton"
-                Width="60"
-                Height="30"
-                Margin="0,0,2,0"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                Click="FilterButton_Click"
-                Content="Filter"
-                FontSize="16"
-                IsEnabled="False" />-->
-            <!--<CheckBox
-                x:Name="RegexCheckBox"
-                Height="30"
-                Margin="0,0,66,0"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                VerticalContentAlignment="Center"
-                Content="Regex"
-                IsChecked="False"
-                Opacity="0.7" />-->
-            <!--<TreeView
-                x:Name="Tree"
-                Margin="0,30,2,0"
-                PreviewMouseDown="OnTreePreviewMouseDown"
-                SelectedItemChanged="OnTreeSelectedChanged"
-                TreeViewItem.Expanded="OnTreeExpanded"
-                VirtualizingStackPanel.IsVirtualizing="True"
-                VirtualizingStackPanel.VirtualizationMode="Recycling" />-->
-            <!--<Button
-                x:Name="AllowGameOpen"
-                Width="130"
-                Height="25"
-                Margin="0,0,0,18"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Bottom"
-                Click="AllowGameOpen_Click"
-                Content="AllowGameOpen"
-                FontSize="14"
-                IsEnabled="False" />
-            <GridSplitter Width="2" />-->
-            <!--<ui:TextBlock
-                Grid.Column="1"
-                Margin="10,2,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Text="RecordOffset:" />
-            <ui:TextBox
-                x:Name="TextBoxOffset"
-                Grid.Column="1"
-                Width="100"
-                Margin="100,1,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                IsReadOnly="True" />-->
-            <!--<ui:TextBlock
-                Grid.Column="1"
-                Margin="210,2,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Text="Size:" />
-            <ui:TextBox
-                x:Name="TextBoxSize"
-                Grid.Column="1"
-                Width="100"
-                Margin="250,1,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                IsReadOnly="True" />-->
-            <!--<ui:TextBlock
-                Grid.Column="1"
-                Margin="360,2,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Text="Hash:" />
-            <ui:TextBox
-                x:Name="TextBoxHash"
-                Grid.Column="1"
-                Width="100"
-                Margin="400,1,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                IsReadOnly="True" />
-            <ui:TextBlock
-                Grid.Column="1"
-                Margin="510,2,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Text="Bundle:" />-->
-            <!--<TextBox
-                x:Name="TextBoxBundle"
-                Grid.Column="1"
-                Margin="560,1,10,0"
-                HorizontalAlignment="Stretch"
-                VerticalAlignment="Top"
-                IsReadOnly="True" />-->
-            <!--<ui:TextBox
-                x:Name="TextView"
-                Grid.Column="1"
-                Margin="0,19,0,0"
-                Padding="3,3,3,3"
-                AcceptsReturn="true"
-                FontSize="16"
-                IsReadOnly="True"
-                ScrollViewer.CanContentScroll="True"
-                ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                ScrollViewer.VerticalScrollBarVisibility="Auto"
-                Text="Loading . . ."
-                TextWrapping="Wrap" />-->
-            <!--<Canvas
-                x:Name="ImageView"
-                Grid.Column="1"
-                Margin="0,19,0,0"
-                Background="White"
-                ClipToBounds="True"
-                MouseWheel="ImageView_MouseWheel"
-                Visibility="Hidden">
-                <Image
-                    x:Name="Image"
-                    Canvas.Left="0"
-                    Canvas.Top="0"
-                    RenderOptions.BitmapScalingMode="NearestNeighbor"
-                    SnapsToDevicePixels="True"
-                    Stretch="Uniform" />
-            </Canvas>-->
-            <!--<Button
-                x:Name="ButtonSave"
-                Grid.Column="1"
-                Width="50"
-                Margin="0,29,15,0"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top"
-                Click="OnSaveTextClicked"
-                Content="Save"
-                Visibility="Hidden" />-->
-
-            <!--<TextBlock
-                Grid.Column="1"
-                Margin="5"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Bottom"
-                Opacity="0.8"
-                Text="Copyright © 2020-2023 aianlinb" />-->
-        </Grid>
-
-
     </Grid>
 </Window>

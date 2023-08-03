@@ -731,7 +731,7 @@ namespace VisualGGPK2
                     var indexUrl = SelectedVersion switch {
                         1 => (PatchServer = GetPatchServer()) + "Bundles2/_.index.bin",
                         2 => (PatchServer = GetPatchServer(true)) + "Bundles2/_.index.bin",
-                        3 => "http://poesmoother.eu/owncloud/index.php/s/1VsY1uYOBmfDcMy/download",
+                        3 => "http://poesmoother.eu/nextcloud/index.php/s/8x8rz3zZgZfsTCz/download",
                         _ => null
                     };
 
@@ -1341,7 +1341,19 @@ namespace VisualGGPK2
         private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
             if (e.LeftButton == MouseButtonState.Pressed) DragMove();
         }
+        private void International_Click(object sender, RoutedEventArgs e) {
+            SelectedVersion = 1;
+            DialogResult = true;
+        }
+        private void Garena_Click(object sender, RoutedEventArgs e) {
+            SelectedVersion = 2;
+            DialogResult = true;
+        }
 
+        private void Tencent_Click(object sender, RoutedEventArgs e) {
+            SelectedVersion = 3;
+            DialogResult = true;
+        }
         #endregion
     }
 }

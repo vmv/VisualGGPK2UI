@@ -1,30 +1,50 @@
-﻿<Window x:Class="VisualGGPK2.VersionSelector"
-		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-		Title="Game Version"
-		Width="170"
-		Height="210"
-		ResizeMode="NoResize"
-		WindowStyle="ToolWindow"
-		WindowStartupLocation="CenterScreen">
-	<StackPanel>
-		<Button Content="Official"
-				FontSize="16"
-				Width="120"
-				Height="30"
-				Margin="0, 20, 0, 0"
-				Click="International_Click"/>
-		<Button Content="Garena"
-				FontSize="16"
-				Width="120"
-				Height="30"
-				Margin="0, 20, 0, 0"
-				Click="Garena_Click"/>
-		<Button Content="Tencent"
-				FontSize="16"
-				Width="120"
-				Height="30"
-				Margin="0, 20, 0, 0"
-				Click="Tencent_Click"/>
-	</StackPanel>
+﻿<Window
+    x:Class="VisualGGPK2.VersionSelector"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    Title="Game Version"
+    Width="170"
+    Height="210"
+    BorderBrush="#FF2E7ED4"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".33*" />
+            <RowDefinition Height=".33*" />
+            <RowDefinition Height=".33*" />
+        </Grid.RowDefinitions>
+
+        <ui:Button
+            Grid.Row="0"
+            Width="120"
+            Height="30"
+            Padding="0,0,0,0"
+            HorizontalAlignment="Center"
+            Click="International_Click"
+            Content="Official"
+            FontSize="16" />
+        <ui:Button
+            Grid.Row="1"
+            Width="120"
+            Height="30"
+            Padding="0,0,0,0"
+            HorizontalAlignment="Center"
+            Click="Garena_Click"
+            Content="Garena"
+            FontSize="16" />
+        <ui:Button
+            Grid.Row="2"
+            Width="120"
+            Height="30"
+            Padding="0,0,0,0"
+            HorizontalAlignment="Center"
+            Click="Tencent_Click"
+            Content="Tencent"
+            FontSize="16" />
+    </Grid>
+
 </Window>

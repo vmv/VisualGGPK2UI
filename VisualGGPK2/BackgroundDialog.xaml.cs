@@ -1,4 +1,5 @@
 ﻿using System.Threading;
+using System.Windows.Input;
 
 namespace VisualGGPK2
 {
@@ -28,6 +29,10 @@ namespace VisualGGPK2
                 Closing -= OnClosing;
                 Dispatcher.Invoke(base.Close);
             } catch { }
+        }
+
+        private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) {
+            if (e.LeftButton == MouseButtonState.Pressed) DragMove();
         }
     }
 }

@@ -8,7 +8,7 @@
     Height="500"
     Closing="OnClosing"
     WindowStartupLocation="CenterScreen"
-    WindowStyle="None">
+    WindowStyle="None" BorderBrush="#FF2E7ED4">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
