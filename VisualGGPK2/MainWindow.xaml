@@ -12,6 +12,7 @@
     AllowDrop="True"
     AllowsTransparency="True"
     Background="{x:Null}"
+    BorderBrush="#FF2E7ED4"
     BorderThickness="1,1,1,1"
     DragEnter="OnDragEnter"
     Drop="OnDragDrop"
@@ -19,9 +20,10 @@
     Foreground="{x:Null}"
     Loaded="OnLoaded"
     ResizeMode="CanResizeWithGrip"
+    SnapsToDevicePixels="True"
     UseLayoutRounding="True"
     WindowStartupLocation="CenterScreen"
-    WindowStyle="None" SnapsToDevicePixels="True" BorderBrush="#FF2E7ED4">
+    WindowStyle="None">
     <!--  Loaded="OnLoaded">  -->
 
     <Window.Resources>
@@ -124,7 +126,7 @@
                 FontSize="14"
                 KeyDown="FilterBox_KeyDown"
                 OpacityMask="Black"
-                PlaceholderText=" .aoc$"
+                PlaceholderText=".aoc"
                 ToolTipService.ToolTip="filter by file extension (.pet$)" />
 
             <CheckBox
@@ -437,7 +439,6 @@
                 SnapsToDevicePixels="False"
                 SyntaxHighlighting="C#"
                 UseLayoutRounding="False"
-                Visibility="Visible"
                 WordWrap="True" />
 
             <Canvas
@@ -467,6 +468,90 @@
                     copyright © 2020-2023 aianlinb
                 </Run>
             </ui:TextBlock>
+
+            <Grid
+                x:Name="DatView"
+                Grid.Column="2"
+                Margin="0,5,0,0"
+                Visibility="Hidden">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition MinHeight="20" />
+                    <RowDefinition MinHeight="20" />
+                </Grid.RowDefinitions>
+                
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox
+                        x:Name="SchemaMin"
+                        Height="35"
+                        Margin="5,0,0,0"
+                        VerticalContentAlignment="Center"
+                        Checked="OnSchemaMinChecked"
+                        Content="Use schema"
+                        IsChecked="True"
+                        ToolTipService.ToolTip="Use schema.min.json"
+                        Unchecked="OnSchemaMinChecked" />
+                    <Button
+                        Width="80"
+                        Height="30"
+                        Margin="80,0,0,0"
+                        HorizontalAlignment="Left"
+                        BorderBrush="#FF2E7ED4"
+                        Click="OnSaveDatClicked"
+                        Content="Save"
+                        ToolTipService.ToolTip="save" />
+                    <Button
+                        Width="80"
+                        Height="30"
+                        Margin="10,0,0,0"
+                        HorizontalAlignment="Left"
+                        Click="OnReloadClicked"
+                        Content="Reload"
+                        ToolTipService.ToolTip="Reload DatDefinitions" />
+                    <Button
+                        Width="80"
+                        Height="30"
+                        Margin="10,0,0,0"
+                        HorizontalAlignment="Left"
+                        Click="OnImportClicked"
+                        Content="Import"
+                        ToolTipService.ToolTip="Import from .csv" />
+                    <Button
+                        Width="80"
+                        Height="30"
+                        Margin="10,0,0,0"
+                        HorizontalAlignment="Left"
+                        Click="OnCSVClicked"
+                        Content="Export"
+                        ToolTipService.ToolTip="Export to .csv" />
+
+                </StackPanel>
+
+                <DataGrid
+                    x:Name="DatTable"
+                    Grid.Row="1"
+                    Margin="0,2,0,2"
+                    AutoGenerateColumns="False"
+                    CanUserAddRows="False"
+                    CanUserDeleteRows="False"
+                    CanUserReorderColumns="False"
+                    SelectionUnit="CellOrRowHeader" />
+                <DataGrid
+                    x:Name="DatReferenceDataTable"
+                    Grid.Row="2"
+                    Margin="0,2,0,0"
+                    AutoGenerateColumns="False"
+                    CanUserAddRows="False"
+                    CanUserDeleteRows="False"
+                    CanUserReorderColumns="False"
+                    SelectionUnit="CellOrRowHeader"
+                    VirtualizingPanel.VirtualizationMode="Standard" />
+                <GridSplitter
+                    Grid.Row="1"
+                    Height="2"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Bottom" />
+            </Grid>
 
         </Grid>
 
@@ -734,71 +819,7 @@
                 Click="OnSaveTextClicked"
                 Content="Save"
                 Visibility="Hidden" />-->
-            <Grid
-                x:Name="DatView"
-                Grid.Column="1"
-                Margin="0,19,0,0"
-                Visibility="Hidden">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="20" />
-                    <RowDefinition MinHeight="10" />
-                    <RowDefinition MinHeight="10" />
-                </Grid.RowDefinitions>
-                <CheckBox
-                    x:Name="SchemaMin"
-                    Margin="5,0,0,0"
-                    VerticalContentAlignment="Center"
-                    Checked="OnSchemaMinChecked"
-                    Content="Use schema.min.json"
-                    IsChecked="True"
-                    Unchecked="OnSchemaMinChecked" />
-                <Button
-                    Margin="0,0,350,0"
-                    Padding="5,0"
-                    HorizontalAlignment="Right"
-                    Click="OnSaveDatClicked"
-                    Content="Save" />
-                <Button
-                    Margin="0,0,210,0"
-                    Padding="5,0"
-                    HorizontalAlignment="Right"
-                    Click="OnReloadClicked"
-                    Content="Reload DatDefinitions" />
-                <Button
-                    Margin="0,0,90,0"
-                    Padding="5,0"
-                    HorizontalAlignment="Right"
-                    Click="OnImportClicked"
-                    Content="Import from .csv" />
-                <Button
-                    Padding="5,0"
-                    HorizontalAlignment="Right"
-                    Click="OnCSVClicked"
-                    Content="Export to .csv" />
-                <DataGrid
-                    x:Name="DatTable"
-                    Grid.Row="1"
-                    Margin="0,0,0,2"
-                    AutoGenerateColumns="False"
-                    CanUserAddRows="False"
-                    CanUserDeleteRows="False"
-                    CanUserReorderColumns="False"
-                    SelectionUnit="CellOrRowHeader" />
-                <DataGrid
-                    x:Name="DatReferenceDataTable"
-                    Grid.Row="2"
-                    AutoGenerateColumns="False"
-                    CanUserAddRows="False"
-                    CanUserDeleteRows="False"
-                    CanUserReorderColumns="False"
-                    SelectionUnit="CellOrRowHeader"
-                    VirtualizingPanel.VirtualizationMode="Standard" />
-                <GridSplitter
-                    Grid.Row="1"
-                    Height="2"
-                    HorizontalAlignment="Stretch"
-                    VerticalAlignment="Bottom" />
-            </Grid>
+
             <!--<TextBlock
                 Grid.Column="1"
                 Margin="5"
