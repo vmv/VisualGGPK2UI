@@ -15,6 +15,7 @@
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
     <ApplicationIcon>Assets\silver_cube.ico</ApplicationIcon>
     <StartupObject>VisualGGPK2.App</StartupObject>
+    <ImplicitUsings>disable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>

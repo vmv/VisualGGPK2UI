@@ -18,3 +18,13 @@ C:\Users\Administrator\source\repos\VisualGGPK2UI\LibGGPK2\obj\Release\net7.0\Li
 C:\Users\Administrator\source\repos\VisualGGPK2UI\LibGGPK2\obj\Release\net7.0\LibGGPK2.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\VisualGGPK2UI\LibGGPK2\obj\Release\net7.0\LibGGPK2.csproj.CopyComplete
 C:\Users\Administrator\source\repos\VisualGGPK2UI\LibGGPK2\obj\Release\net7.0\LibGGPK2.dll
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibGGPK2\bin\Release\net7.0\LibGGPK2.deps.json
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibGGPK2\bin\Release\net7.0\LibGGPK2.dll
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibGGPK2\bin\Release\net7.0\LibBundle.dll
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibGGPK2\obj\Release\net7.0\LibGGPK2.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibGGPK2\obj\Release\net7.0\LibGGPK2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibGGPK2\obj\Release\net7.0\LibGGPK2.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibGGPK2\obj\Release\net7.0\LibGGPK2.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibGGPK2\obj\Release\net7.0\LibGGPK2.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibGGPK2\obj\Release\net7.0\LibGGPK2.csproj.CopyComplete
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibGGPK2\obj\Release\net7.0\LibGGPK2.dll

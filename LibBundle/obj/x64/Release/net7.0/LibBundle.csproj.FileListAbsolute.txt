@@ -14,3 +14,11 @@ C:\Users\Administrator\source\repos\VisualGGPK2UI\LibBundle\obj\x64\Release\net7
 C:\Users\Administrator\source\repos\VisualGGPK2UI\LibBundle\obj\x64\Release\net7.0\LibBundle.AssemblyInfo.cs
 C:\Users\Administrator\source\repos\VisualGGPK2UI\LibBundle\obj\x64\Release\net7.0\LibBundle.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\VisualGGPK2UI\LibBundle\obj\x64\Release\net7.0\LibBundle.dll
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibBundle\bin\x64\Release\net7.0\LibBundle.deps.json
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibBundle\bin\x64\Release\net7.0\LibBundle.dll
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibBundle\obj\x64\Release\net7.0\LibBundle.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibBundle\obj\x64\Release\net7.0\LibBundle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibBundle\obj\x64\Release\net7.0\LibBundle.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibBundle\obj\x64\Release\net7.0\LibBundle.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibBundle\obj\x64\Release\net7.0\LibBundle.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibBundle\obj\x64\Release\net7.0\LibBundle.dll

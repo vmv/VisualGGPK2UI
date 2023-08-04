@@ -88,3 +88,50 @@ C:\Users\Administrator\source\repos\VisualGGPK2UI\VisualGGPK2\obj\Release\net7.0
 C:\Users\Administrator\source\repos\VisualGGPK2UI\VisualGGPK2\obj\Release\net7.0-windows\VisualGGPK2.csproj.CopyComplete
 C:\Users\Administrator\source\repos\VisualGGPK2UI\VisualGGPK2\obj\Release\net7.0-windows\VisualGGPK2.dll
 C:\Users\Administrator\source\repos\VisualGGPK2UI\VisualGGPK2\obj\Release\net7.0-windows\VisualGGPK2.genruntimeconfig.cache
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\Ijwhost.dll
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\DatDefinitions.json
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\License - Fira Code.txt
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\License - Fluent System Icons.txt
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\License - Microsoft.Ui.Xaml.txt
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\License - Segoe Fluent Icons.txt
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\License - VirtualizingWrapPanel.txt
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\License - Windows Presentation Foundation.txt
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\VisualGGPK2.exe
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\VisualGGPK2.deps.json
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\VisualGGPK2.runtimeconfig.json
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\VisualGGPK2.dll
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\ICSharpCode.AvalonEdit.dll
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\BrotliSharpLib.dll
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\DirectXTexWrapper.dll
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\LibBundle.dll
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\LibDat2.dll
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\LibGGPK2.dll
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\Wpf.Ui.dll
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\DirectXTexWrapper.pdb
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\DirectXTexWrapper.xml
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\LibDat2.xml
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\Wpf.Ui.pdb
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\Wpf.Ui.xml
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\VisualGGPK2.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\BackgroundDialog.baml
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\ErrorWindow.baml
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\MainWindow.baml
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\VersionSelector.baml
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\App.baml
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\BackgroundDialog.g.cs
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\ErrorWindow.g.cs
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\MainWindow.g.cs
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\VersionSelector.g.cs
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\App.g.cs
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\VisualGGPK2_Content.g.cs
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\VisualGGPK2_MarkupCompile.cache
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\VisualGGPK2.g.resources
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\VisualGGPK2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\VisualGGPK2.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\VisualGGPK2.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\VisualGGPK2.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\VisualGGPK2.csproj.CopyComplete
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\VisualGGPK2.dll
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\obj\Release\net7.0-windows\VisualGGPK2.genruntimeconfig.cache
+C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\VisualGGPK2\bin\Release\net7.0-windows\VisualGGPK2.dll.config
+C:\Users\Administrator\source\repos\VisualGGPK2UI\VisualGGPK2\bin\Release\net7.0-windows\VisualGGPK2.dll.config

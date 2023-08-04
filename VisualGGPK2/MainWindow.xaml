@@ -138,8 +138,9 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 HorizontalContentAlignment="Center"
+                IsChecked="True"
                 OpacityMask="Black"
-                ToolTipService.ToolTip="use Regex" />
+                ToolTipService.ToolTip="use Regex (pet$)" />
 
             <ui:Button
                 x:Name="FilterButton"
@@ -165,7 +166,7 @@
                     Foreground="DarkGray">
                     VisualGGPK2
                 </Run>
-                <Label FontSize="12" Foreground="#FF2E7ED4">UI</Label>
+                <Label FontSize="11" Foreground="#FF2E7ED4">UI</Label>
             </ui:TextBlock>
 
             <ui:Button
@@ -339,6 +340,7 @@
                     Padding="0,0,0,0"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
+                    Click="Steam_Click"
                     Content="S"
                     FontSize="20"
                     ToolTipService.ToolTip="open Steam" />

@@ -34,5 +34,53 @@ namespace VisualGGPK2.Properties {
                 this["GGPKPath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string officialPath {
+            get {
+                return ((string)(this["officialPath"]));
+            }
+            set {
+                this["officialPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string steamPath {
+            get {
+                return ((string)(this["steamPath"]));
+            }
+            set {
+                this["steamPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string garenaPath {
+            get {
+                return ((string)(this["garenaPath"]));
+            }
+            set {
+                this["garenaPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string tencentPath {
+            get {
+                return ((string)(this["tencentPath"]));
+            }
+            set {
+                this["tencentPath"] = value;
+            }
+        }
     }
 }
