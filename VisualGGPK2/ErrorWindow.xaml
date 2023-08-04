@@ -48,7 +48,7 @@
                 Click="OnCopyClick"
                 Content="Copy"
                 IsEnabled="False"
-                ToolTipService.ToolTip="copy" />
+                ToolTipService.ToolTip="copy" Padding="0,0,0,0" />
             <ui:Button
                 x:Name="ButtonGitHub"
                 Grid.Column="1"
@@ -58,7 +58,7 @@
                 VerticalAlignment="Center"
                 Click="OnGitHubClick"
                 Content="GitHub"
-                ToolTipService.ToolTip="open GitHub webpage" />
+                ToolTipService.ToolTip="open GitHub webpage" Padding="0,0,0,0" />
             <ui:Button
                 x:Name="ButtonResume"
                 Grid.Column="2"
@@ -70,7 +70,7 @@
                 Click="OnResumeClick"
                 Content="Resume"
                 IsEnabled="False"
-                ToolTipService.ToolTip="resume" />
+                ToolTipService.ToolTip="resume" Padding="0,0,0,0" />
             <ui:Button
                 x:Name="ButtonStop"
                 Grid.Column="3"
@@ -82,7 +82,7 @@
                 Click="OnStopClick"
                 Content="Stop"
                 IsEnabled="False"
-                ToolTipService.ToolTip="stop" />
+                ToolTipService.ToolTip="stop" Padding="0,0,0,0" />
         </Grid>
     </Grid>
 </Window>

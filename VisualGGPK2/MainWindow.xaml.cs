@@ -421,7 +421,7 @@ namespace VisualGGPK2
                 DatView.Visibility = Visibility.Hidden;
                 //BK2View.Visibility = Visibility.Hidden;
                 //BANKView.Visibility = Visibility.Hidden;
-                ButtonSave.Visibility = Visibility.Hidden;
+                //ButtonSave.Visibility = Visibility.Hidden;
                 if (tvi.Tag is RecordTreeNode rtn)
                 {
                     TextBoxOffset.Text = "0x" + rtn.Offset.ToString("X");

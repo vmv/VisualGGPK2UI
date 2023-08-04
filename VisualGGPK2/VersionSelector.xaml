@@ -13,9 +13,10 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height=".33*" />
-            <RowDefinition Height=".33*" />
-            <RowDefinition Height=".33*" />
+            <RowDefinition Height=".25*" />
+            <RowDefinition Height=".25*" />
+            <RowDefinition Height=".25*" />
+            <RowDefinition Height=".25*" />
         </Grid.RowDefinitions>
 
         <ui:Button
@@ -33,11 +34,20 @@
             Height="30"
             Padding="0,0,0,0"
             HorizontalAlignment="Center"
+            Click="Steam_Click"
+            Content="Steam"
+            FontSize="16" />
+        <ui:Button
+            Grid.Row="2"
+            Width="120"
+            Height="30"
+            Padding="0,0,0,0"
+            HorizontalAlignment="Center"
             Click="Garena_Click"
             Content="Garena"
             FontSize="16" />
         <ui:Button
-            Grid.Row="2"
+            Grid.Row="3"
             Width="120"
             Height="30"
             Padding="0,0,0,0"

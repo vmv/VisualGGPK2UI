@@ -10,8 +10,13 @@ namespace VisualGGPK2 {
 			MainWindow.SelectedVersion = 1;
 			DialogResult = true;
 		}
+        private void Steam_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.SelectedVersion = 1;
+            DialogResult = true;
+        }
 
-		private void Garena_Click(object sender, RoutedEventArgs e) {
+        private void Garena_Click(object sender, RoutedEventArgs e) {
 			MainWindow.SelectedVersion = 2;
 			DialogResult = true;
 		}
