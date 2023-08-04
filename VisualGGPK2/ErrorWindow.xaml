@@ -43,46 +43,50 @@
                 Width="100"
                 Height="30"
                 Margin="0,0,0,0"
+                Padding="0,0,0,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Click="OnCopyClick"
                 Content="Copy"
                 IsEnabled="False"
-                ToolTipService.ToolTip="copy" Padding="0,0,0,0" />
+                ToolTipService.ToolTip="copy" />
             <ui:Button
                 x:Name="ButtonGitHub"
                 Grid.Column="1"
                 Width="100"
                 Height="30"
+                Padding="0,0,0,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Click="OnGitHubClick"
                 Content="GitHub"
-                ToolTipService.ToolTip="open GitHub webpage" Padding="0,0,0,0" />
+                ToolTipService.ToolTip="open GitHub webpage" />
             <ui:Button
                 x:Name="ButtonResume"
                 Grid.Column="2"
                 Width="100"
                 Height="30"
                 Margin="0,0,0,0"
+                Padding="0,0,0,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Click="OnResumeClick"
                 Content="Resume"
                 IsEnabled="False"
-                ToolTipService.ToolTip="resume" Padding="0,0,0,0" />
+                ToolTipService.ToolTip="resume" />
             <ui:Button
                 x:Name="ButtonStop"
                 Grid.Column="3"
                 Width="100"
                 Height="30"
                 Margin="0,0,0,0"
+                Padding="0,0,0,0"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 Click="OnStopClick"
                 Content="Stop"
                 IsEnabled="False"
-                ToolTipService.ToolTip="stop" Padding="0,0,0,0" />
+                ToolTipService.ToolTip="stop" />
         </Grid>
     </Grid>
 </Window>

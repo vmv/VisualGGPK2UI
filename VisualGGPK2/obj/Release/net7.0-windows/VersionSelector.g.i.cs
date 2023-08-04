@@ -58,7 +58,7 @@ namespace VisualGGPK2 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/VisualGGPK2;component/versionselector.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/VisualGGPK2;V0.16.1.0;component/versionselector.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\VersionSelector.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -104,25 +104,25 @@ namespace VisualGGPK2
                 Title += " (BundleMode)";
 #if !DEBUG
             // Version Check
-            try
-            {
-                var http = new HttpClient
-                {
-                    Timeout = TimeSpan.FromSeconds(2)
-                };
-                http.DefaultRequestHeaders.Add("User-Agent", "VisualGGPK2UI");
-                var json = await http.GetStringAsync("https://api.github.com/repos/vmv/VisualGGPK2UI/releases");
-                var match = Regex.Match(json, "(?<=\"tag_name\":\"v).*?(?=\")");
-                var versionText = $"{currentVersion.Major}.{currentVersion.Minor}.{currentVersion.Build}";
-                if (match.Success && match.Value != versionText && MessageBox.Show(this, $"Found a new update on GitHub!\n\nCurrent Version: {versionText}\nLatest Version: {match.Value}\n\nDownload now?", "VisualGGPK2UI", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
-                {
-                    Process.Start(new ProcessStartInfo("https://github.com/vmv/VisualGGPK2UI/releases") { UseShellExecute = true });
-                    Close();
-                    return;
-                }
-                http.Dispose();
-            }
-            catch { }
+            //try
+            //{
+            //    var http = new HttpClient
+            //    {
+            //        Timeout = TimeSpan.FromSeconds(2)
+            //    };
+            //    http.DefaultRequestHeaders.Add("User-Agent", "VisualGGPK2UI");
+            //    var json = await http.GetStringAsync("https://api.github.com/repos/vmv/VisualGGPK2UI/releases");
+            //    var match = Regex.Match(json, "(?<=\"tag_name\":\"v).*?(?=\")");
+            //    var versionText = $"{currentVersion.Major}.{currentVersion.Minor}.{currentVersion.Build}";
+            //    if (match.Success && match.Value != versionText && MessageBox.Show(this, $"Found a new update on GitHub!\n\nCurrent Version: {versionText}\nLatest Version: {match.Value}\n\nDownload now?", "VisualGGPK2UI", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            //    {
+            //        Process.Start(new ProcessStartInfo("https://github.com/vmv/VisualGGPK2UI/releases") { UseShellExecute = true });
+            //        Close();
+            //        return;
+            //    }
+            //    http.Dispose();
+            //}
+            //catch { }
 #endif
             // GGPK Selection
             if (FilePath == null)
@@ -1602,7 +1602,16 @@ namespace VisualGGPK2
         loop:
             try
             {
-                MessageBox.Show(this, "GGPK file is now closed, you can open the game!\nClose the game and click OK to reopen the GGPK file and return to VisualGGPK2", "Released File Handle", MessageBoxButton.OK, MessageBoxImage.Information);
+                var uiMessageBox = new Wpf.Ui.Controls.MessageBox
+                {
+                    Title = "Open Game",
+                    Content =
+                "Edit Mode is now closed, you can open the game!\nClose the game and click OK to enter in Edit Mode again!",
+                };
+                var result = await uiMessageBox.ShowDialogAsync();
+
+
+                //MessageBox.Show(this, "GGPK file is now closed, you can open the game!\nClose the game and click OK to reopen the GGPK file and return to VisualGGPK2", "Released File Handle", MessageBoxButton.OK, MessageBoxImage.Information);
                 fi = new FileInfo(FilePath);
                 if (fi.LastWriteTimeUtc != t || fi.Length != l)
                 {

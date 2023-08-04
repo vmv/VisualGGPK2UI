@@ -19,6 +19,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="silver_cube.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="Assets\silver_cube.ico" />
   </ItemGroup>
 
@@ -37,6 +41,10 @@
     <ProjectReference Include="..\LibDat2\LibDat2.csproj" />
     <ProjectReference Include="..\LibGGPK2\LibGGPK2.csproj" />
     <ProjectReference Include="D:\Projects\wpfui\src\Wpf.Ui\Wpf.Ui.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="silver_cube.png" />
   </ItemGroup>
 
   <ItemGroup>
