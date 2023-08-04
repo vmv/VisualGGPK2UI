@@ -119,7 +119,7 @@
             <ui:TextBox
                 x:Name="FilterBox"
                 Height="30"
-                Margin="2,2,0,2"
+                Margin="5,2,0,2"
                 Padding="0,0,20,0"
                 HorizontalContentAlignment="Right"
                 VerticalContentAlignment="Center"
@@ -132,16 +132,15 @@
             <CheckBox
                 x:Name="RegexCheckBox"
                 Grid.Column="0"
-                Width="20"
-                Height="20"
-                Margin="8,0,0,0"
+                Width="30"
+                Height="30"
                 Padding="0,0,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 HorizontalContentAlignment="Center"
                 IsChecked="True"
                 OpacityMask="Black"
-                ToolTipService.ToolTip="use Regex (pet$)" />
+                ToolTipService.ToolTip="use Regex (pet$)" MinWidth="30" MinHeight="30" Margin="10,0,0,0" />
 
             <ui:Button
                 x:Name="FilterButton"
@@ -325,7 +324,7 @@
                     ToolTipService.ToolTip="allow game to be opened" />
                 <ui:TextBlock
                     Grid.Column="0"
-                    Margin="0,150,0,0"
+                    Margin="0,80,0,0"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
                     <Run FontWeight="Black" Foreground="#FF2E7ED4">
@@ -394,10 +393,21 @@
                     Content="E"
                     FontSize="20"
                     ToolTipService.ToolTip="open Epic" />
+            </StackPanel>
+            <StackPanel Grid.Column="0" Orientation="Vertical" VerticalAlignment="Bottom" Height="70" Width="50">
+                <ui:TextBlock
+                    Grid.Column="0"
+                    Margin="0,0,0,5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom">
+                    <Run FontWeight="Black" Foreground="DarkGray">
+                        v1.6
+                    </Run>
+                </ui:TextBlock>
                 <ui:Image
                     Width="35"
                     Height="30"
-                    Margin="0,140,0,0"
+                    Margin="0,0,0,0"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Bottom"
                     BorderBrush="#33000000"
@@ -448,9 +458,9 @@
                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
                 ScrollViewer.VerticalScrollBarVisibility="Auto"
                 ShowLineNumbers="True"
-                SnapsToDevicePixels="False"
+                SnapsToDevicePixels="True"
                 SyntaxHighlighting="C#"
-                UseLayoutRounding="False"
+                UseLayoutRounding="True"
                 WordWrap="True" />
 
             <Canvas
