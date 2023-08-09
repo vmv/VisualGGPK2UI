@@ -34,53 +34,6 @@
           }
         }
       },
-      "Microsoft.Win32.SystemEvents/7.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/Microsoft.Win32.SystemEvents.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/Microsoft.Win32.SystemEvents.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
-      "System.Drawing.Common/7.0.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Win32.SystemEvents": "7.0.0"
-        },
-        "compile": {
-          "lib/net7.0/System.Drawing.Common.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/System.Drawing.Common.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/net7.0/System.Drawing.Common.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
       "System.Runtime.CompilerServices.Unsafe/4.5.2": {
         "type": "package",
         "compile": {
@@ -93,6 +46,22 @@
             "related": ".xml"
           }
         }
+      },
+      "WPF-UI/3.0.0-preview.5": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0-windows7.0/Wpf.Ui.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0-windows7.0/Wpf.Ui.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
       },
       "DirectXTexWrapper/1.0.0": {
         "type": "project",
@@ -135,22 +104,6 @@
         "runtime": {
           "bin/placeholder/LibGGPK2.dll": {}
         }
-      },
-      "WPF-UI/3.0.0-preview.4": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "System.Drawing.Common": "7.0.0"
-        },
-        "compile": {
-          "bin/placeholder/WPF-UI.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/WPF-UI.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App.WPF"
-        ]
       }
     }
   },
@@ -201,74 +154,6 @@
         "lib/netstandard2.0/BrotliSharpLib.xml"
       ]
     },
-    "Microsoft.Win32.SystemEvents/7.0.0": {
-      "sha512": "2nXPrhdAyAzir0gLl8Yy8S5Mnm/uBSQQA7jEsILOS1MTyS7DbmV1NgViMtvV1sfCD1ebITpNwb1NIinKeJgUVQ==",
-      "type": "package",
-      "path": "microsoft.win32.systemevents/7.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/Microsoft.Win32.SystemEvents.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/Microsoft.Win32.SystemEvents.targets",
-        "lib/net462/Microsoft.Win32.SystemEvents.dll",
-        "lib/net462/Microsoft.Win32.SystemEvents.xml",
-        "lib/net6.0/Microsoft.Win32.SystemEvents.dll",
-        "lib/net6.0/Microsoft.Win32.SystemEvents.xml",
-        "lib/net7.0/Microsoft.Win32.SystemEvents.dll",
-        "lib/net7.0/Microsoft.Win32.SystemEvents.xml",
-        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
-        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
-        "microsoft.win32.systemevents.7.0.0.nupkg.sha512",
-        "microsoft.win32.systemevents.nuspec",
-        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll",
-        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.xml",
-        "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.dll",
-        "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.xml",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "System.Drawing.Common/7.0.0": {
-      "sha512": "KIX+oBU38pxkKPxvLcLfIkOV5Ien8ReN78wro7OF5/erwcmortzeFx+iBswlh2Vz6gVne0khocQudGwaO1Ey6A==",
-      "type": "package",
-      "path": "system.drawing.common/7.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Drawing.Common.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Drawing.Common.targets",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net462/System.Drawing.Common.dll",
-        "lib/net462/System.Drawing.Common.xml",
-        "lib/net6.0/System.Drawing.Common.dll",
-        "lib/net6.0/System.Drawing.Common.xml",
-        "lib/net7.0/System.Drawing.Common.dll",
-        "lib/net7.0/System.Drawing.Common.xml",
-        "lib/netstandard2.0/System.Drawing.Common.dll",
-        "lib/netstandard2.0/System.Drawing.Common.xml",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "runtimes/win/lib/net6.0/System.Drawing.Common.dll",
-        "runtimes/win/lib/net6.0/System.Drawing.Common.xml",
-        "runtimes/win/lib/net7.0/System.Drawing.Common.dll",
-        "runtimes/win/lib/net7.0/System.Drawing.Common.xml",
-        "system.drawing.common.7.0.0.nupkg.sha512",
-        "system.drawing.common.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
     "System.Runtime.CompilerServices.Unsafe/4.5.2": {
       "sha512": "wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
       "type": "package",
@@ -294,6 +179,31 @@
         "version.txt"
       ]
     },
+    "WPF-UI/3.0.0-preview.5": {
+      "sha512": "7OF3MA9X2UPfkqcTI1WACg5laRbWVQSvdk8soCBETMJG/4LtDVyMzERMhrKNJEP+/wTxrZu13qqlrGR4C5rpGA==",
+      "type": "package",
+      "path": "wpf-ui/3.0.0-preview.5",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net462/Wpf.Ui.dll",
+        "lib/net462/Wpf.Ui.xml",
+        "lib/net472/Wpf.Ui.dll",
+        "lib/net472/Wpf.Ui.xml",
+        "lib/net481/Wpf.Ui.dll",
+        "lib/net481/Wpf.Ui.xml",
+        "lib/net6.0-windows7.0/Wpf.Ui.dll",
+        "lib/net6.0-windows7.0/Wpf.Ui.xml",
+        "lib/net7.0-windows7.0/Wpf.Ui.dll",
+        "lib/net7.0-windows7.0/Wpf.Ui.xml",
+        "tools/VisualStudioToolsManifest.xml",
+        "wpf-ui.3.0.0-preview.5.nupkg.sha512",
+        "wpf-ui.nuspec",
+        "wpfui.png"
+      ]
+    },
     "DirectXTexWrapper/1.0.0": {
       "type": "project",
       "path": "../DirectXTexWrapper/DirectXTexWrapper.vcxproj",
@@ -313,11 +223,6 @@
       "type": "project",
       "path": "../LibGGPK2/LibGGPK2.csproj",
       "msbuildProject": "../LibGGPK2/LibGGPK2.csproj"
-    },
-    "WPF-UI/3.0.0-preview.4": {
-      "type": "project",
-      "path": "D:\\Projects\\wpfui\\src\\Wpf.Ui\\Wpf.Ui.csproj",
-      "msbuildProject": "D:\\Projects\\wpfui\\src\\Wpf.Ui\\Wpf.Ui.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -327,7 +232,7 @@
       "DirectXTexWrapper >= 1.0.0",
       "LibDat2 >= 0.16.1",
       "LibGGPK2 >= 0.16.0",
-      "WPF-UI >= 3.0.0-preview.4"
+      "WPF-UI >= 3.0.0-preview.5"
     ]
   },
   "packageFolders": {
@@ -335,13 +240,13 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "0.16.1",
+    "version": "1.7.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\VisualGGPK2\\VisualGGPK2.csproj",
+      "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI\\VisualGGPK2\\VisualGGPK2.csproj",
       "projectName": "VisualGGPK2",
-      "projectPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\VisualGGPK2\\VisualGGPK2.csproj",
+      "projectPath": "E:\\eProjects\\VisualGGPK2UI\\VisualGGPK2\\VisualGGPK2.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\VisualGGPK2\\obj\\",
+      "outputPath": "E:\\eProjects\\VisualGGPK2UI\\VisualGGPK2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -363,17 +268,14 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj": {
-              "projectPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj"
+            "E:\\eProjects\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj": {
+              "projectPath": "E:\\eProjects\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj"
             },
-            "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj": {
-              "projectPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj"
+            "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj": {
+              "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj"
             },
-            "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibGGPK2\\LibGGPK2.csproj": {
-              "projectPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibGGPK2\\LibGGPK2.csproj"
-            },
-            "D:\\Projects\\wpfui\\src\\Wpf.Ui\\Wpf.Ui.csproj": {
-              "projectPath": "D:\\Projects\\wpfui\\src\\Wpf.Ui\\Wpf.Ui.csproj"
+            "E:\\eProjects\\VisualGGPK2UI\\LibGGPK2\\LibGGPK2.csproj": {
+              "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibGGPK2\\LibGGPK2.csproj"
             }
           }
         }
@@ -395,6 +297,10 @@
           "BrotliSharpLib": {
             "target": "Package",
             "version": "[0.3.3, )"
+          },
+          "WPF-UI": {
+            "target": "Package",
+            "version": "[3.0.0-preview.5, )"
           }
         },
         "imports": [
@@ -416,7 +322,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

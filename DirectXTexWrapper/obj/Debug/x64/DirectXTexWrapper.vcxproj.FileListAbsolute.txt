@@ -8,3 +8,7 @@ C:\Users\Administrator\source\repos\VisualGGPK2UI\DirectXTexWrapper\bin\Debug\x6
 C:\Users\Administrator\source\repos\VisualGGPK2UI\DirectXTexWrapper\bin\Debug\x64\DirectXTexWrapper.runtimeconfig.json
 C:\Users\Administrator\source\repos\VisualGGPK2UI\DirectXTexWrapper\obj\Debug\x64\DirectXTexWrapper.vcxproj.AssemblyReference.cache
 C:\Users\Administrator\source\repos\VisualGGPK2UI\DirectXTexWrapper\obj\Debug\x64\DirectXTexWrapper.genruntimeconfig.cache
+E:\eProjects\VisualGGPK2UI\DirectXTexWrapper\bin\Debug\x64\Ijwhost.dll
+E:\eProjects\VisualGGPK2UI\DirectXTexWrapper\bin\Debug\x64\DirectXTexWrapper.deps.json
+E:\eProjects\VisualGGPK2UI\DirectXTexWrapper\bin\Debug\x64\DirectXTexWrapper.runtimeconfig.json
+E:\eProjects\VisualGGPK2UI\DirectXTexWrapper\obj\Debug\x64\DirectXTexWrapper.genruntimeconfig.cache

@@ -14,11 +14,11 @@
   "project": {
     "version": "0.16.1",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj",
+      "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj",
       "projectName": "LibDat2",
-      "projectPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj",
+      "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibDat2\\obj\\",
+      "outputPath": "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

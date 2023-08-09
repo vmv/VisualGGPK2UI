@@ -6,15 +6,14 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "VisualGGPK2/0.16.1": {
+      "VisualGGPK2/1.7.0": {
         "dependencies": {
           "AvalonEdit": "6.3.0.90",
           "BrotliSharpLib": "0.3.3",
           "DirectXTexWrapper": "1.0.0",
           "LibDat2": "0.16.1",
           "LibGGPK2": "0.16.0",
-          "WPF-UI": "3.0.0-preview.4",
-          "Wpf.Ui": "3.0.0.0"
+          "WPF-UI": "3.0.0-preview.5"
         },
         "runtime": {
           "VisualGGPK2.dll": {}
@@ -39,13 +38,15 @@
           }
         }
       },
-      "Microsoft.Win32.SystemEvents/7.0.0": {},
-      "System.Drawing.Common/7.0.0": {
-        "dependencies": {
-          "Microsoft.Win32.SystemEvents": "7.0.0"
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {},
+      "WPF-UI/3.0.0-preview.5": {
+        "runtime": {
+          "lib/net7.0-windows7.0/Wpf.Ui.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
+          }
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.5.2": {},
       "DirectXTexWrapper/1.0.0": {
         "runtime": {
           "DirectXTexWrapper.dll": {}
@@ -68,27 +69,11 @@
         "runtime": {
           "LibGGPK2.dll": {}
         }
-      },
-      "WPF-UI/3.0.0-preview.4": {
-        "dependencies": {
-          "System.Drawing.Common": "7.0.0"
-        },
-        "runtime": {
-          "Wpf.Ui.dll": {}
-        }
-      },
-      "Wpf.Ui/3.0.0.0": {
-        "runtime": {
-          "Wpf.Ui.dll": {
-            "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.0.0"
-          }
-        }
       }
     }
   },
   "libraries": {
-    "VisualGGPK2/0.16.1": {
+    "VisualGGPK2/1.7.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -107,26 +92,19 @@
       "path": "brotlisharplib/0.3.3",
       "hashPath": "brotlisharplib.0.3.3.nupkg.sha512"
     },
-    "Microsoft.Win32.SystemEvents/7.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-2nXPrhdAyAzir0gLl8Yy8S5Mnm/uBSQQA7jEsILOS1MTyS7DbmV1NgViMtvV1sfCD1ebITpNwb1NIinKeJgUVQ==",
-      "path": "microsoft.win32.systemevents/7.0.0",
-      "hashPath": "microsoft.win32.systemevents.7.0.0.nupkg.sha512"
-    },
-    "System.Drawing.Common/7.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-KIX+oBU38pxkKPxvLcLfIkOV5Ien8ReN78wro7OF5/erwcmortzeFx+iBswlh2Vz6gVne0khocQudGwaO1Ey6A==",
-      "path": "system.drawing.common/7.0.0",
-      "hashPath": "system.drawing.common.7.0.0.nupkg.sha512"
-    },
     "System.Runtime.CompilerServices.Unsafe/4.5.2": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
       "path": "system.runtime.compilerservices.unsafe/4.5.2",
       "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+    },
+    "WPF-UI/3.0.0-preview.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7OF3MA9X2UPfkqcTI1WACg5laRbWVQSvdk8soCBETMJG/4LtDVyMzERMhrKNJEP+/wTxrZu13qqlrGR4C5rpGA==",
+      "path": "wpf-ui/3.0.0-preview.5",
+      "hashPath": "wpf-ui.3.0.0-preview.5.nupkg.sha512"
     },
     "DirectXTexWrapper/1.0.0": {
       "type": "project",
@@ -145,16 +123,6 @@
     },
     "LibGGPK2/0.16.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "WPF-UI/3.0.0-preview.4": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Wpf.Ui/3.0.0.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

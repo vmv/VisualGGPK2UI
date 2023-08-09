@@ -9,7 +9,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <!--<ui:ThemesDictionary Theme="Dark" />-->
-                <ui:ThemesDictionary Theme="Light" />
+                <ui:ThemesDictionary ApplicationTheme="Light" />
                 <!--<ui:ThemesDictionary Theme="Unknown" />-->
                 <!--<ui:ThemesDictionary Theme="vLight" />-->
                 <ui:ControlsDictionary />

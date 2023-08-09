@@ -1,14 +1,14 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\VisualGGPK2\\VisualGGPK2.csproj": {}
+    "E:\\eProjects\\VisualGGPK2UI\\VisualGGPK2\\VisualGGPK2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj": {
+    "E:\\eProjects\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj",
+        "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj",
         "projectName": "DirectXTexWrapper",
-        "projectPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj",
+        "projectPath": "E:\\eProjects\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj",
         "frameworks": {
           "native": {
             "projectReferences": {}
@@ -19,14 +19,14 @@
         "native": {}
       }
     },
-    "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj": {
+    "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj": {
       "version": "2.7.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj",
+        "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj",
         "projectName": "LibBundle",
-        "projectPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj",
+        "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibBundle\\obj\\",
+        "outputPath": "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -75,18 +75,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj": {
+    "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj": {
       "version": "0.16.1",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj",
+        "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj",
         "projectName": "LibDat2",
-        "projectPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj",
+        "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibDat2\\obj\\",
+        "outputPath": "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -135,18 +135,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibGGPK2\\LibGGPK2.csproj": {
+    "E:\\eProjects\\VisualGGPK2UI\\LibGGPK2\\LibGGPK2.csproj": {
       "version": "0.16.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibGGPK2\\LibGGPK2.csproj",
+        "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI\\LibGGPK2\\LibGGPK2.csproj",
         "projectName": "LibGGPK2",
-        "projectPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibGGPK2\\LibGGPK2.csproj",
+        "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibGGPK2\\LibGGPK2.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibGGPK2\\obj\\",
+        "outputPath": "E:\\eProjects\\VisualGGPK2UI\\LibGGPK2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -168,8 +168,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj"
+              "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj": {
+                "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj"
               }
             }
           }
@@ -199,18 +199,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\VisualGGPK2\\VisualGGPK2.csproj": {
-      "version": "0.16.1",
+    "E:\\eProjects\\VisualGGPK2UI\\VisualGGPK2\\VisualGGPK2.csproj": {
+      "version": "1.7.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\VisualGGPK2\\VisualGGPK2.csproj",
+        "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI\\VisualGGPK2\\VisualGGPK2.csproj",
         "projectName": "VisualGGPK2",
-        "projectPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\VisualGGPK2\\VisualGGPK2.csproj",
+        "projectPath": "E:\\eProjects\\VisualGGPK2UI\\VisualGGPK2\\VisualGGPK2.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\VisualGGPK2\\obj\\",
+        "outputPath": "E:\\eProjects\\VisualGGPK2UI\\VisualGGPK2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -232,17 +232,14 @@
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj": {
-                "projectPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj"
+              "E:\\eProjects\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj": {
+                "projectPath": "E:\\eProjects\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj"
               },
-              "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj"
+              "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj": {
+                "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj"
               },
-              "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibGGPK2\\LibGGPK2.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\source\\repos\\VisualGGPK2UI\\LibGGPK2\\LibGGPK2.csproj"
-              },
-              "D:\\Projects\\wpfui\\src\\Wpf.Ui\\Wpf.Ui.csproj": {
-                "projectPath": "D:\\Projects\\wpfui\\src\\Wpf.Ui\\Wpf.Ui.csproj"
+              "E:\\eProjects\\VisualGGPK2UI\\LibGGPK2\\LibGGPK2.csproj": {
+                "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibGGPK2\\LibGGPK2.csproj"
               }
             }
           }
@@ -264,6 +261,10 @@
             "BrotliSharpLib": {
               "target": "Package",
               "version": "[0.3.3, )"
+            },
+            "WPF-UI": {
+              "target": "Package",
+              "version": "[3.0.0-preview.5, )"
             }
           },
           "imports": [
@@ -285,112 +286,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "D:\\Projects\\wpfui\\src\\Wpf.Ui\\Wpf.Ui.csproj": {
-      "version": "3.0.0-preview.4",
-      "restore": {
-        "projectUniqueName": "D:\\Projects\\wpfui\\src\\Wpf.Ui\\Wpf.Ui.csproj",
-        "projectName": "WPF-UI",
-        "projectPath": "D:\\Projects\\wpfui\\src\\Wpf.Ui\\Wpf.Ui.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\wpfui\\src\\Wpf.Ui\\obj\\",
-        "projectStyle": "PackageReference",
-        "crossTargeting": true,
-        "centralPackageVersionsManagementEnabled": true,
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net7.0-windows"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net7.0-windows7.0": {
-            "targetAlias": "net7.0-windows",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net7.0-windows7.0": {
-          "targetAlias": "net7.0-windows",
-          "dependencies": {
-            "Microsoft.SourceLink.GitHub": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[1.1.1, )",
-              "versionCentrallyManaged": true
-            },
-            "PolySharp": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[1.13.2, )",
-              "versionCentrallyManaged": true
-            },
-            "System.Drawing.Common": {
-              "target": "Package",
-              "version": "[7.0.0, )",
-              "versionCentrallyManaged": true
-            }
-          },
-          "centralPackageVersions": {
-            "CommunityToolkit.Mvvm": "[8.0.0, )",
-            "coverlet.collector": "[3.2.0, )",
-            "Microsoft.CodeAnalysis.CSharp": "[4.4.0, )",
-            "Microsoft.Extensions.Hosting": "[7.0.0, )",
-            "Microsoft.NET.Test.Sdk": "[17.5.0, )",
-            "Microsoft.SourceLink.GitHub": "[1.1.1, )",
-            "Microsoft.VisualStudio.CoreUtility": "[17.2.3194, )",
-            "Microsoft.VisualStudio.SDK": "[17.3.32804.24, )",
-            "Microsoft.VSSDK.BuildTools": "[17.4.2118, )",
-            "Microsoft.Web.WebView2": "[1.0.1462.37, )",
-            "Microsoft.Windows.SDK.BuildTools": "[10.0.22621.755, )",
-            "Moq": "[4.18.4, )",
-            "NativeMethods": "[0.0.3, )",
-            "PolySharp": "[1.13.2, )",
-            "System.Drawing.Common": "[7.0.0, )",
-            "System.ValueTuple": "[4.5.0, )",
-            "xunit": "[2.4.2, )",
-            "xunit.runner.visualstudio": "[2.4.5, )"
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            },
-            "Microsoft.WindowsDesktop.App.WPF": {
-              "privateAssets": "none"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

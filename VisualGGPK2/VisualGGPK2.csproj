@@ -4,7 +4,7 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <Authors>aianlinb</Authors>
     <Copyright>Copyright © 2020-2023 aianlinb</Copyright>
-    <Version>0.16.1</Version>
+    <Version>1.7.0</Version>
     <OutputType>WinExe</OutputType>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
@@ -34,13 +34,13 @@
   <ItemGroup>
     <PackageReference Include="AvalonEdit" Version="6.3.0.90" />
     <PackageReference Include="BrotliSharpLib" Version="0.3.3" />
+    <PackageReference Include="WPF-UI" Version="3.0.0-preview.5" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DirectXTexWrapper\DirectXTexWrapper.vcxproj" />
     <ProjectReference Include="..\LibDat2\LibDat2.csproj" />
     <ProjectReference Include="..\LibGGPK2\LibGGPK2.csproj" />
-    <ProjectReference Include="D:\Projects\wpfui\src\Wpf.Ui\Wpf.Ui.csproj" />
   </ItemGroup>
 
   <ItemGroup>

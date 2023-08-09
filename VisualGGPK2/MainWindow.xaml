@@ -5,10 +5,10 @@
     xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     Title="VisualGGPK2"
-    Width="1100"
-    Height="700"
-    MinWidth="1100"
-    MinHeight="700"
+    Width="1300"
+    Height="800"
+    MinWidth="1300"
+    MinHeight="800"
     AllowDrop="True"
     AllowsTransparency="True"
     Background="{x:Null}"
@@ -109,7 +109,7 @@
                 <ColumnDefinition Width="130" />
                 <ColumnDefinition Width="410" />
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="130" />
+                <ColumnDefinition Width="150" />
                 <!--  X Close Button  -->
             </Grid.ColumnDefinitions>
             <Rectangle Grid.Column="0" Fill="#f5f5f5" />
@@ -134,13 +134,16 @@
                 Grid.Column="0"
                 Width="30"
                 Height="30"
+                MinWidth="30"
+                MinHeight="30"
+                Margin="10,0,0,0"
                 Padding="0,0,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 HorizontalContentAlignment="Center"
                 IsChecked="True"
                 OpacityMask="Black"
-                ToolTipService.ToolTip="use Regex (pet$)" MinWidth="30" MinHeight="30" Margin="10,0,0,0" />
+                ToolTipService.ToolTip="use Regex (pet$)" />
 
             <ui:Button
                 x:Name="FilterButton"
@@ -275,6 +278,30 @@
                     VerticalContentAlignment="Center"
                     BorderThickness="1,0,1,0" />
 
+                <CheckBox
+                    x:Name="TextWrap"
+                    Width="30"
+                    Height="30"
+                    MinWidth="30"
+                    MinHeight="30"
+                    Margin="0"
+                    Padding="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    IsChecked="{Binding ElementName=TextView, Path=WordWrap}"
+                    OpacityMask="Black"
+                    ToolTipService.ToolTip="text wrap" />
+
+                <Separator
+                    Grid.Column="2"
+                    Height="25"
+                    Margin="0"
+                    HorizontalAlignment="Left"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    BorderThickness="1,0,1,0" />
+
                 <ui:Button
                     x:Name="ButtonDelete"
                     Grid.Column="2"
@@ -304,7 +331,10 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Rectangle Grid.Column="0" Fill="#f5f5f5" />
-            <Rectangle Grid.Column="1" Fill="#fff" />
+            <Rectangle
+                Grid.Column="1"
+                Fill="#fff"
+                Stroke="#FFD8D8D8" />
             <Rectangle Grid.Column="2" Fill="#fff" />
             <GridSplitter Grid.Column="1" Width="5" />
 
@@ -381,7 +411,7 @@
                     Content="T"
                     FontSize="20"
                     ToolTipService.ToolTip="open Tencent" />
-                <ui:Button
+                <!--<ui:Button
                     x:Name="Epic"
                     Grid.Column="0"
                     Width="35"
@@ -392,16 +422,21 @@
                     VerticalAlignment="Center"
                     Content="E"
                     FontSize="20"
-                    ToolTipService.ToolTip="open Epic" />
+                    ToolTipService.ToolTip="open Epic" />-->
             </StackPanel>
-            <StackPanel Grid.Column="0" Orientation="Vertical" VerticalAlignment="Bottom" Height="70" Width="50">
+            <StackPanel
+                Grid.Column="0"
+                Width="50"
+                Height="70"
+                VerticalAlignment="Bottom"
+                Orientation="Vertical">
                 <ui:TextBlock
                     Grid.Column="0"
                     Margin="0,0,0,5"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Bottom">
                     <Run FontWeight="Black" Foreground="DarkGray">
-                        v1.6
+                        v1.7
                     </Run>
                 </ui:TextBlock>
                 <ui:Image

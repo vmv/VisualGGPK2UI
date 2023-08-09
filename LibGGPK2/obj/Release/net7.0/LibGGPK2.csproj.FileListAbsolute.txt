@@ -28,3 +28,13 @@ C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibGGPK2\obj\Release\net7.
 C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibGGPK2\obj\Release\net7.0\LibGGPK2.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibGGPK2\obj\Release\net7.0\LibGGPK2.csproj.CopyComplete
 C:\Users\Administrator\source\repos\VisualGGPK2UI - 1\LibGGPK2\obj\Release\net7.0\LibGGPK2.dll
+E:\eProjects\VisualGGPK2UI\LibGGPK2\bin\Release\net7.0\LibGGPK2.deps.json
+E:\eProjects\VisualGGPK2UI\LibGGPK2\bin\Release\net7.0\LibGGPK2.dll
+E:\eProjects\VisualGGPK2UI\LibGGPK2\bin\Release\net7.0\LibBundle.dll
+E:\eProjects\VisualGGPK2UI\LibGGPK2\obj\Release\net7.0\LibGGPK2.csproj.AssemblyReference.cache
+E:\eProjects\VisualGGPK2UI\LibGGPK2\obj\Release\net7.0\LibGGPK2.GeneratedMSBuildEditorConfig.editorconfig
+E:\eProjects\VisualGGPK2UI\LibGGPK2\obj\Release\net7.0\LibGGPK2.AssemblyInfoInputs.cache
+E:\eProjects\VisualGGPK2UI\LibGGPK2\obj\Release\net7.0\LibGGPK2.AssemblyInfo.cs
+E:\eProjects\VisualGGPK2UI\LibGGPK2\obj\Release\net7.0\LibGGPK2.csproj.CoreCompileInputs.cache
+E:\eProjects\VisualGGPK2UI\LibGGPK2\obj\Release\net7.0\LibGGPK2.csproj.CopyComplete
+E:\eProjects\VisualGGPK2UI\LibGGPK2\obj\Release\net7.0\LibGGPK2.dll

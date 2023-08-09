@@ -24,3 +24,15 @@ C:\Users\Administrator\source\repos\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\LibDa
 C:\Users\Administrator\source\repos\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\refint\LibDat2.dll
 C:\Users\Administrator\source\repos\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\LibDat2.xml
 C:\Users\Administrator\source\repos\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\ref\LibDat2.dll
+E:\eProjects\VisualGGPK2UI\LibDat2\bin\Debug\net7.0\DatDefinitions.json
+E:\eProjects\VisualGGPK2UI\LibDat2\bin\Debug\net7.0\LibDat2.deps.json
+E:\eProjects\VisualGGPK2UI\LibDat2\bin\Debug\net7.0\LibDat2.dll
+E:\eProjects\VisualGGPK2UI\LibDat2\bin\Debug\net7.0\LibDat2.xml
+E:\eProjects\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\LibDat2.GeneratedMSBuildEditorConfig.editorconfig
+E:\eProjects\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\LibDat2.AssemblyInfoInputs.cache
+E:\eProjects\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\LibDat2.AssemblyInfo.cs
+E:\eProjects\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\LibDat2.csproj.CoreCompileInputs.cache
+E:\eProjects\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\LibDat2.dll
+E:\eProjects\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\refint\LibDat2.dll
+E:\eProjects\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\LibDat2.xml
+E:\eProjects\VisualGGPK2UI\LibDat2\obj\Debug\net7.0\ref\LibDat2.dll
