@@ -230,6 +230,7 @@
       "AvalonEdit >= 6.3.0.90",
       "BrotliSharpLib >= 0.3.3",
       "DirectXTexWrapper >= 1.0.0",
+      "LibBundle >= 2.7.0",
       "LibDat2 >= 0.16.1",
       "LibGGPK2 >= 0.16.0",
       "WPF-UI >= 3.0.0-preview.5"
@@ -240,7 +241,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "1.7.0",
+    "version": "1.8.0",
     "restore": {
       "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI\\VisualGGPK2\\VisualGGPK2.csproj",
       "projectName": "VisualGGPK2",
@@ -270,6 +271,9 @@
           "projectReferences": {
             "E:\\eProjects\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj": {
               "projectPath": "E:\\eProjects\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj"
+            },
+            "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj": {
+              "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj"
             },
             "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj": {
               "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj"

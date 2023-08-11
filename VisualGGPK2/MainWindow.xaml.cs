@@ -34,7 +34,7 @@ using PixelFormat = System.Windows.Media.PixelFormat;
 
 namespace VisualGGPK2
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow : Wpf.Ui.Controls.FluentWindow
     {
         public static string Version;
         public GGPKContainer ggpkContainer;

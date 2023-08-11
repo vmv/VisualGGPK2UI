@@ -4,7 +4,7 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <Authors>aianlinb</Authors>
     <Copyright>Copyright © 2020-2023 aianlinb</Copyright>
-    <Version>1.7.0</Version>
+    <Version>1.8</Version>
     <OutputType>WinExe</OutputType>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
@@ -39,6 +39,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DirectXTexWrapper\DirectXTexWrapper.vcxproj" />
+    <ProjectReference Include="..\LibBundle\LibBundle.csproj" />
     <ProjectReference Include="..\LibDat2\LibDat2.csproj" />
     <ProjectReference Include="..\LibGGPK2\LibGGPK2.csproj" />
   </ItemGroup>

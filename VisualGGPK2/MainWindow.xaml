@@ -1,16 +1,16 @@
-﻿<Window
+﻿<ui:FluentWindow
     x:Class="VisualGGPK2.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    x:Name="MainFluentWindow"
     Title="VisualGGPK2"
     Width="1300"
     Height="800"
     MinWidth="1300"
     MinHeight="800"
     AllowDrop="True"
-    AllowsTransparency="True"
     Background="{x:Null}"
     BorderBrush="#FF2E7ED4"
     BorderThickness="1,1,1,1"
@@ -19,7 +19,7 @@
     FontFamily="Verdana"
     Foreground="{x:Null}"
     Loaded="OnLoaded"
-    ResizeMode="CanResizeWithGrip"
+    ResizeMode="CanResize"
     SnapsToDevicePixels="True"
     UseLayoutRounding="True"
     WindowStartupLocation="CenterScreen"
@@ -164,9 +164,9 @@
                 VerticalAlignment="Center">
                 <Run
                     FontFamily="Verdana"
-                    FontSize="12"
+                    FontSize="14"
                     FontWeight="Black"
-                    Foreground="DarkGray">
+                    Foreground="Gray">
                     VisualGGPK2
                 </Run>
                 <Label FontSize="11" Foreground="#FF2E7ED4">UI</Label>
@@ -436,7 +436,7 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Bottom">
                     <Run FontWeight="Black" Foreground="DarkGray">
-                        v1.7
+                        v1.8
                     </Run>
                 </ui:TextBlock>
                 <ui:Image
@@ -627,18 +627,22 @@
         <!--  Footer  -->
         <Grid Grid.Row="2" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width=".20*" />
-                <ColumnDefinition Width=".15*" />
-                <ColumnDefinition Width=".25*" />
-                <ColumnDefinition Width=".20*" />
+                <ColumnDefinition Width="325*" />
+                <ColumnDefinition Width="243*" />
+                <ColumnDefinition Width="406*" />
+                <ColumnDefinition Width="260*" />
+                <ColumnDefinition Width="64*" />
             </Grid.ColumnDefinitions>
 
             <Rectangle Grid.Column="0" Fill="#f5f5f5" />
             <Rectangle Grid.Column="1" Fill="#f5f5f5" />
             <Rectangle Grid.Column="2" Fill="#f5f5f5" />
-            <Rectangle Grid.Column="3" Fill="#f5f5f5" />
+            <Rectangle
+                Grid.Column="3"
+                Grid.ColumnSpan="2"
+                Fill="#f5f5f5" />
 
-            <ui:TextBlock
+            <!--<ui:TextBlock
                 Grid.Column="0"
                 Margin="5,0,0,0"
                 HorizontalAlignment="Left"
@@ -646,22 +650,23 @@
                 <Run FontWeight="Black" Foreground="#FF797979">
                     offsets:
                 </Run>
-            </ui:TextBlock>
+            </ui:TextBlock>-->
 
             <ui:TextBox
                 x:Name="TextBoxOffset"
                 Grid.Column="0"
-                Height="25"
-                Margin="60,0,0,0"
+                Height="24"
+                Margin="5,0,0,0"
                 Padding="0,0,0,0"
                 VerticalAlignment="Center"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"
                 FontFamily="Verdana"
-                FontSize="12"
-                IsReadOnly="True" />
+                FontSize="14"
+                IsReadOnly="True"
+                PlaceholderText="offsets" />
 
-            <ui:TextBlock
+            <!--<ui:TextBlock
                 Grid.Column="1"
                 Margin="5,0,0,0"
                 HorizontalAlignment="Left"
@@ -669,22 +674,23 @@
                 <Run FontWeight="Black" Foreground="#FF797979">
                     size:
                 </Run>
-            </ui:TextBlock>
+            </ui:TextBlock>-->
 
             <ui:TextBox
                 x:Name="TextBoxSize"
                 Grid.Column="1"
-                Height="25"
-                Margin="40,0,0,0"
+                Height="24"
+                Margin="5,0,0,0"
                 Padding="0,0,0,0"
                 VerticalAlignment="Center"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"
                 FontFamily="Verdana"
-                FontSize="12"
-                IsReadOnly="True" />
+                FontSize="14"
+                IsReadOnly="True"
+                PlaceholderText="size" />
 
-            <ui:TextBlock
+            <!--<ui:TextBlock
                 Grid.Column="2"
                 Margin="5,0,0,0"
                 HorizontalAlignment="Left"
@@ -692,22 +698,23 @@
                 <Run FontWeight="Black" Foreground="#FF797979">
                     hash:
                 </Run>
-            </ui:TextBlock>
+            </ui:TextBlock>-->
 
             <ui:TextBox
                 x:Name="TextBoxHash"
                 Grid.Column="2"
-                Height="25"
-                Margin="45,0,0,0"
+                Height="24"
+                Margin="5,0,0,0"
                 Padding="0,0,0,0"
                 VerticalAlignment="Center"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"
                 FontFamily="Verdana"
-                FontSize="12"
-                IsReadOnly="True" />
+                FontSize="14"
+                IsReadOnly="True"
+                PlaceholderText="hash" />
 
-            <ui:TextBlock
+            <!--<ui:TextBlock
                 Grid.Column="3"
                 Margin="5,0,0,0"
                 HorizontalAlignment="Left"
@@ -715,20 +722,22 @@
                 <Run FontWeight="Black" Foreground="#FF797979">
                     bundle:
                 </Run>
-            </ui:TextBlock>
+            </ui:TextBlock>-->
 
             <ui:TextBox
                 x:Name="TextBoxBundle"
                 Grid.Column="3"
-                Height="25"
-                Margin="60,0,10,0"
+                Grid.ColumnSpan="2"
+                Height="24"
+                Margin="5,0,5,0"
                 Padding="0,0,0,0"
                 VerticalAlignment="Center"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"
                 FontFamily="Verdana"
-                FontSize="12"
-                IsReadOnly="True" />
+                FontSize="14"
+                IsReadOnly="True"
+                PlaceholderText="size" />
         </Grid>
     </Grid>
-</Window>
+</ui:FluentWindow>

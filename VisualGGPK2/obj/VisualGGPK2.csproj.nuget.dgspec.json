@@ -204,7 +204,7 @@
       }
     },
     "E:\\eProjects\\VisualGGPK2UI\\VisualGGPK2\\VisualGGPK2.csproj": {
-      "version": "1.7.0",
+      "version": "1.8.0",
       "restore": {
         "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI\\VisualGGPK2\\VisualGGPK2.csproj",
         "projectName": "VisualGGPK2",
@@ -234,6 +234,9 @@
             "projectReferences": {
               "E:\\eProjects\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj": {
                 "projectPath": "E:\\eProjects\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj"
+              },
+              "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj": {
+                "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj"
               },
               "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj": {
                 "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj"
