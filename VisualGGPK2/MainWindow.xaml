@@ -737,7 +737,7 @@
                 FontFamily="Verdana"
                 FontSize="14"
                 IsReadOnly="True"
-                PlaceholderText="size" />
+                PlaceholderText="bundle" />
         </Grid>
     </Grid>
 </ui:FluentWindow>
