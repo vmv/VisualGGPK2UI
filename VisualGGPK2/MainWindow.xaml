@@ -664,7 +664,8 @@
                 FontFamily="Verdana"
                 FontSize="14"
                 IsReadOnly="True"
-                PlaceholderText="offsets" />
+                PlaceholderText="offsets"
+                ToolTipService.ToolTip="offsets"/>
 
             <!--<ui:TextBlock
                 Grid.Column="1"
@@ -688,7 +689,8 @@
                 FontFamily="Verdana"
                 FontSize="14"
                 IsReadOnly="True"
-                PlaceholderText="size" />
+                PlaceholderText="size"
+                ToolTipService.ToolTip="size"/>
 
             <!--<ui:TextBlock
                 Grid.Column="2"
@@ -712,7 +714,8 @@
                 FontFamily="Verdana"
                 FontSize="14"
                 IsReadOnly="True"
-                PlaceholderText="hash" />
+                PlaceholderText="hash"
+                ToolTipService.ToolTip="hash"/>
 
             <!--<ui:TextBlock
                 Grid.Column="3"
@@ -737,7 +740,8 @@
                 FontFamily="Verdana"
                 FontSize="14"
                 IsReadOnly="True"
-                PlaceholderText="bundle" />
+                PlaceholderText="bundle"
+                ToolTipService.ToolTip="bundle"/>
         </Grid>
     </Grid>
 </ui:FluentWindow>
