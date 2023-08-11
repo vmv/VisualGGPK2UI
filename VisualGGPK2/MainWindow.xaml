@@ -164,9 +164,9 @@
                 VerticalAlignment="Center">
                 <Run
                     FontFamily="Verdana"
-                    FontSize="14"
+                    FontSize="13"
                     FontWeight="Black"
-                    Foreground="Gray">
+                    Foreground="DarkGray">
                     VisualGGPK2
                 </Run>
                 <Label FontSize="11" Foreground="#FF2E7ED4">UI</Label>
@@ -487,7 +487,7 @@
                 FontFamily="Verdana"
                 FontSize="14"
                 Foreground="Black"
-                LineNumbersForeground="LightGray"
+                LineNumbersForeground="Gray"
                 RenderTransformOrigin="0,0"
                 ScrollViewer.CanContentScroll="True"
                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
@@ -519,7 +519,7 @@
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
                 Opacity="0.8">
-                <Run FontWeight="Black" Foreground="#FF797979">
+                <Run FontWeight="Black" Foreground="Gray">
                     copyright © 2020-2023 aianlinb
                 </Run>
             </ui:TextBlock>
