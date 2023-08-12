@@ -97,12 +97,6 @@
             <RowDefinition Height="40" />
         </Grid.RowDefinitions>
 
-        <!--<Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>-->
-
         <!--  Title Bar  -->
         <Grid Grid.Row="0" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
             <Grid.ColumnDefinitions>
@@ -496,7 +490,18 @@
                 SnapsToDevicePixels="True"
                 SyntaxHighlighting="C#"
                 UseLayoutRounding="True"
-                WordWrap="True" />
+                WordWrap="True">
+                <avalonedit:TextEditor.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Command="Undo" />
+                        <MenuItem Command="Redo" />
+                        <Separator />
+                        <MenuItem Command="Cut" />
+                        <MenuItem Command="Copy" />
+                        <MenuItem Command="Paste" />
+                    </ContextMenu>
+                </avalonedit:TextEditor.ContextMenu>
+            </avalonedit:TextEditor>
 
             <Canvas
                 x:Name="ImageView"
@@ -665,7 +670,7 @@
                 FontSize="14"
                 IsReadOnly="True"
                 PlaceholderText="offsets"
-                ToolTipService.ToolTip="offsets"/>
+                ToolTipService.ToolTip="offsets" />
 
             <!--<ui:TextBlock
                 Grid.Column="1"
@@ -690,7 +695,7 @@
                 FontSize="14"
                 IsReadOnly="True"
                 PlaceholderText="size"
-                ToolTipService.ToolTip="size"/>
+                ToolTipService.ToolTip="size" />
 
             <!--<ui:TextBlock
                 Grid.Column="2"
@@ -715,7 +720,7 @@
                 FontSize="14"
                 IsReadOnly="True"
                 PlaceholderText="hash"
-                ToolTipService.ToolTip="hash"/>
+                ToolTipService.ToolTip="hash" />
 
             <!--<ui:TextBlock
                 Grid.Column="3"
@@ -741,7 +746,7 @@
                 FontSize="14"
                 IsReadOnly="True"
                 PlaceholderText="bundle"
-                ToolTipService.ToolTip="bundle"/>
+                ToolTipService.ToolTip="bundle" />
         </Grid>
     </Grid>
 </ui:FluentWindow>
