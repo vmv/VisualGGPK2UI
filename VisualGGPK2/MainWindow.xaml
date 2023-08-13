@@ -106,9 +106,10 @@
                 <ColumnDefinition Width="150" />
                 <!--  X Close Button  -->
             </Grid.ColumnDefinitions>
-            <Rectangle Grid.Column="0" Fill="#f0f0f0" />
-            <Rectangle Grid.Column="1" Fill="#f0f0f0" />
-            <Rectangle Grid.Column="2" Fill="#f0f0f0" />
+            <Rectangle Grid.Column="0" Fill="WhiteSmoke" />
+            <Rectangle Grid.Column="1" Fill="WhiteSmoke" />
+            <Rectangle Grid.Column="2" Fill="WhiteSmoke" />
+            <Rectangle Grid.Column="3" Fill="WhiteSmoke" />
 
             <ui:TextBox
                 x:Name="FilterBox"
@@ -162,7 +163,7 @@
                     FontFamily="Verdana"
                     FontSize="13"
                     FontWeight="Black"
-                    Foreground="DarkGray">
+                    Foreground="Gray">
                     VisualGGPK2
                 </Run>
                 <Label FontSize="11" Foreground="#FF2E7ED4">UI</Label>
@@ -315,7 +316,6 @@
             <ui:TitleBar
                 Grid.Column="3"
                 Height="40"
-                Background="WhiteSmoke"
                 BorderBrush="Black"
                 Foreground="Black" />
         </Grid>
@@ -327,14 +327,11 @@
                 <ColumnDefinition Width="400" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Rectangle Grid.Column="0" Fill="#f0f0f0" />
-            <Rectangle
-                Grid.Column="1"
-                Margin="0,0,0,-1"
-                Fill="#f9f9f9"
-                Stroke="#FFD8D8D8" />
-            <Rectangle Grid.Column="2" Fill="#fff" />
-            <GridSplitter Grid.Column="1" Width="5" />
+
+            <Rectangle Grid.Column="0" Fill="WhiteSmoke" />
+            <Rectangle Grid.Column="1" Fill="#f8f8f8" Stroke="#FFD8D8D8" />
+            <Rectangle Grid.Column="2" Fill="White" />
+            <GridSplitter Grid.Column="1" Width="5" Background="#FFE8E8E8" />
 
             <StackPanel Grid.Column="0" Orientation="Vertical">
                 <ui:Button
@@ -434,7 +431,7 @@
                     Margin="0,0,0,5"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Bottom">
-                    <Run FontWeight="Black" Foreground="DarkGray">
+                    <Run FontWeight="Black" Foreground="Gray">
                         v1.8
                     </Run>
                 </ui:TextBlock>
@@ -456,9 +453,10 @@
                 Height="35"
                 Margin="0,0,5,0"
                 VerticalAlignment="Top"
+                Background="WhiteSmoke"
                 HorizontalContentAlignment="Left"
                 VerticalContentAlignment="Center"
-                FontSize="16"
+                FontSize="14"
                 KeyDown="SearchBox_KeyDown"
                 PlaceholderText="search..." />
 
@@ -499,11 +497,12 @@
                 <avalonedit:TextEditor.ContextMenu>
                     <ContextMenu>
                         <MenuItem Command="Copy" />
-                        <MenuItem Command="Paste" />                        
+                        <MenuItem Command="Paste" />
                         <MenuItem Command="Cut" />
                         <Separator />
                         <MenuItem Command="Undo" />
                         <MenuItem Command="Redo" />
+                        <MenuItem Command="Delete" />
                     </ContextMenu>
                 </avalonedit:TextEditor.ContextMenu>
             </avalonedit:TextEditor>
@@ -525,7 +524,7 @@
 
             <ui:TextBlock
                 Grid.Column="2"
-                Margin="0,0,5,5"
+                Margin="0,0,10,5"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
                 Opacity="0.8">
@@ -647,13 +646,10 @@
                 <ColumnDefinition Width=".35*" />
             </Grid.ColumnDefinitions>
 
-            <Rectangle Grid.Column="0" Fill="#f0f0f0" />
-            <Rectangle Grid.Column="1" Fill="#f0f0f0" />
-            <Rectangle Grid.Column="2" Fill="#f0f0f0" />
-            <Rectangle
-                Grid.Column="3"
-                Grid.ColumnSpan="2"
-                Fill="#f0f0f0" />
+            <Rectangle Grid.Column="0" Fill="WhiteSmoke" />
+            <Rectangle Grid.Column="1" Fill="WhiteSmoke" />
+            <Rectangle Grid.Column="2" Fill="WhiteSmoke" />
+            <Rectangle Grid.Column="3" Fill="WhiteSmoke" />
 
             <!--<ui:TextBlock
                 Grid.Column="0"

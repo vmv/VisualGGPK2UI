@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jhl84j9MJVgZyHmf3a7L4c3pRGcCjovgG4dV4VRHc/uK/KoTuzpQRQ8NjkHV8rj6mpfid3yhez6byHaI6dBnVw==",
+  "dgSpecHash": "TsxusHVWsMl9IoOxwcWTehDZkoUe0qWhN4YlT5LxCMJOkCk5PHdhuUGF2EMzO3tkhO0IzLeR3s8Fl3qyAzn1ow==",
   "success": true,
-  "projectFilePath": "E:\\eProjects\\VisualGGPK2UI\\VisualGGPK2\\VisualGGPK2.csproj",
+  "projectFilePath": "E:\\eProjects\\VisualGGPK2UI - Copy\\VisualGGPK2\\VisualGGPK2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\avalonedit\\6.3.0.90\\avalonedit.6.3.0.90.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\brotlisharplib\\0.3.3\\brotlisharplib.0.3.3.nupkg.sha512",

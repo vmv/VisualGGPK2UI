@@ -8,7 +8,6 @@ using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
@@ -31,6 +30,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using VisualGGPK2.Properties;
 using PixelFormat = System.Windows.Media.PixelFormat;
+//using Wpf.Ui.Controls;
+using TreeViewItem = Wpf.Ui.Controls.TreeViewItem;
 
 namespace VisualGGPK2
 {
@@ -42,12 +43,12 @@ namespace VisualGGPK2
         /// <summary>
         /// Icon of directory on TreeView
         /// </summary>
-        public static readonly BitmapFrame IconDir = BitmapFrame.Create(Assembly.GetExecutingAssembly().GetManifestResourceStream("VisualGGPK2.Resources.dir.ico"));
+        public static readonly BitmapFrame IconDir = BitmapFrame.Create(Assembly.GetExecutingAssembly().GetManifestResourceStream("VisualGGPK2.Resources.blue_dir.ico"));
 
         /// <summary>
         /// Icon of file on TreeView
         /// </summary>
-        public static readonly BitmapFrame IconFile = BitmapFrame.Create(Assembly.GetExecutingAssembly().GetManifestResourceStream("VisualGGPK2.Resources.file.ico"));
+        public static readonly BitmapFrame IconFile = BitmapFrame.Create(Assembly.GetExecutingAssembly().GetManifestResourceStream("VisualGGPK2.Resources.blue_file.ico"));
 
         public static readonly ContextMenu TreeMenu = new();
         public static readonly Encoding Unicode = new UnicodeEncoding(false, true);
@@ -366,7 +367,7 @@ namespace VisualGGPK2
         /// <summary>
         /// Create a element of the TreeView
         /// </summary>
-        public static TreeViewItem CreateNode(RecordTreeNode rtn)
+        public static Wpf.Ui.Controls.TreeViewItem CreateNode(RecordTreeNode rtn)
         {
             var tvi = new TreeViewItem { Tag = rtn, Margin = new Thickness(0, 1, 0, 1) };
             var stack = new StackPanel { Orientation = Orientation.Horizontal };

@@ -12,3 +12,7 @@ E:\eProjects\VisualGGPK2UI\DirectXTexWrapper\bin\Debug\x64\Ijwhost.dll
 E:\eProjects\VisualGGPK2UI\DirectXTexWrapper\bin\Debug\x64\DirectXTexWrapper.deps.json
 E:\eProjects\VisualGGPK2UI\DirectXTexWrapper\bin\Debug\x64\DirectXTexWrapper.runtimeconfig.json
 E:\eProjects\VisualGGPK2UI\DirectXTexWrapper\obj\Debug\x64\DirectXTexWrapper.genruntimeconfig.cache
+E:\eProjects\VisualGGPK2UI - Copy\DirectXTexWrapper\bin\Debug\x64\Ijwhost.dll
+E:\eProjects\VisualGGPK2UI - Copy\DirectXTexWrapper\bin\Debug\x64\DirectXTexWrapper.deps.json
+E:\eProjects\VisualGGPK2UI - Copy\DirectXTexWrapper\bin\Debug\x64\DirectXTexWrapper.runtimeconfig.json
+E:\eProjects\VisualGGPK2UI - Copy\DirectXTexWrapper\obj\Debug\x64\DirectXTexWrapper.genruntimeconfig.cache

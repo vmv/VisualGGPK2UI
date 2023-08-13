@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj": {}
+    "E:\\eProjects\\VisualGGPK2UI - Copy\\LibBundle\\LibBundle.csproj": {}
   },
   "projects": {
-    "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj": {
+    "E:\\eProjects\\VisualGGPK2UI - Copy\\LibBundle\\LibBundle.csproj": {
       "version": "2.7.0",
       "restore": {
-        "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj",
+        "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI - Copy\\LibBundle\\LibBundle.csproj",
         "projectName": "LibBundle",
-        "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj",
+        "projectPath": "E:\\eProjects\\VisualGGPK2UI - Copy\\LibBundle\\LibBundle.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\obj\\",
+        "outputPath": "E:\\eProjects\\VisualGGPK2UI - Copy\\LibBundle\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

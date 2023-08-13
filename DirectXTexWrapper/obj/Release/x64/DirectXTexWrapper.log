@@ -2,4 +2,4 @@
   .NETCoreApp,Version=v6.0.AssemblyAttributes.cpp
   Generating Code...
   LINK : /LTCG specified but no code generation required; remove /LTCG from the link command line to improve linker performance
-  DirectXTexWrapper.vcxproj -> E:\eProjects\VisualGGPK2UI\DirectXTexWrapper\bin\Release\x64\DirectXTexWrapper.dll
+  DirectXTexWrapper.vcxproj -> E:\eProjects\VisualGGPK2UI - Copy\DirectXTexWrapper\bin\Release\x64\DirectXTexWrapper.dll

@@ -98,7 +98,7 @@ namespace VisualGGPK2 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/VisualGGPK2;component/errorwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/VisualGGPK2;V1.8.0.0;component/errorwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ErrorWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

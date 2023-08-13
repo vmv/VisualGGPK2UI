@@ -28,3 +28,13 @@ E:\eProjects\VisualGGPK2UI\LibGGPK2\obj\Debug\net7.0\LibGGPK2.AssemblyInfo.cs
 E:\eProjects\VisualGGPK2UI\LibGGPK2\obj\Debug\net7.0\LibGGPK2.csproj.CoreCompileInputs.cache
 E:\eProjects\VisualGGPK2UI\LibGGPK2\obj\Debug\net7.0\LibGGPK2.csproj.CopyComplete
 E:\eProjects\VisualGGPK2UI\LibGGPK2\obj\Debug\net7.0\LibGGPK2.dll
+E:\eProjects\VisualGGPK2UI - Copy\LibGGPK2\bin\Debug\net7.0\LibGGPK2.deps.json
+E:\eProjects\VisualGGPK2UI - Copy\LibGGPK2\bin\Debug\net7.0\LibGGPK2.dll
+E:\eProjects\VisualGGPK2UI - Copy\LibGGPK2\bin\Debug\net7.0\LibBundle.dll
+E:\eProjects\VisualGGPK2UI - Copy\LibGGPK2\obj\Debug\net7.0\LibGGPK2.csproj.AssemblyReference.cache
+E:\eProjects\VisualGGPK2UI - Copy\LibGGPK2\obj\Debug\net7.0\LibGGPK2.GeneratedMSBuildEditorConfig.editorconfig
+E:\eProjects\VisualGGPK2UI - Copy\LibGGPK2\obj\Debug\net7.0\LibGGPK2.AssemblyInfoInputs.cache
+E:\eProjects\VisualGGPK2UI - Copy\LibGGPK2\obj\Debug\net7.0\LibGGPK2.AssemblyInfo.cs
+E:\eProjects\VisualGGPK2UI - Copy\LibGGPK2\obj\Debug\net7.0\LibGGPK2.csproj.CoreCompileInputs.cache
+E:\eProjects\VisualGGPK2UI - Copy\LibGGPK2\obj\Debug\net7.0\LibGGPK2.csproj.CopyComplete
+E:\eProjects\VisualGGPK2UI - Copy\LibGGPK2\obj\Debug\net7.0\LibGGPK2.dll

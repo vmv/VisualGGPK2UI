@@ -29,3 +29,10 @@ E:\eProjects\VisualGGPK2UI\LibBundle\obj\x64\Release\net7.0\LibBundle.AssemblyIn
 E:\eProjects\VisualGGPK2UI\LibBundle\obj\x64\Release\net7.0\LibBundle.AssemblyInfo.cs
 E:\eProjects\VisualGGPK2UI\LibBundle\obj\x64\Release\net7.0\LibBundle.csproj.CoreCompileInputs.cache
 E:\eProjects\VisualGGPK2UI\LibBundle\obj\x64\Release\net7.0\LibBundle.dll
+E:\eProjects\VisualGGPK2UI - Copy\LibBundle\bin\x64\Release\net7.0\LibBundle.deps.json
+E:\eProjects\VisualGGPK2UI - Copy\LibBundle\bin\x64\Release\net7.0\LibBundle.dll
+E:\eProjects\VisualGGPK2UI - Copy\LibBundle\obj\x64\Release\net7.0\LibBundle.GeneratedMSBuildEditorConfig.editorconfig
+E:\eProjects\VisualGGPK2UI - Copy\LibBundle\obj\x64\Release\net7.0\LibBundle.AssemblyInfoInputs.cache
+E:\eProjects\VisualGGPK2UI - Copy\LibBundle\obj\x64\Release\net7.0\LibBundle.AssemblyInfo.cs
+E:\eProjects\VisualGGPK2UI - Copy\LibBundle\obj\x64\Release\net7.0\LibBundle.csproj.CoreCompileInputs.cache
+E:\eProjects\VisualGGPK2UI - Copy\LibBundle\obj\x64\Release\net7.0\LibBundle.dll

@@ -1,14 +1,14 @@
 {
   "format": 1,
   "restore": {
-    "E:\\eProjects\\VisualGGPK2UI\\VisualGGPK2\\VisualGGPK2.csproj": {}
+    "E:\\eProjects\\VisualGGPK2UI - Copy\\VisualGGPK2\\VisualGGPK2.csproj": {}
   },
   "projects": {
-    "E:\\eProjects\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj": {
+    "E:\\eProjects\\VisualGGPK2UI - Copy\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj": {
       "restore": {
-        "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj",
+        "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI - Copy\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj",
         "projectName": "DirectXTexWrapper",
-        "projectPath": "E:\\eProjects\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj",
+        "projectPath": "E:\\eProjects\\VisualGGPK2UI - Copy\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj",
         "frameworks": {
           "native": {
             "projectReferences": {}
@@ -19,14 +19,14 @@
         "native": {}
       }
     },
-    "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj": {
+    "E:\\eProjects\\VisualGGPK2UI - Copy\\LibBundle\\LibBundle.csproj": {
       "version": "2.7.0",
       "restore": {
-        "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj",
+        "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI - Copy\\LibBundle\\LibBundle.csproj",
         "projectName": "LibBundle",
-        "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj",
+        "projectPath": "E:\\eProjects\\VisualGGPK2UI - Copy\\LibBundle\\LibBundle.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\obj\\",
+        "outputPath": "E:\\eProjects\\VisualGGPK2UI - Copy\\LibBundle\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -79,14 +79,14 @@
         }
       }
     },
-    "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj": {
+    "E:\\eProjects\\VisualGGPK2UI - Copy\\LibDat2\\LibDat2.csproj": {
       "version": "0.16.1",
       "restore": {
-        "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj",
+        "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI - Copy\\LibDat2\\LibDat2.csproj",
         "projectName": "LibDat2",
-        "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj",
+        "projectPath": "E:\\eProjects\\VisualGGPK2UI - Copy\\LibDat2\\LibDat2.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\obj\\",
+        "outputPath": "E:\\eProjects\\VisualGGPK2UI - Copy\\LibDat2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -139,14 +139,14 @@
         }
       }
     },
-    "E:\\eProjects\\VisualGGPK2UI\\LibGGPK2\\LibGGPK2.csproj": {
+    "E:\\eProjects\\VisualGGPK2UI - Copy\\LibGGPK2\\LibGGPK2.csproj": {
       "version": "0.16.0",
       "restore": {
-        "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI\\LibGGPK2\\LibGGPK2.csproj",
+        "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI - Copy\\LibGGPK2\\LibGGPK2.csproj",
         "projectName": "LibGGPK2",
-        "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibGGPK2\\LibGGPK2.csproj",
+        "projectPath": "E:\\eProjects\\VisualGGPK2UI - Copy\\LibGGPK2\\LibGGPK2.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\eProjects\\VisualGGPK2UI\\LibGGPK2\\obj\\",
+        "outputPath": "E:\\eProjects\\VisualGGPK2UI - Copy\\LibGGPK2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -168,8 +168,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj": {
-                "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj"
+              "E:\\eProjects\\VisualGGPK2UI - Copy\\LibBundle\\LibBundle.csproj": {
+                "projectPath": "E:\\eProjects\\VisualGGPK2UI - Copy\\LibBundle\\LibBundle.csproj"
               }
             }
           }
@@ -203,14 +203,14 @@
         }
       }
     },
-    "E:\\eProjects\\VisualGGPK2UI\\VisualGGPK2\\VisualGGPK2.csproj": {
+    "E:\\eProjects\\VisualGGPK2UI - Copy\\VisualGGPK2\\VisualGGPK2.csproj": {
       "version": "1.8.0",
       "restore": {
-        "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI\\VisualGGPK2\\VisualGGPK2.csproj",
+        "projectUniqueName": "E:\\eProjects\\VisualGGPK2UI - Copy\\VisualGGPK2\\VisualGGPK2.csproj",
         "projectName": "VisualGGPK2",
-        "projectPath": "E:\\eProjects\\VisualGGPK2UI\\VisualGGPK2\\VisualGGPK2.csproj",
+        "projectPath": "E:\\eProjects\\VisualGGPK2UI - Copy\\VisualGGPK2\\VisualGGPK2.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\eProjects\\VisualGGPK2UI\\VisualGGPK2\\obj\\",
+        "outputPath": "E:\\eProjects\\VisualGGPK2UI - Copy\\VisualGGPK2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -232,17 +232,17 @@
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "E:\\eProjects\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj": {
-                "projectPath": "E:\\eProjects\\VisualGGPK2UI\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj"
+              "E:\\eProjects\\VisualGGPK2UI - Copy\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj": {
+                "projectPath": "E:\\eProjects\\VisualGGPK2UI - Copy\\DirectXTexWrapper\\DirectXTexWrapper.vcxproj"
               },
-              "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj": {
-                "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibBundle\\LibBundle.csproj"
+              "E:\\eProjects\\VisualGGPK2UI - Copy\\LibBundle\\LibBundle.csproj": {
+                "projectPath": "E:\\eProjects\\VisualGGPK2UI - Copy\\LibBundle\\LibBundle.csproj"
               },
-              "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj": {
-                "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibDat2\\LibDat2.csproj"
+              "E:\\eProjects\\VisualGGPK2UI - Copy\\LibDat2\\LibDat2.csproj": {
+                "projectPath": "E:\\eProjects\\VisualGGPK2UI - Copy\\LibDat2\\LibDat2.csproj"
               },
-              "E:\\eProjects\\VisualGGPK2UI\\LibGGPK2\\LibGGPK2.csproj": {
-                "projectPath": "E:\\eProjects\\VisualGGPK2UI\\LibGGPK2\\LibGGPK2.csproj"
+              "E:\\eProjects\\VisualGGPK2UI - Copy\\LibGGPK2\\LibGGPK2.csproj": {
+                "projectPath": "E:\\eProjects\\VisualGGPK2UI - Copy\\LibGGPK2\\LibGGPK2.csproj"
               }
             }
           }
