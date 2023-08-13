@@ -156,7 +156,8 @@
             <ui:TextBlock
                 Grid.Column="1"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Center" FontSize="13">
+                VerticalAlignment="Center"
+                FontSize="13">
                 <Run
                     FontFamily="Verdana"
                     FontSize="13"
@@ -329,8 +330,9 @@
             <Rectangle Grid.Column="0" Fill="#f0f0f0" />
             <Rectangle
                 Grid.Column="1"
+                Margin="0,0,0,-1"
                 Fill="#f9f9f9"
-                Stroke="#FFD8D8D8" Margin="0,0,0,-1" />
+                Stroke="#FFD8D8D8" />
             <Rectangle Grid.Column="2" Fill="#fff" />
             <GridSplitter Grid.Column="1" Width="5" />
 
@@ -496,12 +498,12 @@
                 WordWrap="True">
                 <avalonedit:TextEditor.ContextMenu>
                     <ContextMenu>
+                        <MenuItem Command="Copy" />
+                        <MenuItem Command="Paste" />                        
+                        <MenuItem Command="Cut" />
+                        <Separator />
                         <MenuItem Command="Undo" />
                         <MenuItem Command="Redo" />
-                        <Separator />
-                        <MenuItem Command="Cut" />
-                        <MenuItem Command="Copy" />
-                        <MenuItem Command="Paste" />
                     </ContextMenu>
                 </avalonedit:TextEditor.ContextMenu>
             </avalonedit:TextEditor>
