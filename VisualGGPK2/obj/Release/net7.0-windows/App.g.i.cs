@@ -64,7 +64,7 @@ namespace VisualGGPK2 {
             
             #line default
             #line hidden
-            System.Uri resourceLocater = new System.Uri("/VisualGGPK2;V1.8.0.0;component/app.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/VisualGGPK2;component/app.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\App.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -106,9 +106,9 @@
                 <ColumnDefinition Width="150" />
                 <!--  X Close Button  -->
             </Grid.ColumnDefinitions>
-            <Rectangle Grid.Column="0" Fill="#f5f5f5" />
-            <Rectangle Grid.Column="1" Fill="#f5f5f5" />
-            <Rectangle Grid.Column="2" Fill="#f5f5f5" />
+            <Rectangle Grid.Column="0" Fill="#f0f0f0" />
+            <Rectangle Grid.Column="1" Fill="#f0f0f0" />
+            <Rectangle Grid.Column="2" Fill="#f0f0f0" />
 
             <ui:TextBox
                 x:Name="FilterBox"
@@ -150,12 +150,13 @@
                 VerticalAlignment="Center"
                 Click="FilterButton_Click"
                 Content="Filter"
+                FontSize="12"
                 OpacityMask="Black" />
 
             <ui:TextBlock
                 Grid.Column="1"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Center">
+                VerticalAlignment="Center" FontSize="13">
                 <Run
                     FontFamily="Verdana"
                     FontSize="13"
@@ -176,7 +177,8 @@
                 VerticalAlignment="Center"
                 BorderBrush="#FF2E7ED4"
                 Click="OnSaveTextClicked"
-                Content="Save" />
+                Content="Save"
+                FontSize="14" />
             <StackPanel Grid.Column="2" Orientation="Horizontal">
 
                 <Separator
@@ -324,11 +326,11 @@
                 <ColumnDefinition Width="400" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Rectangle Grid.Column="0" Fill="#f5f5f5" />
+            <Rectangle Grid.Column="0" Fill="#f0f0f0" />
             <Rectangle
                 Grid.Column="1"
-                Fill="#fff"
-                Stroke="#FFD8D8D8" />
+                Fill="#f9f9f9"
+                Stroke="#FFD8D8D8" Margin="0,0,0,-1" />
             <Rectangle Grid.Column="2" Fill="#fff" />
             <GridSplitter Grid.Column="1" Width="5" />
 
@@ -405,7 +407,7 @@
                     Content="T"
                     FontSize="20"
                     ToolTipService.ToolTip="open Tencent" />
-                <!--<ui:Button
+                <ui:Button
                     x:Name="Epic"
                     Grid.Column="0"
                     Width="35"
@@ -414,9 +416,10 @@
                     Padding="0,0,0,0"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
+                    Click="Steam_Click"
                     Content="E"
                     FontSize="20"
-                    ToolTipService.ToolTip="open Epic" />-->
+                    ToolTipService.ToolTip="open Epic" />
             </StackPanel>
             <StackPanel
                 Grid.Column="0"
@@ -524,7 +527,10 @@
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
                 Opacity="0.8">
-                <Run FontWeight="Black" Foreground="Gray">
+                <Run
+                    FontSize="12"
+                    FontWeight="Black"
+                    Foreground="Gray">
                     copyright © 2020-2023 aianlinb
                 </Run>
             </ui:TextBlock>
@@ -607,6 +613,7 @@
                     CanUserAddRows="False"
                     CanUserDeleteRows="False"
                     CanUserReorderColumns="False"
+                    FontSize="12"
                     SelectionUnit="CellOrRowHeader" />
                 <DataGrid
                     x:Name="DatReferenceDataTable"
@@ -632,20 +639,19 @@
         <!--  Footer  -->
         <Grid Grid.Row="2" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="325*" />
-                <ColumnDefinition Width="243*" />
-                <ColumnDefinition Width="406*" />
-                <ColumnDefinition Width="260*" />
-                <ColumnDefinition Width="64*" />
+                <ColumnDefinition Width=".15*" />
+                <ColumnDefinition Width=".15*" />
+                <ColumnDefinition Width=".35*" />
+                <ColumnDefinition Width=".35*" />
             </Grid.ColumnDefinitions>
 
-            <Rectangle Grid.Column="0" Fill="#f5f5f5" />
-            <Rectangle Grid.Column="1" Fill="#f5f5f5" />
-            <Rectangle Grid.Column="2" Fill="#f5f5f5" />
+            <Rectangle Grid.Column="0" Fill="#f0f0f0" />
+            <Rectangle Grid.Column="1" Fill="#f0f0f0" />
+            <Rectangle Grid.Column="2" Fill="#f0f0f0" />
             <Rectangle
                 Grid.Column="3"
                 Grid.ColumnSpan="2"
-                Fill="#f5f5f5" />
+                Fill="#f0f0f0" />
 
             <!--<ui:TextBlock
                 Grid.Column="0"
@@ -667,7 +673,7 @@
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"
                 FontFamily="Verdana"
-                FontSize="14"
+                FontSize="12"
                 IsReadOnly="True"
                 PlaceholderText="offsets"
                 ToolTipService.ToolTip="offsets" />
@@ -692,7 +698,7 @@
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"
                 FontFamily="Verdana"
-                FontSize="14"
+                FontSize="12"
                 IsReadOnly="True"
                 PlaceholderText="size"
                 ToolTipService.ToolTip="size" />
@@ -717,7 +723,7 @@
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"
                 FontFamily="Verdana"
-                FontSize="14"
+                FontSize="12"
                 IsReadOnly="True"
                 PlaceholderText="hash"
                 ToolTipService.ToolTip="hash" />
@@ -743,7 +749,7 @@
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"
                 FontFamily="Verdana"
-                FontSize="14"
+                FontSize="12"
                 IsReadOnly="True"
                 PlaceholderText="bundle"
                 ToolTipService.ToolTip="bundle" />
