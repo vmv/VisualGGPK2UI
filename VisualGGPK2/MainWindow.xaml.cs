@@ -1,4 +1,5 @@
 ﻿using DirectXTexWrapper;
+using ICSharpCode.AvalonEdit.Search;
 using LibBundle;
 using LibBundle.Records;
 using LibDat2;
@@ -86,9 +87,8 @@ namespace VisualGGPK2
                 Close();
                 return;
             }
-            MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
-            MaxWidth = SystemParameters.MaximizedPrimaryScreenWidth;
             InitializeComponent();
+            SearchPanel.Install(TextView);
         }        
 
         private async void OnLoaded(object sender, RoutedEventArgs e)
