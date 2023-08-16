@@ -2,6 +2,6 @@
 UI for VisualGGPK2
 https://github.com/aianlinb/VisualGGPK2
 
-![v1 8_dark](https://github.com/vmv/VisualGGPK2UI/assets/17906882/9614d914-f72c-4e39-b930-93cc6dce6816)
+![absolut_dark](https://github.com/vmv/VisualGGPK2UI/assets/17906882/dca96c18-17f0-4da9-a954-3852ac28e79f)
 ![vsg3](https://github.com/vmv/VisualGGPK2UI/assets/17906882/06e49daf-5046-4128-8171-642736287eec)
 
