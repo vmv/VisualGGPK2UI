@@ -37,6 +37,7 @@
   <ItemGroup>
     <PackageReference Include="AvalonEdit" Version="6.3.0.90" />
     <PackageReference Include="BrotliSharpLib" Version="0.3.3" />
+    <PackageReference Include="FluentIcons.WPF" Version="1.1.211" />
     <PackageReference Include="WPF-UI" Version="3.0.0-preview.5" />
   </ItemGroup>
 

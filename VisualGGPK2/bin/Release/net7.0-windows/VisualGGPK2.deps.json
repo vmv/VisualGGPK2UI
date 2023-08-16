@@ -11,6 +11,7 @@
           "AvalonEdit": "6.3.0.90",
           "BrotliSharpLib": "0.3.3",
           "DirectXTexWrapper": "1.0.0",
+          "FluentIcons.WPF": "1.1.211",
           "LibBundle": "2.7.0",
           "LibDat2": "0.16.1",
           "LibGGPK2": "0.16.0",
@@ -36,6 +37,25 @@
           "lib/netstandard2.0/BrotliSharpLib.dll": {
             "assemblyVersion": "0.3.2.0",
             "fileVersion": "0.3.3.0"
+          }
+        }
+      },
+      "FluentIcons.Common/1.1.211": {
+        "runtime": {
+          "lib/netstandard2.0/FluentIcons.Common.dll": {
+            "assemblyVersion": "1.1.211.0",
+            "fileVersion": "1.1.211.0"
+          }
+        }
+      },
+      "FluentIcons.WPF/1.1.211": {
+        "dependencies": {
+          "FluentIcons.Common": "1.1.211"
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/FluentIcons.WPF.dll": {
+            "assemblyVersion": "1.1.211.0",
+            "fileVersion": "1.1.211.0"
           }
         }
       },
@@ -92,6 +112,20 @@
       "sha512": "sha512-/z74VNg6etlQK/N1mSD5Tz2qQUZqc3RMiuv2F8Q/MOfvg4l7a6lDYhQQTPd9s9saSokh1GqUD7JTuunOiQid8w==",
       "path": "brotlisharplib/0.3.3",
       "hashPath": "brotlisharplib.0.3.3.nupkg.sha512"
+    },
+    "FluentIcons.Common/1.1.211": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-79jZyRkkOT9Dh3Axda8/pnOgyVc1mNAz2I5rRMRyrVy58FwxjRV2sqZnjqJHNrW3y8+XXpb87YEqZ3uDeBg8Pw==",
+      "path": "fluenticons.common/1.1.211",
+      "hashPath": "fluenticons.common.1.1.211.nupkg.sha512"
+    },
+    "FluentIcons.WPF/1.1.211": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pYMlazTAUd/V5qObrVURIWtf45+Uco4IRMRLtbf82wC3pBhq/1Sm8TvCMj6P6HhaEbyFAXwTHPP8OYvkoe5Mvg==",
+      "path": "fluenticons.wpf/1.1.211",
+      "hashPath": "fluenticons.wpf.1.1.211.nupkg.sha512"
     },
     "System.Runtime.CompilerServices.Unsafe/4.5.2": {
       "type": "package",

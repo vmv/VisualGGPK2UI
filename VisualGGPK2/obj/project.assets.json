@@ -34,6 +34,30 @@
           }
         }
       },
+      "FluentIcons.Common/1.1.211": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/FluentIcons.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentIcons.Common.dll": {}
+        }
+      },
+      "FluentIcons.WPF/1.1.211": {
+        "type": "package",
+        "dependencies": {
+          "FluentIcons.Common": "[1.1.211]"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/FluentIcons.WPF.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/FluentIcons.WPF.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
       "System.Runtime.CompilerServices.Unsafe/4.5.2": {
         "type": "package",
         "compile": {
@@ -154,6 +178,37 @@
         "lib/netstandard2.0/BrotliSharpLib.xml"
       ]
     },
+    "FluentIcons.Common/1.1.211": {
+      "sha512": "79jZyRkkOT9Dh3Axda8/pnOgyVc1mNAz2I5rRMRyrVy58FwxjRV2sqZnjqJHNrW3y8+XXpb87YEqZ3uDeBg8Pw==",
+      "type": "package",
+      "path": "fluenticons.common/1.1.211",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "fluenticons.common.1.1.211.nupkg.sha512",
+        "fluenticons.common.nuspec",
+        "lib/netstandard2.0/FluentIcons.Common.dll"
+      ]
+    },
+    "FluentIcons.WPF/1.1.211": {
+      "sha512": "pYMlazTAUd/V5qObrVURIWtf45+Uco4IRMRLtbf82wC3pBhq/1Sm8TvCMj6P6HhaEbyFAXwTHPP8OYvkoe5Mvg==",
+      "type": "package",
+      "path": "fluenticons.wpf/1.1.211",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "fluenticons.wpf.1.1.211.nupkg.sha512",
+        "fluenticons.wpf.nuspec",
+        "lib/net462/FluentIcons.WPF.dll",
+        "lib/net472/FluentIcons.WPF.dll",
+        "lib/net6.0-windows7.0/FluentIcons.WPF.dll",
+        "lib/netcoreapp3.1/FluentIcons.WPF.dll"
+      ]
+    },
     "System.Runtime.CompilerServices.Unsafe/4.5.2": {
       "sha512": "wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
       "type": "package",
@@ -230,6 +285,7 @@
       "AvalonEdit >= 6.3.0.90",
       "BrotliSharpLib >= 0.3.3",
       "DirectXTexWrapper >= 1.0.0",
+      "FluentIcons.WPF >= 1.1.211",
       "LibBundle >= 2.7.0",
       "LibDat2 >= 0.16.1",
       "LibGGPK2 >= 0.16.0",
@@ -301,6 +357,10 @@
           "BrotliSharpLib": {
             "target": "Package",
             "version": "[0.3.3, )"
+          },
+          "FluentIcons.WPF": {
+            "target": "Package",
+            "version": "[1.1.211, )"
           },
           "WPF-UI": {
             "target": "Package",

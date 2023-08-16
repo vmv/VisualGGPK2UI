@@ -160,3 +160,7 @@ E:\eProjects\VisualGGPK2UI - Copy\VisualGGPK2\obj\Debug\net7.0-windows\VisualGGP
 E:\eProjects\VisualGGPK2UI - Copy\VisualGGPK2\obj\Debug\net7.0-windows\VisualGGPK2.csproj.CopyComplete
 E:\eProjects\VisualGGPK2UI - Copy\VisualGGPK2\obj\Debug\net7.0-windows\VisualGGPK2.dll
 E:\eProjects\VisualGGPK2UI - Copy\VisualGGPK2\obj\Debug\net7.0-windows\VisualGGPK2.genruntimeconfig.cache
+E:\eProjects\VisualGGPK2UI - Copy\VisualGGPK2\bin\Debug\net7.0-windows\FluentIcons.Common.dll
+E:\eProjects\VisualGGPK2UI - Copy\VisualGGPK2\bin\Debug\net7.0-windows\FluentIcons.WPF.dll
+E:\eProjects\VisualGGPK2UI - Copy\VisualGGPK2\obj\Debug\net7.0-windows\VisualGGPK2.Properties.Resources.resources
+E:\eProjects\VisualGGPK2UI - Copy\VisualGGPK2\obj\Debug\net7.0-windows\VisualGGPK2.csproj.GenerateResource.cache

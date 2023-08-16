@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "TsxusHVWsMl9IoOxwcWTehDZkoUe0qWhN4YlT5LxCMJOkCk5PHdhuUGF2EMzO3tkhO0IzLeR3s8Fl3qyAzn1ow==",
+  "dgSpecHash": "40TIuwvTrT0x8+F9ujM7jNDupfZL9WyGOOqL223kwT8RjhIZ3M9U+svUIMGF6vgKvRpvHea7fFeSPGetCR0Svw==",
   "success": true,
   "projectFilePath": "E:\\eProjects\\VisualGGPK2UI - Copy\\VisualGGPK2\\VisualGGPK2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\avalonedit\\6.3.0.90\\avalonedit.6.3.0.90.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\brotlisharplib\\0.3.3\\brotlisharplib.0.3.3.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\fluenticons.common\\1.1.211\\fluenticons.common.1.1.211.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\fluenticons.wpf\\1.1.211\\fluenticons.wpf.1.1.211.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\wpf-ui\\3.0.0-preview.5\\wpf-ui.3.0.0-preview.5.nupkg.sha512"
   ],

@@ -3,6 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit"
+    xmlns:ic="clr-namespace:FluentIcons.WPF;assembly=FluentIcons.WPF"
     xmlns:search="http://icsharpcode.net/sharpdevelop/avalonedit"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     x:Name="MainFluentWindow"
@@ -234,16 +235,16 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="40" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="40" />
+            <RowDefinition Height="30" />
         </Grid.RowDefinitions>
 
         <!--  Title Bar  -->
         <Grid Grid.Row="0" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="130" />
-                <ColumnDefinition Width="410" />
+                <ColumnDefinition Width="317" />
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="130" />
                 <!--  X Close Button  -->
             </Grid.ColumnDefinitions>
             <Rectangle Grid.Column="0" Fill="WhiteSmoke" />
@@ -253,11 +254,13 @@
 
             <ui:TextBox
                 x:Name="FilterBox"
+                Grid.Column="0"
                 Height="30"
-                Margin="5,2,0,2"
+                Margin="5,2,2,2"
                 Padding="0,0,20,0"
                 HorizontalContentAlignment="Right"
                 VerticalContentAlignment="Center"
+                BorderThickness="0"
                 FontSize="14"
                 KeyDown="FilterBox_KeyDown"
                 OpacityMask="Black"
@@ -283,22 +286,23 @@
             <ui:Button
                 x:Name="FilterButton"
                 Grid.Column="1"
-                Width="60"
+                Width="50"
                 Height="30"
                 Margin="5,0,0,0"
-                Padding="0,0,0,0"
+                Padding="0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 Click="FilterButton_Click"
-                Content="Filter"
-                FontSize="12"
-                OpacityMask="Black" />
+                FontSize="24"
+                OpacityMask="Black">
+                <ic:SymbolIcon IsFilled="False" Symbol="Filter" />
+            </ui:Button>
 
             <ui:TextBlock
                 Grid.Column="1"
+                Margin="50,0,0,0"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                FontSize="13">
+                VerticalAlignment="Center">
                 <Run
                     FontFamily="Verdana"
                     FontSize="13"
@@ -309,112 +313,114 @@
                 <Label FontSize="11" Foreground="#FF2E7ED4">UI</Label>
             </ui:TextBlock>
 
-            <ui:Button
-                x:Name="ButtonSave"
-                Grid.Column="1"
-                Width="80"
-                Height="30"
-                Margin="0,0,10,0"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Center"
-                BorderBrush="#FF2E7ED4"
-                Click="OnSaveTextClicked"
-                Content="Save"
-                FontSize="14" />
             <StackPanel Grid.Column="2" Orientation="Horizontal">
 
+                <ui:Button
+                    x:Name="ButtonSave"
+                    Width="60"
+                    Height="30"
+                    Margin="0,0,5,0"
+                    Padding="0"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    BorderBrush="#FF2E7ED4"
+                    Click="OnSaveTextClicked"
+                    FontSize="20"
+                    ToolTipService.ToolTip="save">
+                    <ic:SymbolIcon IsFilled="False" Symbol="Save" />
+                </ui:Button>
+
                 <Separator
-                    x:Name="s1"
-                    Grid.Column="2"
+                    Width="2"
                     Height="25"
-                    HorizontalAlignment="Left"
-                    HorizontalContentAlignment="Center"
-                    VerticalContentAlignment="Center"
-                    BorderThickness="1,0,1,0" />
+                    Margin="0"
+                    Background="LightGray"
+                    BorderThickness="0" />
 
                 <ui:Button
                     x:Name="ButtonSelectAll"
-                    Grid.Column="2"
                     Width="40"
                     Height="30"
-                    Margin="10,0,0,0"
+                    Margin="5,0,0,0"
+                    Padding="0"
                     Click="ButtonSelectAll_Click"
-                    FontSize="18"
-                    Icon="{ui:SymbolIcon MultiselectLtr24}"
-                    ToolTipService.ToolTip="select all" />
+                    FontSize="20"
+                    ToolTipService.ToolTip="select all">
+                    <ic:SymbolIcon IsFilled="False" Symbol="MultiselectLtr" />
+                </ui:Button>
 
                 <ui:Button
                     x:Name="ButtonCopy"
-                    Grid.Column="2"
                     Width="40"
                     Height="30"
-                    Margin="10,0,0,0"
+                    Margin="5,0,0,0"
+                    Padding="0"
                     Click="ButtonCopy_Click"
-                    FontSize="18"
-                    Icon="{ui:SymbolIcon Copy24}"
-                    ToolTipService.ToolTip="copy" />
+                    FontSize="20"
+                    ToolTipService.ToolTip="copy">
+                    <ic:SymbolIcon IsFilled="False" Symbol="Copy" />
+                </ui:Button>
 
                 <ui:Button
                     x:Name="ButtonCut"
-                    Grid.Column="2"
                     Width="40"
                     Height="30"
-                    Margin="10,0,0,0"
+                    Margin="5,0,0,0"
+                    Padding="0"
                     Click="ButtonCut_Click"
                     FontSize="18"
-                    Icon="{ui:SymbolIcon Cut24}"
-                    ToolTipService.ToolTip="cut" />
+                    ToolTipService.ToolTip="cut">
+                    <ic:SymbolIcon IsFilled="False" Symbol="Cut" />
+                </ui:Button>
 
                 <ui:Button
                     x:Name="ButtonPaste"
-                    Grid.Column="2"
                     Width="40"
                     Height="30"
-                    Margin="10,0,0,0"
+                    Margin="5,0,5,0"
+                    Padding="0"
                     Click="ButtonPaste_Click"
-                    FontSize="18"
-                    Icon="{ui:SymbolIcon ClipboardPaste24}"
-                    ToolTipService.ToolTip="paste" />
+                    FontSize="20"
+                    ToolTipService.ToolTip="paste">
+                    <ic:SymbolIcon IsFilled="False" Symbol="ClipboardPaste" />
+                </ui:Button>
 
                 <Separator
-                    Grid.Column="2"
+                    Width="2"
                     Height="25"
-                    Margin="5,0,0,0"
-                    HorizontalAlignment="Left"
-                    HorizontalContentAlignment="Center"
-                    VerticalContentAlignment="Center"
-                    BorderThickness="1,0,1,0" />
+                    Margin="0"
+                    Background="LightGray"
+                    BorderThickness="0" />
 
                 <ui:Button
                     x:Name="ButtonUndo"
-                    Grid.Column="2"
                     Width="40"
                     Height="30"
-                    Margin="10,0,0,0"
+                    Margin="5,0,0,0"
+                    Padding="0"
                     Click="ButtonUndo_Click"
-                    FontSize="18"
-                    Icon="{ui:SymbolIcon ArrowUndo24}"
-                    ToolTipService.ToolTip="undo" />
+                    FontSize="20"
+                    ToolTipService.ToolTip="undo">
+                    <ic:SymbolIcon IsFilled="False" Symbol="ArrowUndo" />
+                </ui:Button>
 
                 <ui:Button
                     x:Name="ButtonRedo"
-                    Grid.Column="2"
                     Width="40"
                     Height="30"
-                    Margin="10,0,0,0"
+                    Margin="5,0,5,0"
                     Click="ButtonRedo_Click"
-                    FontSize="18"
-                    Icon="{ui:SymbolIcon ArrowRedo24}"
-                    ToolTipService.ToolTip="redo" />
+                    FontSize="20"
+                    ToolTipService.ToolTip="redo">
+                    <ic:SymbolIcon IsFilled="False" Symbol="ArrowRedo" />
+                </ui:Button>
 
                 <Separator
-                    Grid.Column="2"
+                    Width="2"
                     Height="25"
-                    Margin="5,0,0,0"
-                    HorizontalAlignment="Left"
-                    HorizontalContentAlignment="Center"
-                    VerticalContentAlignment="Center"
-                    BorderThickness="1,0,1,0" />
+                    Margin="0"
+                    Background="LightGray"
+                    BorderThickness="0" />
 
                 <CheckBox
                     x:Name="TextWrap"
@@ -432,29 +438,40 @@
                     ToolTipService.ToolTip="text wrap" />
 
                 <Separator
-                    Grid.Column="2"
+                    Width="2"
                     Height="25"
                     Margin="0"
-                    HorizontalAlignment="Left"
-                    HorizontalContentAlignment="Center"
-                    VerticalContentAlignment="Center"
-                    BorderThickness="1,0,1,0" />
+                    Background="LightGray"
+                    BorderThickness="0" />
 
                 <ui:Button
                     x:Name="ButtonDelete"
-                    Grid.Column="2"
                     Width="40"
                     Height="30"
-                    Margin="10,0,0,0"
+                    Margin="5,0,0,0"
+                    Padding="0"
                     Click="ButtonDelete_Click"
-                    FontSize="18"
+                    FontSize="20"
                     Foreground="#E4FF0000"
-                    Icon="{ui:SymbolIcon Delete24}"
-                    ToolTipService.ToolTip="delete" />
+                    ToolTipService.ToolTip="delete">
+                    <ic:SymbolIcon IsFilled="False" Symbol="Delete" />
+                </ui:Button>
+
+                <ComboBox
+                    Width="200"
+                    Height="30"
+                    Margin="5,0,0,0"
+                    BorderBrush="Gray"
+                    BorderThickness="0,0,0,1"
+                    Foreground="Black"
+                    ToolTipService.ToolTip="syntax style selection">
+                    wtf is this?!
+                </ComboBox>
             </StackPanel>
 
             <ui:TitleBar
                 Grid.Column="3"
+                Width="130"
                 Height="40"
                 BorderBrush="Black"
                 Foreground="Black" />
@@ -485,17 +502,18 @@
                     x:Name="AllowGameOpen"
                     Width="35"
                     Height="30"
-                    Margin="0,35,0,0"
-                    Padding="0,0,0,0"
+                    Margin="0,50,0,0"
+                    Padding="0"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     HorizontalContentAlignment="Center"
                     Click="AllowGameOpen_Click"
                     FontSize="20"
-                    Icon="{ui:SymbolIcon DesktopCheckmark24}"
-                    ToolTipService.ToolTip="allow game to be opened" />
+                    ToolTipService.ToolTip="allow game to be opened">
+                    <ic:SymbolIcon IsFilled="False" Symbol="DesktopCheckmark" />
+                </ui:Button>
+
                 <ui:TextBlock
-                    Grid.Column="0"
                     Margin="0,80,0,0"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
@@ -503,9 +521,9 @@
                         open
                     </Run>
                 </ui:TextBlock>
+
                 <ui:Button
                     x:Name="Official"
-                    Grid.Column="0"
                     Width="35"
                     Height="30"
                     Margin="0,10,0,0"
@@ -516,9 +534,9 @@
                     Content="O"
                     FontSize="20"
                     ToolTipService.ToolTip="open Official" />
+
                 <ui:Button
                     x:Name="Steam"
-                    Grid.Column="0"
                     Width="35"
                     Height="30"
                     Margin="0,10,0,0"
@@ -529,9 +547,9 @@
                     Content="S"
                     FontSize="20"
                     ToolTipService.ToolTip="open Steam" />
+
                 <ui:Button
                     x:Name="Garena"
-                    Grid.Column="0"
                     Width="35"
                     Height="30"
                     Margin="0,10,0,0"
@@ -541,9 +559,9 @@
                     Content="G"
                     FontSize="20"
                     ToolTipService.ToolTip="open Garena" />
+
                 <ui:Button
                     x:Name="Tencent"
-                    Grid.Column="0"
                     Width="35"
                     Height="30"
                     Margin="0,10,0,0"
@@ -553,9 +571,9 @@
                     Content="T"
                     FontSize="20"
                     ToolTipService.ToolTip="open Tencent" />
+
                 <ui:Button
                     x:Name="Epic"
-                    Grid.Column="0"
                     Width="35"
                     Height="30"
                     Margin="0,10,0,0"
@@ -567,6 +585,7 @@
                     FontSize="20"
                     ToolTipService.ToolTip="open Epic" />
             </StackPanel>
+
             <StackPanel
                 Grid.Column="0"
                 Width="50"
@@ -574,14 +593,14 @@
                 VerticalAlignment="Bottom"
                 Orientation="Vertical">
                 <ui:TextBlock
-                    Grid.Column="0"
                     Margin="0,0,0,5"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Bottom">
-                    <Run FontWeight="Black" Foreground="Gray">
-                        v1.8.3
+                    <Run Foreground="Gray">
+                        v1.8.8
                     </Run>
                 </ui:TextBlock>
+
                 <ui:Image
                     Width="35"
                     Height="30"
@@ -594,23 +613,29 @@
                     ToolTipService.ToolTip="VisualGGPK2 UI" />
             </StackPanel>
 
-            <ui:AutoSuggestBox
+            <ui:TextBox
                 x:Name="SearchBox"
                 Grid.Column="1"
-                Height="35"
-                Margin="0,0,5,0"
+                Width="300"
+                Height="30"
+                MinWidth="300"
+                MinHeight="30"
+                Margin="0,1,0,0"
+                Padding="5,-2,20,0"
                 VerticalAlignment="Top"
                 HorizontalContentAlignment="Left"
                 VerticalContentAlignment="Center"
                 Background="WhiteSmoke"
+                BorderThickness="0,0,0,1"
                 FontSize="14"
+                Foreground="Black"
                 KeyDown="SearchBox_KeyDown"
                 PlaceholderText="search..." />
 
             <TreeView
                 x:Name="Tree"
                 Grid.Column="1"
-                Margin="0,50,5,0"
+                Margin="0,40,6,0"
                 AllowDrop="True"
                 PreviewMouseDown="OnTreePreviewMouseDown"
                 SelectedItemChanged="OnTreeSelectedChanged"
@@ -778,35 +803,21 @@
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Bottom" />
             </Grid>
-
         </Grid>
-
-
-
 
         <!--  Footer  -->
         <Grid Grid.Row="2" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width=".15*" />
                 <ColumnDefinition Width=".15*" />
-                <ColumnDefinition Width=".35*" />
-                <ColumnDefinition Width=".35*" />
+                <ColumnDefinition Width=".40*" />
+                <ColumnDefinition Width=".30*" />
             </Grid.ColumnDefinitions>
 
             <Rectangle Grid.Column="0" Fill="WhiteSmoke" />
             <Rectangle Grid.Column="1" Fill="WhiteSmoke" />
             <Rectangle Grid.Column="2" Fill="WhiteSmoke" />
             <Rectangle Grid.Column="3" Fill="WhiteSmoke" />
-
-            <!--<ui:TextBlock
-                Grid.Column="0"
-                Margin="5,0,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Center">
-                <Run FontWeight="Black" Foreground="#FF797979">
-                    offsets:
-                </Run>
-            </ui:TextBlock>-->
 
             <ui:TextBox
                 x:Name="TextBoxOffset"
@@ -817,21 +828,12 @@
                 VerticalAlignment="Center"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"
+                BorderThickness="0"
                 FontFamily="Verdana"
                 FontSize="12"
                 IsReadOnly="True"
                 PlaceholderText="offsets"
                 ToolTipService.ToolTip="offsets" />
-
-            <!--<ui:TextBlock
-                Grid.Column="1"
-                Margin="5,0,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Center">
-                <Run FontWeight="Black" Foreground="#FF797979">
-                    size:
-                </Run>
-            </ui:TextBlock>-->
 
             <ui:TextBox
                 x:Name="TextBoxSize"
@@ -842,21 +844,12 @@
                 VerticalAlignment="Center"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"
+                BorderThickness="0"
                 FontFamily="Verdana"
                 FontSize="12"
                 IsReadOnly="True"
                 PlaceholderText="size"
                 ToolTipService.ToolTip="size" />
-
-            <!--<ui:TextBlock
-                Grid.Column="2"
-                Margin="5,0,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Center">
-                <Run FontWeight="Black" Foreground="#FF797979">
-                    hash:
-                </Run>
-            </ui:TextBlock>-->
 
             <ui:TextBox
                 x:Name="TextBoxHash"
@@ -867,32 +860,23 @@
                 VerticalAlignment="Center"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"
+                BorderThickness="0"
                 FontFamily="Verdana"
                 FontSize="12"
                 IsReadOnly="True"
                 PlaceholderText="hash"
                 ToolTipService.ToolTip="hash" />
 
-            <!--<ui:TextBlock
-                Grid.Column="3"
-                Margin="5,0,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Center">
-                <Run FontWeight="Black" Foreground="#FF797979">
-                    bundle:
-                </Run>
-            </ui:TextBlock>-->
-
             <ui:TextBox
                 x:Name="TextBoxBundle"
                 Grid.Column="3"
-                Grid.ColumnSpan="2"
                 Height="24"
                 Margin="5,0,5,0"
                 Padding="0,0,0,0"
                 VerticalAlignment="Center"
                 HorizontalContentAlignment="Center"
                 VerticalContentAlignment="Center"
+                BorderThickness="0"
                 FontFamily="Verdana"
                 FontSize="12"
                 IsReadOnly="True"

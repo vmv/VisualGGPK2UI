@@ -28,7 +28,6 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Threading;
 using VisualGGPK2.Properties;
 using PixelFormat = System.Windows.Media.PixelFormat;
 //using Wpf.Ui.Controls;
@@ -36,21 +35,12 @@ using TreeViewItem = Wpf.Ui.Controls.TreeViewItem;
 
 namespace VisualGGPK2
 {
-    public partial class MainWindow : Wpf.Ui.Controls.FluentWindow
+    public partial class MainWindow
     {
         public static string Version;
         public GGPKContainer ggpkContainer;
-
-        /// <summary>
-        /// Icon of directory on TreeView
-        /// </summary>
-        public static readonly BitmapFrame IconDir = BitmapFrame.Create(Assembly.GetExecutingAssembly().GetManifestResourceStream("VisualGGPK2.Resources.blue_dir.ico"));
-
-        /// <summary>
-        /// Icon of file on TreeView
-        /// </summary>
-        public static readonly BitmapFrame IconFile = BitmapFrame.Create(Assembly.GetExecutingAssembly().GetManifestResourceStream("VisualGGPK2.Resources.blue_file.ico"));
-
+        public static readonly BitmapFrame IconDir = BitmapFrame.Create(Assembly.GetExecutingAssembly().GetManifestResourceStream("VisualGGPK2.Resources.dir.ico"));
+        public static readonly BitmapFrame IconFile = BitmapFrame.Create(Assembly.GetExecutingAssembly().GetManifestResourceStream("VisualGGPK2.Resources.file.ico"));
         public static readonly ContextMenu TreeMenu = new();
         public static readonly Encoding Unicode = new UnicodeEncoding(false, true);
         public static readonly Encoding UTF8 = new UTF8Encoding(false, false);

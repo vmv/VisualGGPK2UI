@@ -265,6 +265,10 @@
               "target": "Package",
               "version": "[0.3.3, )"
             },
+            "FluentIcons.WPF": {
+              "target": "Package",
+              "version": "[1.1.211, )"
+            },
             "WPF-UI": {
               "target": "Package",
               "version": "[3.0.0-preview.5, )"
