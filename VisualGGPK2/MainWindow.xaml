@@ -2,8 +2,11 @@
     x:Class="VisualGGPK2.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:System="clr-namespace:System;assembly=System.Runtime"
+    xmlns:av="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:avalonedit="http://icsharpcode.net/sharpdevelop/avalonedit"
     xmlns:ic="clr-namespace:FluentIcons.WPF;assembly=FluentIcons.WPF"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:search="http://icsharpcode.net/sharpdevelop/avalonedit"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     x:Name="MainFluentWindow"
@@ -25,17 +28,18 @@
     SnapsToDevicePixels="True"
     UseLayoutRounding="True"
     WindowStartupLocation="CenterScreen"
-    WindowStyle="None">
+    WindowStyle="None"
+    mc:Ignorable="av">
     <!--  Loaded="OnLoaded">  -->
 
-    <Window.Resources>
+    <ui:FluentWindow.Resources>
         <ResourceDictionary>
             <!--  Avalon Edit  -->
-            <Style TargetType="{x:Type avalonedit:LineNumberMargin}">
-                <Setter Property="Control.Cursor" Value="/ICSharpCode.AvalonEdit;component/themes/RightArrow.cur" />
+            <Style TargetType="{x:Type search:LineNumberMargin}">
+                <Setter Property="Cursor" Value="/ICSharpCode.AvalonEdit;component/themes/RightArrow.cur" />
             </Style>
 
-            <Style TargetType="search:SearchPanel">
+            <Style TargetType="{x:Type search:SearchPanel}">
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type search:SearchPanel}">
@@ -50,7 +54,7 @@
                                 Cursor="Arrow">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBox
-                                        Name="PART_searchTextBox"
+                                        x:Name="PART_searchTextBox"
                                         Width="200"
                                         Height="25"
                                         MinWidth="200"
@@ -61,16 +65,14 @@
                                         Focusable="True"
                                         FontFamily="Verdana"
                                         Foreground="Black">
-                                        <TextBox.Text>
-                                            <Binding
-                                                Path="SearchPattern"
-                                                RelativeSource="{RelativeSource TemplatedParent}"
-                                                UpdateSourceTrigger="PropertyChanged">
-                                                <Binding.ValidationRules>
-                                                    <ExceptionValidationRule />
-                                                </Binding.ValidationRules>
-                                            </Binding>
-                                        </TextBox.Text>
+                                        <Binding
+                                            Path="SearchPattern"
+                                            RelativeSource="{RelativeSource Mode=TemplatedParent}"
+                                            UpdateSourceTrigger="PropertyChanged">
+                                            <Binding.ValidationRules>
+                                                <ExceptionValidationRule />
+                                            </Binding.ValidationRules>
+                                        </Binding>
                                     </TextBox>
                                     <search:DropDownButton
                                         Height="35"
@@ -82,7 +84,7 @@
                                         Foreground="Black">
                                         <search:DropDownButton.DropDownContent>
                                             <Popup
-                                                Name="PART_dropdownPopup"
+                                                x:Name="PART_dropdownPopup"
                                                 Width="145"
                                                 Height="110"
                                                 MinWidth="145"
@@ -104,7 +106,7 @@
                                                             BorderBrush="#FFD8D8D8"
                                                             Content="Match Case"
                                                             Foreground="Black"
-                                                            IsChecked="{Binding MatchCase, RelativeSource={RelativeSource TemplatedParent}}" />
+                                                            IsChecked="{Binding MatchCase, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
                                                         <CheckBox
                                                             Width="20"
                                                             Height="20"
@@ -114,7 +116,7 @@
                                                             BorderBrush="#FFD8D8D8"
                                                             Content="Match Whole"
                                                             Foreground="Black"
-                                                            IsChecked="{Binding WholeWords, RelativeSource={RelativeSource TemplatedParent}}" />
+                                                            IsChecked="{Binding WholeWords, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
                                                         <CheckBox
                                                             Width="20"
                                                             Height="20"
@@ -124,7 +126,7 @@
                                                             BorderBrush="#FFD8D8D8"
                                                             Content="Use Regex"
                                                             Foreground="Black"
-                                                            IsChecked="{Binding UseRegex, RelativeSource={RelativeSource TemplatedParent}}" />
+                                                            IsChecked="{Binding UseRegex, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
                                                     </StackPanel>
                                                 </Border>
                                             </Popup>
@@ -139,7 +141,7 @@
                                         Command="search:SearchCommands.FindPrevious"
                                         Foreground="Black"
                                         Icon="{ui:SymbolIcon ArrowPrevious24}"
-                                        ToolTip="{Binding Localization.FindPreviousText, RelativeSource={RelativeSource TemplatedParent}}" />
+                                        ToolTip="{Binding Localization.FindPreviousText, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
                                     <ui:Button
                                         Width="30"
                                         Height="30"
@@ -147,7 +149,7 @@
                                         Command="search:SearchCommands.FindNext"
                                         Foreground="Black"
                                         Icon="{ui:SymbolIcon ArrowNext24}"
-                                        ToolTip="{Binding Localization.FindNextText, RelativeSource={RelativeSource TemplatedParent}}" />
+                                        ToolTip="{Binding Localization.FindNextText, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
                                     <ui:Button
                                         Width="40"
                                         Height="30"
@@ -169,6 +171,7 @@
             <!--  end Avalon Edit  -->
 
 
+            <!--  end TreeView  -->
             <!--  TreeView Style  -->
             <Style x:Key="TreeViewStyle" TargetType="{x:Type TreeView}">
                 <Setter Property="FocusVisualStyle" Value="{x:Null}" />
@@ -190,16 +193,16 @@
                 <Setter Property="SnapsToDevicePixels" Value="True" />
                 <Setter Property="Template">
                     <Setter.Value>
-                        <ControlTemplate TargetType="TreeView">
+                        <ControlTemplate TargetType="{x:Type TreeView}">
                             <Border
-                                Name="Border"
+                                x:Name="Border"
                                 Padding="0"
                                 Background="{TemplateBinding Background}"
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 CornerRadius="4">
                                 <ScrollViewer
-                                    Name="ItemsPresenterScrollViewer"
+                                    x:Name="ItemsPresenterScrollViewer"
                                     CanContentScroll="False"
                                     HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
                                     VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">
@@ -227,667 +230,691 @@
                 </Style.Triggers>
             </Style>
             <Style BasedOn="{StaticResource TreeViewStyle}" TargetType="{x:Type TreeView}" />
-            <!--  end TreeView  -->
         </ResourceDictionary>
-    </Window.Resources>
+    </ui:FluentWindow.Resources>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="30" />
-        </Grid.RowDefinitions>
+    <Grid Background="Transparent" Visibility="Visible">
 
-        <!--  Title Bar  -->
-        <Grid Grid.Row="0" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="130" />
-                <ColumnDefinition Width="317" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="130" />
-                <!--  X Close Button  -->
-            </Grid.ColumnDefinitions>
-            <Rectangle Grid.Column="0" Fill="WhiteSmoke" />
-            <Rectangle Grid.Column="1" Fill="WhiteSmoke" />
-            <Rectangle Grid.Column="2" Fill="WhiteSmoke" />
-            <Rectangle Grid.Column="3" Fill="WhiteSmoke" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
 
-            <ui:TextBox
-                x:Name="FilterBox"
-                Grid.Column="0"
-                Height="30"
-                Margin="5,2,2,2"
-                Padding="0,0,20,0"
-                HorizontalContentAlignment="Right"
-                VerticalContentAlignment="Center"
-                BorderThickness="0"
-                FontSize="14"
-                KeyDown="FilterBox_KeyDown"
-                OpacityMask="Black"
-                PlaceholderText=".aoc"
-                ToolTipService.ToolTip="filter by file extension (.pet)" />
+            <!--<ui:ProgressRing
+            x:Name="pRing"
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            AutomationProperties.IsRowHeader="True"
+            IsEnabled="True"
+            IsIndeterminate="False"
+            UseLayoutRounding="True"
+            Visibility="Hidden" />-->
 
-            <CheckBox
-                x:Name="RegexCheckBox"
-                Grid.Column="0"
-                Width="30"
-                Height="30"
-                MinWidth="30"
-                MinHeight="30"
-                Margin="10,0,0,0"
-                Padding="0,0,0,0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Center"
-                HorizontalContentAlignment="Center"
-                IsChecked="True"
-                OpacityMask="Black"
-                ToolTipService.ToolTip="use Regex (pet$)" />
+            <!--  Title Bar  -->
+            <Grid Grid.Row="0" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="130" />
+                    <ColumnDefinition Width="317" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="130" />
+                    <!--  X Close Button  -->
+                </Grid.ColumnDefinitions>
+                <Rectangle Grid.Column="0" Fill="WhiteSmoke" />
+                <Rectangle Grid.Column="1" Fill="WhiteSmoke" />
+                <Rectangle Grid.Column="2" Fill="WhiteSmoke" />
+                <Rectangle Grid.Column="3" Fill="WhiteSmoke" />
 
-            <ui:Button
-                x:Name="FilterButton"
-                Grid.Column="1"
-                Width="50"
-                Height="30"
-                Margin="5,0,0,0"
-                Padding="0"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Center"
-                Click="FilterButton_Click"
-                FontSize="24"
-                OpacityMask="Black">
-                <ic:SymbolIcon IsFilled="False" Symbol="Filter" />
-            </ui:Button>
-
-            <ui:TextBlock
-                Grid.Column="1"
-                Margin="50,0,0,0"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center">
-                <Run
-                    FontFamily="Verdana"
-                    FontSize="13"
-                    FontWeight="Black"
-                    Foreground="Gray">
-                    VisualGGPK2
-                </Run>
-                <Label FontSize="11" Foreground="#FF2E7ED4">UI</Label>
-            </ui:TextBlock>
-
-            <StackPanel Grid.Column="2" Orientation="Horizontal">
-
-                <ui:Button
-                    x:Name="ButtonSave"
-                    Width="60"
+                <ui:TextBox
+                    x:Name="FilterBox"
+                    Grid.Column="0"
                     Height="30"
-                    Margin="0,0,5,0"
-                    Padding="0"
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Center"
-                    BorderBrush="#FF2E7ED4"
-                    Click="OnSaveTextClicked"
-                    FontSize="20"
-                    ToolTipService.ToolTip="save">
-                    <ic:SymbolIcon IsFilled="False" Symbol="Save" />
-                </ui:Button>
-
-                <Separator
-                    Width="2"
-                    Height="25"
-                    Margin="0"
-                    Background="LightGray"
-                    BorderThickness="0" />
-
-                <ui:Button
-                    x:Name="ButtonSelectAll"
-                    Width="40"
-                    Height="30"
-                    Margin="5,0,0,0"
-                    Padding="0"
-                    Click="ButtonSelectAll_Click"
-                    FontSize="20"
-                    ToolTipService.ToolTip="select all">
-                    <ic:SymbolIcon IsFilled="False" Symbol="MultiselectLtr" />
-                </ui:Button>
-
-                <ui:Button
-                    x:Name="ButtonCopy"
-                    Width="40"
-                    Height="30"
-                    Margin="5,0,0,0"
-                    Padding="0"
-                    Click="ButtonCopy_Click"
-                    FontSize="20"
-                    ToolTipService.ToolTip="copy">
-                    <ic:SymbolIcon IsFilled="False" Symbol="Copy" />
-                </ui:Button>
-
-                <ui:Button
-                    x:Name="ButtonCut"
-                    Width="40"
-                    Height="30"
-                    Margin="5,0,0,0"
-                    Padding="0"
-                    Click="ButtonCut_Click"
-                    FontSize="18"
-                    ToolTipService.ToolTip="cut">
-                    <ic:SymbolIcon IsFilled="False" Symbol="Cut" />
-                </ui:Button>
-
-                <ui:Button
-                    x:Name="ButtonPaste"
-                    Width="40"
-                    Height="30"
-                    Margin="5,0,5,0"
-                    Padding="0"
-                    Click="ButtonPaste_Click"
-                    FontSize="20"
-                    ToolTipService.ToolTip="paste">
-                    <ic:SymbolIcon IsFilled="False" Symbol="ClipboardPaste" />
-                </ui:Button>
-
-                <Separator
-                    Width="2"
-                    Height="25"
-                    Margin="0"
-                    Background="LightGray"
-                    BorderThickness="0" />
-
-                <ui:Button
-                    x:Name="ButtonUndo"
-                    Width="40"
-                    Height="30"
-                    Margin="5,0,0,0"
-                    Padding="0"
-                    Click="ButtonUndo_Click"
-                    FontSize="20"
-                    ToolTipService.ToolTip="undo">
-                    <ic:SymbolIcon IsFilled="False" Symbol="ArrowUndo" />
-                </ui:Button>
-
-                <ui:Button
-                    x:Name="ButtonRedo"
-                    Width="40"
-                    Height="30"
-                    Margin="5,0,5,0"
-                    Click="ButtonRedo_Click"
-                    FontSize="20"
-                    ToolTipService.ToolTip="redo">
-                    <ic:SymbolIcon IsFilled="False" Symbol="ArrowRedo" />
-                </ui:Button>
-
-                <Separator
-                    Width="2"
-                    Height="25"
-                    Margin="0"
-                    Background="LightGray"
-                    BorderThickness="0" />
+                    Margin="5,2,2,2"
+                    Padding="0,0,20,0"
+                    HorizontalContentAlignment="Right"
+                    VerticalContentAlignment="Center"
+                    BorderThickness="0"
+                    FontSize="14"
+                    KeyDown="FilterBox_KeyDown"
+                    OpacityMask="Black"
+                    PlaceholderText=".aoc"
+                    ToolTipService.ToolTip="filter by file extension (.pet)" />
 
                 <CheckBox
-                    x:Name="TextWrap"
+                    x:Name="RegexCheckBox"
+                    Grid.Column="0"
                     Width="30"
                     Height="30"
                     MinWidth="30"
                     MinHeight="30"
-                    Margin="0"
-                    Padding="0"
-                    HorizontalAlignment="Center"
+                    Margin="10,0,0,0"
+                    Padding="0,0,0,0"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     HorizontalContentAlignment="Center"
-                    IsChecked="{Binding ElementName=TextView, Path=WordWrap}"
+                    IsChecked="True"
                     OpacityMask="Black"
-                    ToolTipService.ToolTip="text wrap" />
-
-                <Separator
-                    Width="2"
-                    Height="25"
-                    Margin="0"
-                    Background="LightGray"
-                    BorderThickness="0" />
+                    ToolTipService.ToolTip="use Regex (pet$)" />
 
                 <ui:Button
-                    x:Name="ButtonDelete"
-                    Width="40"
+                    x:Name="FilterButton"
+                    Grid.Column="1"
+                    Width="50"
                     Height="30"
                     Margin="5,0,0,0"
                     Padding="0"
-                    Click="ButtonDelete_Click"
-                    FontSize="20"
-                    Foreground="#E4FF0000"
-                    ToolTipService.ToolTip="delete">
-                    <ic:SymbolIcon IsFilled="False" Symbol="Delete" />
-                </ui:Button>
-
-                <ComboBox
-                    Width="200"
-                    Height="30"
-                    Margin="5,0,0,0"
-                    BorderBrush="Gray"
-                    BorderThickness="0,0,0,1"
-                    Foreground="Black"
-                    ToolTipService.ToolTip="syntax style selection">
-                    wtf is this?!
-                </ComboBox>
-            </StackPanel>
-
-            <ui:TitleBar
-                Grid.Column="3"
-                Width="130"
-                Height="40"
-                BorderBrush="Black"
-                Foreground="Black" />
-        </Grid>
-
-        <!--  Content  -->
-        <Grid Grid.Row="1" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="50" />
-                <ColumnDefinition Width="400" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-
-            <Rectangle Grid.Column="0" Fill="WhiteSmoke" />
-            <Rectangle
-                Grid.Column="1"
-                Margin="0,0,0,-1"
-                Fill="#f8f8f8"
-                Stroke="#FFD8D8D8" />
-            <Rectangle Grid.Column="2" Fill="White" />
-            <GridSplitter
-                Grid.Column="1"
-                Width="5"
-                Background="#FFE8E8E8" />
-
-            <StackPanel Grid.Column="0" Orientation="Vertical">
-                <ui:Button
-                    x:Name="AllowGameOpen"
-                    Width="35"
-                    Height="30"
-                    Margin="0,50,0,0"
-                    Padding="0"
-                    HorizontalAlignment="Center"
+                    HorizontalAlignment="Left"
                     VerticalAlignment="Center"
-                    HorizontalContentAlignment="Center"
-                    Click="AllowGameOpen_Click"
-                    FontSize="20"
-                    ToolTipService.ToolTip="allow game to be opened">
-                    <ic:SymbolIcon IsFilled="False" Symbol="DesktopCheckmark" />
+                    Click="FilterButton_Click"
+                    FontSize="24"
+                    OpacityMask="Black">
+                    <ic:SymbolIcon IsFilled="False" Symbol="Filter" />
                 </ui:Button>
 
                 <ui:TextBlock
-                    Margin="0,80,0,0"
+                    Grid.Column="1"
+                    Margin="50,0,0,0"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
-                    <Run FontWeight="Black" Foreground="#FF2E7ED4">
-                        open
-                    </Run>
+                    <Run
+                        FontFamily="Verdana"
+                        FontSize="13"
+                        FontWeight="Black"
+                        Foreground="Gray"
+                        Text="VisualGGPK2" />
+                    <InlineUIContainer>
+                        <Label
+                            Content="UI"
+                            FontSize="11"
+                            Foreground="#FF2E7ED4" />
+                    </InlineUIContainer>
                 </ui:TextBlock>
 
-                <ui:Button
-                    x:Name="Official"
-                    Width="35"
-                    Height="30"
-                    Margin="0,10,0,0"
-                    Padding="0,0,0,0"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Click="International_Click"
-                    Content="O"
-                    FontSize="20"
-                    ToolTipService.ToolTip="open Official" />
+                <StackPanel Grid.Column="2" Orientation="Horizontal">
+                    <ui:Button
+                        x:Name="ButtonSave"
+                        Width="60"
+                        Height="30"
+                        Margin="0,0,5,0"
+                        Padding="0"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        BorderBrush="#FF2E7ED4"
+                        Click="OnSaveTextClicked"
+                        FontSize="20"
+                        ToolTipService.ToolTip="save">
+                        <ic:SymbolIcon IsFilled="False" Symbol="Save" />
+                    </ui:Button>
 
-                <ui:Button
-                    x:Name="Steam"
-                    Width="35"
-                    Height="30"
-                    Margin="0,10,0,0"
-                    Padding="0,0,0,0"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Click="Steam_Click"
-                    Content="S"
-                    FontSize="20"
-                    ToolTipService.ToolTip="open Steam" />
+                    <Separator
+                        Width="2"
+                        Height="25"
+                        Margin="0"
+                        Background="LightGray"
+                        BorderThickness="0" />
 
-                <ui:Button
-                    x:Name="Garena"
-                    Width="35"
-                    Height="30"
-                    Margin="0,10,0,0"
-                    Padding="0,0,0,0"
-                    HorizontalAlignment="Center"
-                    Click="Garena_Click"
-                    Content="G"
-                    FontSize="20"
-                    ToolTipService.ToolTip="open Garena" />
+                    <ui:Button
+                        x:Name="ButtonSelectAll"
+                        Width="40"
+                        Height="30"
+                        Margin="5,0,0,0"
+                        Padding="0"
+                        Click="ButtonSelectAll_Click"
+                        FontSize="20"
+                        ToolTipService.ToolTip="select all">
+                        <ic:SymbolIcon IsFilled="False" Symbol="MultiselectLtr" />
+                    </ui:Button>
 
-                <ui:Button
-                    x:Name="Tencent"
-                    Width="35"
-                    Height="30"
-                    Margin="0,10,0,0"
-                    Padding="0,0,0,0"
-                    HorizontalAlignment="Center"
-                    Click="Tencent_Click"
-                    Content="T"
-                    FontSize="20"
-                    ToolTipService.ToolTip="open Tencent" />
+                    <ui:Button
+                        x:Name="ButtonCopy"
+                        Width="40"
+                        Height="30"
+                        Margin="5,0,0,0"
+                        Padding="0"
+                        Click="ButtonCopy_Click"
+                        FontSize="20"
+                        ToolTipService.ToolTip="copy">
+                        <ic:SymbolIcon IsFilled="False" Symbol="Copy" />
+                    </ui:Button>
 
-                <ui:Button
-                    x:Name="Epic"
-                    Width="35"
-                    Height="30"
-                    Margin="0,10,0,0"
-                    Padding="0,0,0,0"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    Click="Steam_Click"
-                    Content="E"
-                    FontSize="20"
-                    ToolTipService.ToolTip="open Epic" />
-            </StackPanel>
+                    <ui:Button
+                        x:Name="ButtonCut"
+                        Width="40"
+                        Height="30"
+                        Margin="5,0,0,0"
+                        Padding="0"
+                        Click="ButtonCut_Click"
+                        FontSize="18"
+                        ToolTipService.ToolTip="cut">
+                        <ic:SymbolIcon IsFilled="False" Symbol="Cut" />
+                    </ui:Button>
 
-            <StackPanel
-                Grid.Column="0"
-                Width="50"
-                Height="70"
-                VerticalAlignment="Bottom"
-                Orientation="Vertical">
-                <ui:TextBlock
-                    Margin="0,0,0,5"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Bottom">
-                    <Run Foreground="Gray">
-                        v1.8.8
-                    </Run>
-                </ui:TextBlock>
+                    <ui:Button
+                        x:Name="ButtonPaste"
+                        Width="40"
+                        Height="30"
+                        Margin="5,0,5,0"
+                        Padding="0"
+                        Click="ButtonPaste_Click"
+                        FontSize="20"
+                        ToolTipService.ToolTip="paste">
+                        <ic:SymbolIcon IsFilled="False" Symbol="ClipboardPaste" />
+                    </ui:Button>
 
-                <ui:Image
-                    Width="35"
-                    Height="30"
-                    Margin="0,0,0,0"
-                    HorizontalAlignment="Center"
+                    <Separator
+                        Width="2"
+                        Height="25"
+                        Margin="0"
+                        Background="LightGray"
+                        BorderThickness="0" />
+
+                    <ui:Button
+                        x:Name="ButtonUndo"
+                        Width="40"
+                        Height="30"
+                        Margin="5,0,0,0"
+                        Padding="0"
+                        Click="ButtonUndo_Click"
+                        FontSize="20"
+                        ToolTipService.ToolTip="undo">
+                        <ic:SymbolIcon IsFilled="False" Symbol="ArrowUndo" />
+                    </ui:Button>
+
+                    <ui:Button
+                        x:Name="ButtonRedo"
+                        Width="40"
+                        Height="30"
+                        Margin="5,0,5,0"
+                        Click="ButtonRedo_Click"
+                        FontSize="20"
+                        ToolTipService.ToolTip="redo">
+                        <ic:SymbolIcon IsFilled="False" Symbol="ArrowRedo" />
+                    </ui:Button>
+
+                    <Separator
+                        Width="2"
+                        Height="25"
+                        Margin="0"
+                        Background="LightGray"
+                        BorderThickness="0" />
+
+                    <CheckBox
+                        x:Name="TextWrap"
+                        Width="30"
+                        Height="30"
+                        MinWidth="30"
+                        MinHeight="30"
+                        Margin="0"
+                        Padding="0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        IsChecked="{Binding WordWrap, ElementName=TextView}"
+                        OpacityMask="Black"
+                        ToolTipService.ToolTip="text wrap" />
+
+                    <Separator
+                        Width="2"
+                        Height="25"
+                        Margin="0"
+                        Background="LightGray"
+                        BorderThickness="0" />
+
+                    <ui:Button
+                        x:Name="ButtonDelete"
+                        Width="40"
+                        Height="30"
+                        Margin="5,0,0,0"
+                        Padding="0"
+                        Click="ButtonDelete_Click"
+                        FontSize="20"
+                        Foreground="#E4FF0000"
+                        ToolTipService.ToolTip="delete">
+                        <ic:SymbolIcon IsFilled="False" Symbol="Delete" />
+                    </ui:Button>
+
+                    <ComboBox
+                        Width="200"
+                        Height="30"
+                        Margin="5,0,0,0"
+                        Padding="3,2,0,0"
+                        BorderBrush="Gray"
+                        BorderThickness="0,0,0,1"
+                        Foreground="Black"
+                        ToolTipService.ToolTip="syntax style selection">
+                        <System:String>wtf is this?!</System:String>
+                    </ComboBox>
+                </StackPanel>
+
+                <ui:TitleBar
+                    Grid.Column="3"
+                    Width="130"
+                    Height="40"
+                    BorderBrush="Black"
+                    Foreground="Black" />
+            </Grid>
+
+            <!--  Content  -->
+            <Grid Grid.Row="1" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50" />
+                    <ColumnDefinition Width="400" MinWidth="400" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Rectangle Grid.Column="0" Fill="WhiteSmoke" />
+                <Rectangle
+                    Grid.Column="1"
+                    Margin="0,0,0,-1"
+                    Fill="#f8f8f8"
+                    Stroke="#FFD8D8D8" />
+                <Rectangle Grid.Column="2" Fill="White" />
+                <GridSplitter
+                    Grid.Column="1"
+                    Width="5"
+                    Background="#FFE8E8E8" />
+
+                <StackPanel Grid.Column="0" Orientation="Vertical">
+                    <ui:Button
+                        x:Name="AllowGameOpen"
+                        Width="35"
+                        Height="30"
+                        Margin="0,50,0,0"
+                        Padding="0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        Click="AllowGameOpen_Click"
+                        FontSize="20"
+                        ToolTipService.ToolTip="allow game to be opened">
+                        <ic:SymbolIcon IsFilled="False" Symbol="DesktopCheckmark" />
+                    </ui:Button>
+
+                    <ui:TextBlock
+                        Margin="0,80,0,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                        <Run
+                            FontWeight="Black"
+                            Foreground="#FF2E7ED4"
+                            Text="open" />
+                    </ui:TextBlock>
+
+                    <ui:Button
+                        x:Name="Official"
+                        Width="35"
+                        Height="30"
+                        Margin="0,10,0,0"
+                        Padding="0,0,0,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Click="International_Click"
+                        Content="O"
+                        FontSize="20"
+                        ToolTipService.ToolTip="open Official" />
+
+                    <ui:Button
+                        x:Name="Steam"
+                        Width="35"
+                        Height="30"
+                        Margin="0,10,0,0"
+                        Padding="0,0,0,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Click="Steam_Click"
+                        Content="S"
+                        FontSize="20"
+                        ToolTipService.ToolTip="open Steam" />
+
+                    <ui:Button
+                        x:Name="Garena"
+                        Width="35"
+                        Height="30"
+                        Margin="0,10,0,0"
+                        Padding="0,0,0,0"
+                        HorizontalAlignment="Center"
+                        Click="Garena_Click"
+                        Content="G"
+                        FontSize="20"
+                        ToolTipService.ToolTip="open Garena" />
+
+                    <ui:Button
+                        x:Name="Tencent"
+                        Width="35"
+                        Height="30"
+                        Margin="0,10,0,0"
+                        Padding="0,0,0,0"
+                        HorizontalAlignment="Center"
+                        Click="Tencent_Click"
+                        Content="T"
+                        FontSize="20"
+                        ToolTipService.ToolTip="open Tencent" />
+
+                    <ui:Button
+                        x:Name="Epic"
+                        Width="35"
+                        Height="30"
+                        Margin="0,10,0,0"
+                        Padding="0,0,0,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Click="Steam_Click"
+                        Content="E"
+                        FontSize="20"
+                        ToolTipService.ToolTip="open Epic" />
+                </StackPanel>
+
+                <StackPanel
+                    Grid.Column="0"
+                    Width="50"
+                    Height="70"
                     VerticalAlignment="Bottom"
-                    BorderBrush="#33000000"
-                    CornerRadius="4"
-                    Source="/silver_cube.png"
-                    ToolTipService.ToolTip="VisualGGPK2 UI" />
-            </StackPanel>
+                    Orientation="Vertical">
+                    <ui:TextBlock
+                        Margin="0,0,0,5"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Bottom">
+                        <Run Foreground="Gray" Text="v1.8.8" />
+                    </ui:TextBlock>
 
-            <ui:TextBox
-                x:Name="SearchBox"
-                Grid.Column="1"
-                Width="300"
-                Height="30"
-                MinWidth="300"
-                MinHeight="30"
-                Margin="0,1,0,0"
-                Padding="5,-2,20,0"
-                VerticalAlignment="Top"
-                HorizontalContentAlignment="Left"
-                VerticalContentAlignment="Center"
-                Background="WhiteSmoke"
-                BorderThickness="0,0,0,1"
-                FontSize="14"
-                Foreground="Black"
-                KeyDown="SearchBox_KeyDown"
-                PlaceholderText="search..." />
+                    <ui:Image
+                        Width="35"
+                        Height="30"
+                        Margin="0,0,0,0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Bottom"
+                        BorderBrush="#33000000"
+                        CornerRadius="4"
+                        Source="/silver_cube.png"
+                        ToolTipService.ToolTip="VisualGGPK2 UI" />
+                </StackPanel>
 
-            <TreeView
-                x:Name="Tree"
-                Grid.Column="1"
-                Margin="0,40,6,0"
-                AllowDrop="True"
-                PreviewMouseDown="OnTreePreviewMouseDown"
-                SelectedItemChanged="OnTreeSelectedChanged"
-                Style="{DynamicResource TreeViewStyle}"
-                TreeViewItem.Expanded="OnTreeExpanded"
-                VirtualizingStackPanel.IsVirtualizing="True"
-                VirtualizingStackPanel.VirtualizationMode="Recycling" />
+                <ui:TextBox
+                    x:Name="SearchBox"
+                    Grid.Column="1"
+                    Width="300"
+                    Height="30"
+                    MinWidth="300"
+                    MinHeight="30"
+                    Margin="0,1,0,0"
+                    Padding="5,-2,20,0"
+                    VerticalAlignment="Top"
+                    HorizontalContentAlignment="Left"
+                    VerticalContentAlignment="Center"
+                    Background="WhiteSmoke"
+                    BorderThickness="0,0,0,1"
+                    FontSize="14"
+                    Foreground="Black"
+                    KeyDown="SearchBox_KeyDown"
+                    PlaceholderText="search..." />
 
-            <ui:ProgressRing
+                <TreeView
+                    x:Name="Tree"
+                    Grid.Column="1"
+                    Margin="0,40,6,0"
+                    AllowDrop="True"
+                    PreviewMouseDown="OnTreePreviewMouseDown"
+                    SelectedItemChanged="OnTreeSelectedChanged"
+                    Style="{DynamicResource TreeViewStyle}"
+                    TreeViewItem.Expanded="OnTreeExpanded"
+                    VirtualizingPanel.IsVirtualizing="True"
+                    VirtualizingPanel.VirtualizationMode="Recycling" />
+
+                <!--<ui:ProgressRing
                 x:Name="pRing"
                 Grid.Column="2"
                 VerticalAlignment="Center"
-                IsIndeterminate="False" />
+                IsIndeterminate="False" />-->
 
-            <avalonedit:TextEditor
-                x:Name="TextView"
-                Grid.Column="2"
-                Padding="10,10,0,0"
-                HorizontalContentAlignment="Left"
-                VerticalContentAlignment="Top"
-                Background="{x:Null}"
-                BorderBrush="#FFD8D8D8"
-                BorderThickness="1,1,0,0"
-                FontFamily="Verdana"
-                FontSize="14"
-                Foreground="Black"
-                LineNumbersForeground="Gray"
-                RenderTransformOrigin="0,0"
-                ScrollViewer.CanContentScroll="True"
-                ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                ScrollViewer.VerticalScrollBarVisibility="Auto"
-                ShowLineNumbers="True"
-                SnapsToDevicePixels="True"
-                SyntaxHighlighting="C#"
-                UseLayoutRounding="True"
-                WordWrap="True">
-                <avalonedit:TextEditor.ContextMenu>
-                    <ContextMenu>
-                        <MenuItem Command="Copy" />
-                        <MenuItem Command="Paste" />
-                        <MenuItem Command="Cut" />
-                        <Separator />
-                        <MenuItem Command="Undo" />
-                        <MenuItem Command="Redo" />
-                        <MenuItem Command="Delete" />
-                    </ContextMenu>
-                </avalonedit:TextEditor.ContextMenu>
-            </avalonedit:TextEditor>
 
-            <Canvas
-                x:Name="ImageView"
-                Grid.Column="2"
-                Margin="2"
-                Background="White"
-                ClipToBounds="True"
-                Visibility="Hidden">
-                <Image
-                    x:Name="Image"
-                    Canvas.Left="0"
-                    Canvas.Top="0"
-                    RenderOptions.BitmapScalingMode="NearestNeighbor"
-                    Stretch="None" />
-            </Canvas>
 
-            <ui:TextBlock
-                Grid.Column="2"
-                Margin="0,0,10,5"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Bottom"
-                Opacity="0.8">
-                <Run
+                <search:TextEditor
+                    x:Name="TextView"
+                    Grid.Column="2"
+                    Padding="10,10,0,0"
+                    HorizontalContentAlignment="Left"
+                    VerticalContentAlignment="Top"
+                    Background="{x:Null}"
+                    BorderBrush="#FFD8D8D8"
+                    BorderThickness="1,1,0,0"
+                    FontFamily="Verdana"
+                    FontSize="14"
+                    Foreground="Black"
+                    LineNumbersForeground="Gray"
+                    RenderTransformOrigin="0,0"
+                    ScrollViewer.CanContentScroll="True"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto"
+                    ShowLineNumbers="True"
+                    SnapsToDevicePixels="True"
+                    SyntaxHighlighting="C#"
+                    UseLayoutRounding="True"
+                    WordWrap="True">
+                    <search:TextEditor.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Command="Copy" />
+                            <MenuItem Command="Paste" />
+                            <MenuItem Command="Cut" />
+                            <Separator />
+                            <MenuItem Command="Undo" />
+                            <MenuItem Command="Redo" />
+                            <MenuItem Command="Delete" />
+                        </ContextMenu>
+                    </search:TextEditor.ContextMenu>
+                </search:TextEditor>
+
+                <Canvas
+                    x:Name="ImageView"
+                    Grid.Column="2"
+                    Margin="2"
+                    Background="White"
+                    ClipToBounds="True"
+                    Visibility="Hidden">
+                    <Image
+                        x:Name="Image"
+                        Canvas.Left="0"
+                        Canvas.Top="0"
+                        RenderOptions.BitmapScalingMode="NearestNeighbor"
+                        Stretch="None" />
+                </Canvas>
+
+                <ui:TextBlock
+                    Grid.Column="2"
+                    Margin="0,0,10,5"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Opacity="0.8">
+                    <Run
+                        FontSize="12"
+                        FontWeight="Black"
+                        Foreground="Gray"
+                        Text="copyright © 2020-2023 aianlinb" />
+                </ui:TextBlock>
+
+                <Grid
+                    x:Name="DatView"
+                    Grid.Column="2"
+                    Margin="0,5,0,0"
+                    Visibility="Hidden">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition MinHeight="30" />
+                        <RowDefinition MinHeight="30" />
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox
+                            x:Name="SchemaMin"
+                            Height="35"
+                            Margin="5,0,0,0"
+                            VerticalContentAlignment="Center"
+                            Checked="OnSchemaMinChecked"
+                            Content="Use schema"
+                            IsChecked="True"
+                            ToolTipService.ToolTip="Use schema.min.json"
+                            Unchecked="OnSchemaMinChecked" />
+                        <Separator
+                            Height="25"
+                            Margin="5,0,0,0"
+                            HorizontalAlignment="Left"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            BorderThickness="1,0,1,0" />
+                        <Button
+                            Width="80"
+                            Height="30"
+                            Margin="10,0,0,0"
+                            HorizontalAlignment="Left"
+                            Click="OnReloadClicked"
+                            Content="Reload"
+                            ToolTipService.ToolTip="Reload DatDefinitions" />
+                        <Button
+                            Width="80"
+                            Height="30"
+                            Margin="10,0,0,0"
+                            HorizontalAlignment="Left"
+                            Click="OnImportClicked"
+                            Content="Import"
+                            ToolTipService.ToolTip="Import from .csv" />
+                        <Button
+                            Width="80"
+                            Height="30"
+                            Margin="10,0,0,0"
+                            HorizontalAlignment="Left"
+                            Click="OnCSVClicked"
+                            Content="Export"
+                            ToolTipService.ToolTip="Export to .csv" />
+                        <Separator
+                            Height="25"
+                            Margin="5,0,0,0"
+                            HorizontalAlignment="Left"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            BorderThickness="1,0,1,0" />
+                        <Button
+                            Width="80"
+                            Height="30"
+                            Margin="10,0,0,0"
+                            HorizontalAlignment="Left"
+                            BorderBrush="#FF2E7ED4"
+                            Click="OnSaveDatClicked"
+                            Content="Save"
+                            ToolTipService.ToolTip="save" />
+                    </StackPanel>
+
+                    <DataGrid
+                        x:Name="DatTable"
+                        Grid.Row="1"
+                        Margin="0,5,0,2"
+                        AutoGenerateColumns="False"
+                        CanUserAddRows="False"
+                        CanUserDeleteRows="False"
+                        CanUserReorderColumns="False"
+                        FontSize="12"
+                        SelectionUnit="CellOrRowHeader" />
+                    <DataGrid
+                        x:Name="DatReferenceDataTable"
+                        Grid.Row="2"
+                        AutoGenerateColumns="False"
+                        CanUserAddRows="False"
+                        CanUserDeleteRows="False"
+                        CanUserReorderColumns="False"
+                        SelectionUnit="CellOrRowHeader"
+                        VirtualizingPanel.VirtualizationMode="Standard" />
+                    <GridSplitter
+                        Grid.Row="1"
+                        Height="5"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Bottom" />
+                </Grid>
+            </Grid>
+
+            <!--  Footer  -->
+            <Grid Grid.Row="2" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".15*" />
+                    <ColumnDefinition Width=".15*" />
+                    <ColumnDefinition Width=".40*" />
+                    <ColumnDefinition Width=".30*" />
+                </Grid.ColumnDefinitions>
+
+                <Rectangle Grid.Column="0" Fill="WhiteSmoke" />
+                <Rectangle Grid.Column="1" Fill="WhiteSmoke" />
+                <Rectangle Grid.Column="2" Fill="WhiteSmoke" />
+                <Rectangle Grid.Column="3" Fill="WhiteSmoke" />
+
+                <ui:TextBox
+                    x:Name="TextBoxOffset"
+                    Grid.Column="0"
+                    Height="24"
+                    Margin="5,0,0,0"
+                    Padding="0,0,0,0"
+                    VerticalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    BorderThickness="0"
+                    FontFamily="Verdana"
                     FontSize="12"
-                    FontWeight="Black"
-                    Foreground="Gray">
-                    copyright © 2020-2023 aianlinb
-                </Run>
-            </ui:TextBlock>
+                    IsReadOnly="True"
+                    PlaceholderText="offsets"
+                    ToolTipService.ToolTip="offsets" />
 
-            <Grid
-                x:Name="DatView"
-                Grid.Column="2"
-                Margin="0,5,0,0"
-                Visibility="Hidden">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="30" />
-                    <RowDefinition MinHeight="30" />
-                    <RowDefinition MinHeight="30" />
-                </Grid.RowDefinitions>
-                <StackPanel Orientation="Horizontal">
-                    <CheckBox
-                        x:Name="SchemaMin"
-                        Height="35"
-                        Margin="5,0,0,0"
-                        VerticalContentAlignment="Center"
-                        Checked="OnSchemaMinChecked"
-                        Content="Use schema"
-                        IsChecked="True"
-                        ToolTipService.ToolTip="Use schema.min.json"
-                        Unchecked="OnSchemaMinChecked" />
-                    <Separator
-                        Height="25"
-                        Margin="5,0,0,0"
-                        HorizontalAlignment="Left"
-                        HorizontalContentAlignment="Center"
-                        VerticalContentAlignment="Center"
-                        BorderThickness="1,0,1,0" />
-                    <Button
-                        Width="80"
-                        Height="30"
-                        Margin="10,0,0,0"
-                        HorizontalAlignment="Left"
-                        Click="OnReloadClicked"
-                        Content="Reload"
-                        ToolTipService.ToolTip="Reload DatDefinitions" />
-                    <Button
-                        Width="80"
-                        Height="30"
-                        Margin="10,0,0,0"
-                        HorizontalAlignment="Left"
-                        Click="OnImportClicked"
-                        Content="Import"
-                        ToolTipService.ToolTip="Import from .csv" />
-                    <Button
-                        Width="80"
-                        Height="30"
-                        Margin="10,0,0,0"
-                        HorizontalAlignment="Left"
-                        Click="OnCSVClicked"
-                        Content="Export"
-                        ToolTipService.ToolTip="Export to .csv" />
-                    <Separator
-                        Height="25"
-                        Margin="5,0,0,0"
-                        HorizontalAlignment="Left"
-                        HorizontalContentAlignment="Center"
-                        VerticalContentAlignment="Center"
-                        BorderThickness="1,0,1,0" />
-                    <Button
-                        Width="80"
-                        Height="30"
-                        Margin="10,0,0,0"
-                        HorizontalAlignment="Left"
-                        BorderBrush="#FF2E7ED4"
-                        Click="OnSaveDatClicked"
-                        Content="Save"
-                        ToolTipService.ToolTip="save" />
-                </StackPanel>
-
-                <DataGrid
-                    x:Name="DatTable"
-                    Grid.Row="1"
-                    Margin="0,5,0,2"
-                    AutoGenerateColumns="False"
-                    CanUserAddRows="False"
-                    CanUserDeleteRows="False"
-                    CanUserReorderColumns="False"
+                <ui:TextBox
+                    x:Name="TextBoxSize"
+                    Grid.Column="1"
+                    Height="24"
+                    Margin="5,0,0,0"
+                    Padding="0,0,0,0"
+                    VerticalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    BorderThickness="0"
+                    FontFamily="Verdana"
                     FontSize="12"
-                    SelectionUnit="CellOrRowHeader" />
-                <DataGrid
-                    x:Name="DatReferenceDataTable"
-                    Grid.Row="2"
-                    AutoGenerateColumns="False"
-                    CanUserAddRows="False"
-                    CanUserDeleteRows="False"
-                    CanUserReorderColumns="False"
-                    SelectionUnit="CellOrRowHeader"
-                    VirtualizingPanel.VirtualizationMode="Standard" />
-                <GridSplitter
-                    Grid.Row="1"
-                    Height="5"
-                    HorizontalAlignment="Stretch"
-                    VerticalAlignment="Bottom" />
+                    IsReadOnly="True"
+                    PlaceholderText="size"
+                    ToolTipService.ToolTip="size" />
+
+                <ui:TextBox
+                    x:Name="TextBoxHash"
+                    Grid.Column="2"
+                    Height="24"
+                    Margin="5,0,0,0"
+                    Padding="0,0,0,0"
+                    VerticalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    BorderThickness="0"
+                    FontFamily="Verdana"
+                    FontSize="12"
+                    IsReadOnly="True"
+                    PlaceholderText="hash"
+                    ToolTipService.ToolTip="hash" />
+
+                <ui:TextBox
+                    x:Name="TextBoxBundle"
+                    Grid.Column="3"
+                    Height="24"
+                    Margin="5,0,5,0"
+                    Padding="0,0,0,0"
+                    VerticalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    BorderThickness="0"
+                    FontFamily="Verdana"
+                    FontSize="12"
+                    IsReadOnly="True"
+                    PlaceholderText="bundle"
+                    ToolTipService.ToolTip="bundle" />
             </Grid>
         </Grid>
-
-        <!--  Footer  -->
-        <Grid Grid.Row="2" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width=".15*" />
-                <ColumnDefinition Width=".15*" />
-                <ColumnDefinition Width=".40*" />
-                <ColumnDefinition Width=".30*" />
-            </Grid.ColumnDefinitions>
-
-            <Rectangle Grid.Column="0" Fill="WhiteSmoke" />
-            <Rectangle Grid.Column="1" Fill="WhiteSmoke" />
-            <Rectangle Grid.Column="2" Fill="WhiteSmoke" />
-            <Rectangle Grid.Column="3" Fill="WhiteSmoke" />
-
-            <ui:TextBox
-                x:Name="TextBoxOffset"
-                Grid.Column="0"
-                Height="24"
-                Margin="5,0,0,0"
-                Padding="0,0,0,0"
-                VerticalAlignment="Center"
-                HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center"
-                BorderThickness="0"
-                FontFamily="Verdana"
-                FontSize="12"
-                IsReadOnly="True"
-                PlaceholderText="offsets"
-                ToolTipService.ToolTip="offsets" />
-
-            <ui:TextBox
-                x:Name="TextBoxSize"
-                Grid.Column="1"
-                Height="24"
-                Margin="5,0,0,0"
-                Padding="0,0,0,0"
-                VerticalAlignment="Center"
-                HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center"
-                BorderThickness="0"
-                FontFamily="Verdana"
-                FontSize="12"
-                IsReadOnly="True"
-                PlaceholderText="size"
-                ToolTipService.ToolTip="size" />
-
-            <ui:TextBox
-                x:Name="TextBoxHash"
-                Grid.Column="2"
-                Height="24"
-                Margin="5,0,0,0"
-                Padding="0,0,0,0"
-                VerticalAlignment="Center"
-                HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center"
-                BorderThickness="0"
-                FontFamily="Verdana"
-                FontSize="12"
-                IsReadOnly="True"
-                PlaceholderText="hash"
-                ToolTipService.ToolTip="hash" />
-
-            <ui:TextBox
-                x:Name="TextBoxBundle"
-                Grid.Column="3"
-                Height="24"
-                Margin="5,0,5,0"
-                Padding="0,0,0,0"
-                VerticalAlignment="Center"
-                HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center"
-                BorderThickness="0"
-                FontFamily="Verdana"
-                FontSize="12"
-                IsReadOnly="True"
-                PlaceholderText="bundle"
-                ToolTipService.ToolTip="bundle" />
-        </Grid>
+        <ui:ProgressRing
+            x:Name="pRing"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            IsIndeterminate="False"
+            Visibility="Hidden" />
     </Grid>
+
 </ui:FluentWindow>

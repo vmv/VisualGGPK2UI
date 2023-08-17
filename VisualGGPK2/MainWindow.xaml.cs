@@ -79,15 +79,14 @@ namespace VisualGGPK2
             }
             InitializeComponent();
             SearchPanel.Install(TextView);
+            //pRing.IsIndeterminate = false;
+            //pRing.Visibility = Visibility.Hidden;
         }        
 
         private async void OnLoaded(object sender, RoutedEventArgs e)
         {
             var currentVersion = Assembly.GetExecutingAssembly().GetName().Version!;
-            if (currentVersion.Revision == 0)
-                Version = $" (v{currentVersion.Major}.{currentVersion.Minor}.{currentVersion.Build})";
-            else
-                Version = $" (v{currentVersion.Major}.{currentVersion.Minor}.{currentVersion.Build}.{currentVersion.Revision})";
+            Version = currentVersion.Revision == 0 ? $" (v{currentVersion.Major}.{currentVersion.Minor}.{currentVersion.Build})" : $" (v{currentVersion.Major}.{currentVersion.Minor}.{currentVersion.Build}.{currentVersion.Revision})";
             Title += Version;
             if (SteamMode)
                 Title += " (SteamMode)";
@@ -133,9 +132,7 @@ namespace VisualGGPK2
                 }
                 if (setting.GGPKPath == "")
                 {
-                    string path;
-                    path = Registry.CurrentUser.OpenSubKey(@"Software\GrindingGearGames\Path of Exile")?.GetValue("InstallLocation") as string;
-                    if (path != null && File.Exists(path + @"\Content.ggpk")) // Get POE path
+                    if (Registry.CurrentUser.OpenSubKey(@"Software\GrindingGearGames\Path of Exile")?.GetValue("InstallLocation") is string path && File.Exists(path + @"\Content.ggpk")) // Get POE path
                         ofd.InitialDirectory = path.TrimEnd('\\');
                 }
                 else if (File.Exists(setting.GGPKPath + @"\Content.ggpk"))
@@ -152,8 +149,9 @@ namespace VisualGGPK2
                     return;
                 }
             }
-            pRing.IsIndeterminate = true;
             pRing.Visibility = Visibility.Visible;
+            pRing.IsIndeterminate = true;
+            
             // Initial GGPK
             await Task.Run(() => ggpkContainer = new GGPKContainer(FilePath, BundleMode, SteamMode));
 
@@ -218,16 +216,22 @@ namespace VisualGGPK2
             };
             if (ofd.ShowDialog() != true) return false;
             Tree.Items.Clear();
-            pRing.IsIndeterminate = true;
-            pRing.Visibility = Visibility.Visible;
+
+            
+            //pRing.Visibility = Visibility.Visible;
+            //pRing.IsIndeterminate = true;
+
             await Task.Run(() =>
             {
                 Dispatcher.Invoke(() =>
                 {
                     try
                     {
+                        
                         setting.officialPath = Directory.GetParent(ofd.FileName)?.FullName;
                         setting.Save();
+                        //pRing.Visibility = Visibility.Visible;
+                        //pRing.IsIndeterminate = true;
                         ggpkContainer = new GGPKContainer(ofd.FileName, bundleMode);
                         var root = CreateNode(ggpkContainer.rootDirectory);
                         Tree.Items.Add(root);
@@ -240,8 +244,8 @@ namespace VisualGGPK2
                     ggpkContainer.fileStream?.Close();
                 });
             });
-            pRing.IsIndeterminate = false;
-            pRing.Visibility = Visibility.Hidden;
+            //pRing.IsIndeterminate = false;
+            //pRing.Visibility = Visibility.Hidden;
             return true;
         }
 
@@ -259,8 +263,8 @@ namespace VisualGGPK2
             };
             if (ofd.ShowDialog() != true) return false;
             Tree.Items.Clear();
-            pRing.IsIndeterminate = true;
-            pRing.Visibility = Visibility.Visible;
+            //pRing.IsIndeterminate = true;
+            //pRing.Visibility = Visibility.Visible;
             await Task.Run(() =>
             {
                 Dispatcher.Invoke(() =>
@@ -280,8 +284,8 @@ namespace VisualGGPK2
                     }
                 });
             });
-            pRing.IsIndeterminate = false;
-            pRing.Visibility = Visibility.Hidden;
+            //pRing.IsIndeterminate = false;
+            //pRing.Visibility = Visibility.Hidden;
             return true;
         }
 
@@ -299,8 +303,8 @@ namespace VisualGGPK2
             };
             if (ofd.ShowDialog() != true) return false;
             Tree.Items.Clear();
-            pRing.IsIndeterminate = true;
-            pRing.Visibility = Visibility.Visible;
+            //pRing.IsIndeterminate = true;
+            //pRing.Visibility = Visibility.Visible;
             await Task.Run(() =>
             {
                 Dispatcher.Invoke(() =>
@@ -321,8 +325,8 @@ namespace VisualGGPK2
                     ggpkContainer.fileStream?.Close();
                 });
             });
-            pRing.IsIndeterminate = false;
-            pRing.Visibility = Visibility.Hidden;
+            //pRing.IsIndeterminate = false;
+            //pRing.Visibility = Visibility.Hidden;
             return true;
         }
 
@@ -339,8 +343,8 @@ namespace VisualGGPK2
             };
             if (ofd.ShowDialog() != true) return false;
             Tree.Items.Clear();
-            pRing.IsIndeterminate = true;
-            pRing.Visibility = Visibility.Visible;
+            //pRing.IsIndeterminate = true;
+            //pRing.Visibility = Visibility.Visible;
             await Task.Run(() =>
             {
                 Dispatcher.Invoke(() =>
@@ -361,8 +365,8 @@ namespace VisualGGPK2
                     ggpkContainer.fileStream?.Close();
                 });
             });
-            pRing.IsIndeterminate = false;
-            pRing.Visibility = Visibility.Hidden;
+            //pRing.IsIndeterminate = false;
+            //pRing.Visibility = Visibility.Hidden;
             return true;
         }
 
@@ -1724,16 +1728,19 @@ namespace VisualGGPK2
         private async void International_Click(object sender, RoutedEventArgs e)
         {
             if (!await OfficialLoaded()) return;
+            //DialogResult = true;
         }
 
         private async void Steam_Click(object sender, RoutedEventArgs e)
         {
             if (!await SteamLoaded()) return;
+            //DialogResult = true;
         }
 
         private async void Garena_Click(object sender, RoutedEventArgs e)
         {
             if (!await GarenaLoaded()) return;
+            //DialogResult = true;
         }
 
         private async void Tencent_Click(object sender, RoutedEventArgs e)
