@@ -644,6 +644,12 @@
                 VirtualizingStackPanel.IsVirtualizing="True"
                 VirtualizingStackPanel.VirtualizationMode="Recycling" />
 
+            <ui:ProgressRing
+                x:Name="pRing"
+                Grid.Column="2"
+                VerticalAlignment="Center"
+                IsIndeterminate="False" />
+
             <avalonedit:TextEditor
                 x:Name="TextView"
                 Grid.Column="2"

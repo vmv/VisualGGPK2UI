@@ -152,7 +152,8 @@ namespace VisualGGPK2
                     return;
                 }
             }
-
+            pRing.IsIndeterminate = true;
+            pRing.Visibility = Visibility.Visible;
             // Initial GGPK
             await Task.Run(() => ggpkContainer = new GGPKContainer(FilePath, BundleMode, SteamMode));
 
@@ -200,6 +201,8 @@ namespace VisualGGPK2
             DatReferenceDataTable.CellEditEnding += OnDatReferenceDataTableCellEdit;
 
             TextView.AppendText("\r\nDone!");
+            pRing.IsIndeterminate = false;
+            pRing.Visibility = Visibility.Hidden;
         }
 
         private async Task<bool> OfficialLoaded(bool bundleMode = false)
@@ -215,6 +218,8 @@ namespace VisualGGPK2
             };
             if (ofd.ShowDialog() != true) return false;
             Tree.Items.Clear();
+            pRing.IsIndeterminate = true;
+            pRing.Visibility = Visibility.Visible;
             await Task.Run(() =>
             {
                 Dispatcher.Invoke(() =>
@@ -235,6 +240,8 @@ namespace VisualGGPK2
                     ggpkContainer.fileStream?.Close();
                 });
             });
+            pRing.IsIndeterminate = false;
+            pRing.Visibility = Visibility.Hidden;
             return true;
         }
 
@@ -252,6 +259,8 @@ namespace VisualGGPK2
             };
             if (ofd.ShowDialog() != true) return false;
             Tree.Items.Clear();
+            pRing.IsIndeterminate = true;
+            pRing.Visibility = Visibility.Visible;
             await Task.Run(() =>
             {
                 Dispatcher.Invoke(() =>
@@ -271,6 +280,8 @@ namespace VisualGGPK2
                     }
                 });
             });
+            pRing.IsIndeterminate = false;
+            pRing.Visibility = Visibility.Hidden;
             return true;
         }
 
@@ -288,6 +299,8 @@ namespace VisualGGPK2
             };
             if (ofd.ShowDialog() != true) return false;
             Tree.Items.Clear();
+            pRing.IsIndeterminate = true;
+            pRing.Visibility = Visibility.Visible;
             await Task.Run(() =>
             {
                 Dispatcher.Invoke(() =>
@@ -308,6 +321,8 @@ namespace VisualGGPK2
                     ggpkContainer.fileStream?.Close();
                 });
             });
+            pRing.IsIndeterminate = false;
+            pRing.Visibility = Visibility.Hidden;
             return true;
         }
 
@@ -324,6 +339,8 @@ namespace VisualGGPK2
             };
             if (ofd.ShowDialog() != true) return false;
             Tree.Items.Clear();
+            pRing.IsIndeterminate = true;
+            pRing.Visibility = Visibility.Visible;
             await Task.Run(() =>
             {
                 Dispatcher.Invoke(() =>
@@ -344,6 +361,8 @@ namespace VisualGGPK2
                     ggpkContainer.fileStream?.Close();
                 });
             });
+            pRing.IsIndeterminate = false;
+            pRing.Visibility = Visibility.Hidden;
             return true;
         }
 
@@ -357,7 +376,7 @@ namespace VisualGGPK2
         /// <summary>
         /// Create a element of the TreeView
         /// </summary>
-        public static Wpf.Ui.Controls.TreeViewItem CreateNode(RecordTreeNode rtn)
+        public static TreeViewItem CreateNode(RecordTreeNode rtn)
         {
             var tvi = new TreeViewItem { Tag = rtn, Margin = new Thickness(0, 1, 0, 1) };
             var stack = new StackPanel { Orientation = Orientation.Horizontal };
@@ -391,12 +410,10 @@ namespace VisualGGPK2
         private void OnTreeExpanded(object sender, RoutedEventArgs e)
         {
             var tvi = e.Source as TreeViewItem;
-            if (tvi.Items.Count == 1 && tvi.Items[0] is string) // Haven't been expanded yet
-            {
-                tvi.Items.Clear();
-                foreach (var c in ((RecordTreeNode)tvi.Tag).Children)
-                    tvi.Items.Add(CreateNode(c));
-            }
+            if (tvi?.Items is not [string]) return; // Haven't been expanded yet
+            tvi.Items.Clear();
+            foreach (var c in ((RecordTreeNode)tvi.Tag).Children)
+                tvi.Items.Add(CreateNode(c));
         }
 
         /// <summary>
