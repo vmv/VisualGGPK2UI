@@ -22,10 +22,10 @@ namespace LibGGPK2
         public readonly RecordTreeNode rootDirectory;
         public readonly DirectoryRecord OriginalBundles2;
         public readonly BundleDirectoryNode FakeBundles2;
-        public readonly IndexContainer Index;
+        public IndexContainer Index;
         public readonly FileRecord IndexRecord;
         public readonly LinkedList<FreeRecord> LinkedFreeRecords;
-        protected readonly Dictionary<LibBundle.Records.BundleRecord, FileRecord> _RecordOfBundle;
+        public readonly Dictionary<LibBundle.Records.BundleRecord, FileRecord> _RecordOfBundle;
 
         /// <summary>
         /// Get the FileRecord of a bundle

@@ -597,12 +597,14 @@
                     <ComboBox
                         Width="100"
                         Height="25"
+                        MinWidth="100"
+                        MinHeight="25"
                         Margin="5,0,0,0"
                         Padding="3,2,0,0"
                         BorderBrush="Gray"
                         BorderThickness="0,0,0,1"
                         Foreground="Black"
-                        ToolTipService.ToolTip="syntax style selection" MinHeight="25" MinWidth="100" />
+                        ToolTipService.ToolTip="syntax style selection" />
                 </StackPanel>
 
                 <ui:TitleBar
@@ -648,7 +650,6 @@
                         ToolTipService.ToolTip="allow game to be opened">
                         <ic:SymbolIcon IsFilled="False" Symbol="DesktopCheckmark" />
                     </ui:Button>
-
                     <ui:TextBlock
                         Margin="0,80,0,0"
                         HorizontalAlignment="Center"
@@ -658,69 +659,81 @@
                             Foreground="#FF2E7ED4"
                             Text="open" />
                     </ui:TextBlock>
-
                     <ui:Button
                         x:Name="Official"
                         Width="35"
                         Height="30"
                         Margin="0,10,0,0"
-                        Padding="0,0,0,0"
+                        Padding="0"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Click="International_Click"
                         Content="O"
                         FontSize="20"
                         ToolTipService.ToolTip="open Official" />
-
                     <ui:Button
                         x:Name="Steam"
                         Width="35"
                         Height="30"
                         Margin="0,10,0,0"
-                        Padding="0,0,0,0"
+                        Padding="0"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Click="Steam_Click"
                         Content="S"
                         FontSize="20"
                         ToolTipService.ToolTip="open Steam" />
-
                     <ui:Button
                         x:Name="Garena"
                         Width="35"
                         Height="30"
                         Margin="0,10,0,0"
-                        Padding="0,0,0,0"
+                        Padding="0"
                         HorizontalAlignment="Center"
                         Click="Garena_Click"
                         Content="G"
                         FontSize="20"
                         ToolTipService.ToolTip="open Garena" />
-
                     <ui:Button
                         x:Name="Tencent"
                         Width="35"
                         Height="30"
                         Margin="0,10,0,0"
-                        Padding="0,0,0,0"
+                        Padding="0"
                         HorizontalAlignment="Center"
                         Click="Tencent_Click"
                         Content="T"
                         FontSize="20"
                         ToolTipService.ToolTip="open Tencent" />
-
                     <ui:Button
                         x:Name="Epic"
                         Width="35"
                         Height="30"
                         Margin="0,10,0,0"
-                        Padding="0,0,0,0"
+                        Padding="0"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
                         Click="Epic_Click"
                         Content="E"
                         FontSize="20"
                         ToolTipService.ToolTip="open Epic" />
+                    <ui:Button
+                        x:Name="Restore"
+                        Width="35"
+                        Height="30"
+                        Margin="0,100,0,0"
+                        Padding="0"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Background="Transparent"
+                        BorderBrush="Black"
+                        BorderThickness="1"
+                        Click="Restore_Click"
+                        FontSize="24"
+                        Foreground="Black"
+                        ToolTipService.ToolTip="restore original ggpk _.index.bin">
+                        <ic:SymbolIcon IsFilled="False" Symbol="ArrowReset" />
+                    </ui:Button>
                 </StackPanel>
 
                 <StackPanel
@@ -779,6 +792,32 @@
                     VirtualizingPanel.IsVirtualizing="True"
                     VirtualizingPanel.VirtualizationMode="Recycling" />
 
+                <!--<ui:TextBlock
+                    x:Name="tooltip_open"
+                    Grid.Column="1"
+                    Margin="10,0,0,160"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center">
+                    <ic:SymbolIcon IsFilled="False" Symbol="ArrowLeft" FontSize="24" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                    <Run
+                        FontSize="15"
+                        Foreground="Gray"
+                        Text="Open your game content from these buttons!" />
+                </ui:TextBlock>
+
+                <ui:TextBlock
+                    x:Name="tooltip_restore"
+                    Grid.Column="1"
+                    Margin="10,0,0,220"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom">
+                    <ic:SymbolIcon IsFilled="False" Symbol="ArrowLeft" FontSize="24" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                    <Run
+                        FontSize="15"
+                        Foreground="Gray"
+                        Text="Restore your _index.bin with this button!" />
+                </ui:TextBlock>-->
+
                 <avalonedit:TextEditor
                     x:Name="TextView"
                     Grid.Column="2"
@@ -821,7 +860,7 @@
                     VerticalAlignment="Top">
                     <Run
                         FontSize="14"
-                        Foreground="LightGray"
+                        Foreground="Gray"
                         Text="press Ctrl+F to open search menu on file" />
                 </ui:TextBlock>
 
@@ -836,7 +875,7 @@
                         x:Name="Image"
                         Canvas.Left="0"
                         Canvas.Top="0"
-                        RenderOptions.BitmapScalingMode="NearestNeighbor"
+                        RenderOptions.BitmapScalingMode="HighQuality"
                         Stretch="None" />
                 </Canvas>
 

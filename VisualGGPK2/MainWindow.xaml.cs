@@ -226,7 +226,8 @@ namespace VisualGGPK2
             return true;
         }
 
-        private async Task<bool> SteamLoaded() {
+        private async Task<bool> SteamLoaded() 
+        {
             if (FilePath != null) return true;
             var steamPath = GetSteamInstallPath() + @"\steamapps\common\Path of Exile\Bundles2";
             var ofd = new OpenFileDialog {
@@ -1660,6 +1661,47 @@ namespace VisualGGPK2
             }
         }
 
+        public Task RestoreIndex()
+        {
+            try
+            {
+                http = new HttpClient();
+                var download = GetPatchServer() + "Bundles2/_.index.bin";
+                var index = http.GetByteArrayAsync(download).Result;
+                ggpkContainer.IndexRecord.ReplaceContent(index);
+                ggpkContainer.fileStream.Seek(ggpkContainer.IndexRecord.DataBegin, SeekOrigin.Begin);
+                ggpkContainer.Index = new IndexContainer(ggpkContainer.Reader);
+                ggpkContainer._RecordOfBundle.Clear();
+            }
+            catch (Exception ex)
+            {
+                var ew = new ErrorWindow();
+                ew.ShowError(ex);
+                if (ew.ShowDialog() != true)
+                {
+                    Application.Current.Shutdown();
+                }
+            }
+
+            return Task.CompletedTask;
+        }
+
+        private async Task Restore_Official(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("This will restore original _.index.bin!", "Confirm", MessageBoxButton.OKCancel) != MessageBoxResult.OK) return;
+            await RestoreIndex();
+            MessageBox.Show("Successfully restored!", " Done");
+        }
+
+        private async void Restore_Click(object sender, RoutedEventArgs e)
+        {
+            await Task.Run(async () => {
+                await Dispatcher.Invoke(async () => {
+                    await Restore_Official(sender, e);
+                });
+            });
+        }
+
         private void ImageView_MouseWheel(object sender, MouseWheelEventArgs e)
         {
             var p = e.GetPosition(ImageView);
@@ -1742,7 +1784,7 @@ namespace VisualGGPK2
         }
 
         private async void Tencent_Click(object sender, RoutedEventArgs e) {
-            try { if (!await SteamLoaded()) return; }
+            try { if (!await TencentLoaded()) return; }
             catch { //...
             }
         }
