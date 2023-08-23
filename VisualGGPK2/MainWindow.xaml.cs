@@ -1645,13 +1645,13 @@ namespace VisualGGPK2
                     if (!SteamMode)
                         AllowGameOpen.IsEnabled = true;
 
-                    TextView.AppendText("\r\nDone!");
+                    TextView.AppendText("\r\n Done!");
                 }
                 else
                 {
                     ggpkContainer.fileStream = File.Open(FilePath, FileMode.Open, FileAccess.ReadWrite, FileShare.Read);
-                    ggpkContainer.Reader = new(ggpkContainer.fileStream);
-                    ggpkContainer.Writer = new(ggpkContainer.fileStream);
+                    ggpkContainer.Reader = new BinaryReader(ggpkContainer.fileStream);
+                    ggpkContainer.Writer = new BinaryWriter(ggpkContainer.fileStream);
                 }
             }
             catch (IOException)
@@ -1682,7 +1682,6 @@ namespace VisualGGPK2
                     Application.Current.Shutdown();
                 }
             }
-
             return Task.CompletedTask;
         }
 
