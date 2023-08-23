@@ -9,7 +9,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <!--<ui:ThemesDictionary Theme="Dark" />-->
-                <ui:ThemesDictionary ApplicationTheme="Light" />
+                <ui:ThemesDictionary Theme="Light" />
                 <ResourceDictionary Source="/ICSharpCode.AvalonEdit;component/TextEditor.xaml" />
                 <ResourceDictionary Source="/ICSharpCode.AvalonEdit;component/Search/DropDownButton.xaml" />
                 <ResourceDictionary Source="/ICSharpCode.AvalonEdit;component/Search/SearchPanel.xaml" />

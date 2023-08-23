@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "40TIuwvTrT0x8+F9ujM7jNDupfZL9WyGOOqL223kwT8RjhIZ3M9U+svUIMGF6vgKvRpvHea7fFeSPGetCR0Svw==",
+  "dgSpecHash": "hOFK0yfcj1hAhuM0gPKWXxNrmU1iW54ZUySeLMqevpqVZpx6LlHcDoD86H13yAupWLjwbm9tx9i3YZTcl1iWbQ==",
   "success": true,
   "projectFilePath": "E:\\eProjects\\VisualGGPK2UI - Copy\\VisualGGPK2\\VisualGGPK2.csproj",
   "expectedPackageFiles": [
@@ -9,7 +9,7 @@
     "C:\\Users\\Administrator\\.nuget\\packages\\fluenticons.common\\1.1.211\\fluenticons.common.1.1.211.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\fluenticons.wpf\\1.1.211\\fluenticons.wpf.1.1.211.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
-    "C:\\Users\\Administrator\\.nuget\\packages\\wpf-ui\\3.0.0-preview.5\\wpf-ui.3.0.0-preview.5.nupkg.sha512"
+    "C:\\Users\\Administrator\\.nuget\\packages\\wpf-ui\\3.0.0-preview.6\\wpf-ui.3.0.0-preview.6.nupkg.sha512"
   ],
   "logs": []
 }

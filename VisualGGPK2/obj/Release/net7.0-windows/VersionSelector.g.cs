@@ -32,7 +32,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Shell;
 using Wpf.Ui;
-using Wpf.Ui.Common;
 using Wpf.Ui.Controls;
 using Wpf.Ui.Converters;
 using Wpf.Ui.Markup;

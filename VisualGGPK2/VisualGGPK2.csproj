@@ -13,19 +13,28 @@
     <NoWin32Manifest>true</NoWin32Manifest>
     <DebugType>embedded</DebugType>
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
-    <ApplicationIcon>Assets\silver_cube.ico</ApplicationIcon>
+    <ApplicationIcon>Assets\visualggpk2.ico</ApplicationIcon>
     <StartupObject>VisualGGPK2.App</StartupObject>
     <ImplicitUsings>disable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\discord_logo.png" />
+    <None Remove="Assets\epic_logo.png" />
+    <None Remove="Assets\garena_logo.png" />
+    <None Remove="Assets\ggg_logo.png" />
+    <None Remove="Assets\silver_cube.png" />
+    <None Remove="Assets\steam_logo.png" />
+    <None Remove="Assets\tencent_logo.png" />
+    <None Remove="Assets\visualggpk2.png" />
+    <None Remove="ggg_logo.png" />
     <None Remove="Resources\blue_dir.ico" />
     <None Remove="Resources\blue_file.ico" />
     <None Remove="silver_cube.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Assets\silver_cube.ico" />
+    <Content Include="Assets\visualggpk2.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,7 +47,7 @@
     <PackageReference Include="AvalonEdit" Version="6.3.0.90" />
     <PackageReference Include="BrotliSharpLib" Version="0.3.3" />
     <PackageReference Include="FluentIcons.WPF" Version="1.1.211" />
-    <PackageReference Include="WPF-UI" Version="3.0.0-preview.5" />
+    <PackageReference Include="WPF-UI" Version="3.0.0-preview.6" />
   </ItemGroup>
 
   <ItemGroup>
@@ -50,6 +59,14 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\blue_file.ico" />
+    <Resource Include="Assets\discord_logo.png" />
+    <Resource Include="Assets\epic_logo.png" />
+    <Resource Include="Assets\garena_logo.png" />
+    <Resource Include="Assets\ggg_logo.png" />
+    <Resource Include="Assets\steam_logo.png" />
+    <Resource Include="Assets\tencent_logo.png" />
+    <Resource Include="Assets\visualggpk2.png" />
+    <Resource Include="ggg_logo.png" />
     <Resource Include="silver_cube.png" />
   </ItemGroup>
 

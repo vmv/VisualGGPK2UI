@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/silver_cube.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/visualggpk2.ico")]
 
 

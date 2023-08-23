@@ -35,8 +35,117 @@
     <ui:FluentWindow.Resources>
         <ResourceDictionary>
             <!--  Avalon Edit  -->
-            <Style TargetType="{x:Type search:LineNumberMargin}">
-                <Setter Property="Cursor" Value="/ICSharpCode.AvalonEdit;component/themes/RightArrow.cur" />
+            <Style x:Shared="False" TargetType="{x:Type avalonedit:TextArea}">
+                <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                <Setter Property="SelectionBrush">
+                    <Setter.Value>
+                        <SolidColorBrush Opacity="0.7" Color="#3399FF" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="SelectionBorder">
+                    <Setter.Value>
+                        <Pen>
+                            <Pen.Brush>
+                                <SolidColorBrush Color="#3399FF" />
+                            </Pen.Brush>
+                        </Pen>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="SelectionForeground">
+                    <Setter.Value>
+                        <SolidColorBrush Color="GhostWhite" />
+                    </Setter.Value>
+                </Setter>
+
+                <!--  number margin area  -->
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type avalonedit:TextArea}">
+                            <DockPanel Focusable="False">
+                                <ItemsControl
+                                    Margin="0,0,10,0"
+                                    Focusable="False"
+                                    ItemsSource="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=LeftMargins}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Horizontal" />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                </ItemsControl>
+                                <ContentPresenter
+                                    Panel.ZIndex="-1"
+                                    Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TextView}"
+                                    Focusable="False" />
+                            </DockPanel>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!--  Colors for DropDownButton and SplitButton  -->
+            <SolidColorBrush x:Key="{ComponentResourceKey {x:Type avalonedit:DropDownButton}, ActiveBorder}" Color="LightGray" />
+            <SolidColorBrush x:Key="{ComponentResourceKey {x:Type avalonedit:DropDownButton}, ActiveBackground}" Color="Gray" />
+
+            <!--  Style and Template for DropDownButton  -->
+            <Style TargetType="{x:Type avalonedit:DropDownButton}">
+                <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+                <Setter Property="Padding" Value="2,2,2,2" />
+                <Setter Property="Border.BorderThickness" Value="1,1,1,1" />
+                <Setter Property="Panel.Background" Value="GhostWhite" />
+                <Setter Property="Border.BorderBrush" Value="Transparent" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="avalonedit:DropDownButton">
+                            <Border
+                                x:Name="OuterBorder"
+                                Background="GhostWhite"
+                                BorderBrush="Transparent"
+                                BorderThickness="1"
+                                SnapsToDevicePixels="True">
+                                <StackPanel Orientation="Horizontal">
+                                    <ContentPresenter
+                                        Margin="{TemplateBinding Control.Padding}"
+                                        HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                                        VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                                        Content="{TemplateBinding ContentControl.Content}"
+                                        ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}"
+                                        ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                                        SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}" />
+                                    <Path
+                                        Width="7"
+                                        Height="3.5"
+                                        Margin="0,2,2,2"
+                                        Data="M0,0 L1,0 0.5,1 z"
+                                        Fill="{TemplateBinding TextElement.Foreground}"
+                                        Stretch="Fill" />
+                                </StackPanel>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="UIElement.IsMouseOver" Value="True">
+                                    <Setter TargetName="OuterBorder" Property="Border.BorderBrush" Value="LightGray" />
+                                    <Setter TargetName="OuterBorder" Property="Panel.Background" Value="GhostWhite" />
+                                </Trigger>
+                                <Trigger Property="UIElement.IsKeyboardFocused" Value="True">
+                                    <Setter TargetName="OuterBorder" Property="Border.BorderBrush" Value="LightGray" />
+                                    <Setter TargetName="OuterBorder" Property="Panel.Background" Value="GhostWhite" />
+                                </Trigger>
+                                <Trigger Property="UIElement.IsEnabled" Value="False">
+                                    <Setter Property="TextElement.Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+                                </Trigger>
+                                <Trigger Property="avalonedit:DropDownButton.IsDropDownContentOpen" Value="True">
+                                    <Setter TargetName="OuterBorder" Property="Border.BorderBrush" Value="{DynamicResource {x:Static SystemColors.ControlDarkBrushKey}}" />
+                                    <Setter TargetName="OuterBorder" Property="Border.BorderThickness" Value="0,0,0,0" />
+                                    <Setter TargetName="OuterBorder" Property="Border.Padding" Value="0,0,0,0" />
+                                    <Setter TargetName="OuterBorder" Property="Panel.Background" Value="GhostWhite" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
             </Style>
 
             <Style TargetType="{x:Type search:SearchPanel}">
@@ -47,13 +156,13 @@
                                 Margin="0,0,10,0"
                                 HorizontalAlignment="Right"
                                 VerticalAlignment="Top"
-                                Background="Transparent"
+                                Background="WhiteSmoke"
                                 BorderBrush="#FFD8D8D8"
                                 BorderThickness="1"
                                 CornerRadius="3,3,3,3"
                                 Cursor="Arrow">
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBox
+                                    <ui:TextBox
                                         x:Name="PART_searchTextBox"
                                         Width="200"
                                         Height="25"
@@ -73,7 +182,7 @@
                                                 <ExceptionValidationRule />
                                             </Binding.ValidationRules>
                                         </Binding>
-                                    </TextBox>
+                                    </ui:TextBox>
                                     <search:DropDownButton
                                         Height="35"
                                         Margin="0"
@@ -85,22 +194,23 @@
                                         <search:DropDownButton.DropDownContent>
                                             <Popup
                                                 x:Name="PART_dropdownPopup"
-                                                Width="145"
+                                                Width="135"
                                                 Height="110"
-                                                MinWidth="145"
+                                                MinWidth="135"
                                                 MinHeight="110"
                                                 Margin="0,5,0,0"
-                                                OpacityMask="#FFE0E0E0"
                                                 Placement="Center"
                                                 PopupAnimation="Fade"
                                                 StaysOpen="False">
                                                 <Border
-                                                    Background="Transparent"
+                                                    Background="WhiteSmoke"
                                                     BorderBrush="#FFD8D8D8"
                                                     BorderThickness="1">
-                                                    <StackPanel Background="White" Orientation="Vertical">
+                                                    <StackPanel Background="GhostWhite" Orientation="Vertical">
                                                         <CheckBox
-                                                            Margin="2"
+                                                            Width="20"
+                                                            Height="20"
+                                                            Margin="5,0,5,0"
                                                             HorizontalContentAlignment="Stretch"
                                                             VerticalContentAlignment="Stretch"
                                                             BorderBrush="#FFD8D8D8"
@@ -110,7 +220,7 @@
                                                         <CheckBox
                                                             Width="20"
                                                             Height="20"
-                                                            Margin="2"
+                                                            Margin="5,0,5,0"
                                                             HorizontalContentAlignment="Stretch"
                                                             VerticalContentAlignment="Stretch"
                                                             BorderBrush="#FFD8D8D8"
@@ -120,7 +230,7 @@
                                                         <CheckBox
                                                             Width="20"
                                                             Height="20"
-                                                            Margin="2"
+                                                            Margin="5,0,5,0"
                                                             HorizontalContentAlignment="Stretch"
                                                             VerticalContentAlignment="Stretch"
                                                             BorderBrush="#FFD8D8D8"
@@ -138,18 +248,32 @@
                                         MinWidth="30"
                                         MinHeight="30"
                                         Margin="2"
+                                        Padding="0"
+                                        Background="WhiteSmoke"
                                         Command="search:SearchCommands.FindPrevious"
-                                        Foreground="Black"
-                                        Icon="{ui:SymbolIcon ArrowPrevious24}"
-                                        ToolTip="{Binding Localization.FindPreviousText, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                                        FontSize="18"
+                                        Foreground="Black">
+                                        <ic:SymbolIcon
+                                            IsFilled="False"
+                                            Symbol="ArrowPrevious"
+                                            ToolTipService.ToolTip="find previous" />
+                                    </ui:Button>
                                     <ui:Button
                                         Width="30"
                                         Height="30"
+                                        MinWidth="30"
+                                        MinHeight="30"
                                         Margin="2"
+                                        Padding="0"
+                                        Background="WhiteSmoke"
                                         Command="search:SearchCommands.FindNext"
-                                        Foreground="Black"
-                                        Icon="{ui:SymbolIcon ArrowNext24}"
-                                        ToolTip="{Binding Localization.FindNextText, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                                        FontSize="18"
+                                        Foreground="Black">
+                                        <ic:SymbolIcon
+                                            IsFilled="False"
+                                            Symbol="ArrowNext"
+                                            ToolTipService.ToolTip="find next" />
+                                    </ui:Button>
                                     <ui:Button
                                         Width="40"
                                         Height="30"
@@ -158,10 +282,16 @@
                                         VerticalAlignment="Top"
                                         HorizontalContentAlignment="Center"
                                         VerticalContentAlignment="Center"
+                                        Background="WhiteSmoke"
                                         Command="search:SearchCommands.CloseSearchPanel"
                                         Focusable="False"
-                                        Foreground="Black"
-                                        Icon="{ui:SymbolIcon ArrowExit20}" />
+                                        FontSize="18"
+                                        Foreground="Black">
+                                        <ic:SymbolIcon
+                                            IsFilled="False"
+                                            Symbol="ArrowExit"
+                                            ToolTipService.ToolTip="close search" />
+                                    </ui:Button>
                                 </StackPanel>
                             </Border>
                         </ControlTemplate>
@@ -241,17 +371,6 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="30" />
             </Grid.RowDefinitions>
-
-            <!--<ui:ProgressRing
-            x:Name="pRing"
-            Grid.Row="1"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            AutomationProperties.IsRowHeader="True"
-            IsEnabled="True"
-            IsIndeterminate="False"
-            UseLayoutRounding="True"
-            Visibility="Hidden" />-->
 
             <!--  Title Bar  -->
             <Grid Grid.Row="0" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
@@ -476,16 +595,14 @@
                     </ui:Button>
 
                     <ComboBox
-                        Width="200"
-                        Height="30"
+                        Width="100"
+                        Height="25"
                         Margin="5,0,0,0"
                         Padding="3,2,0,0"
                         BorderBrush="Gray"
                         BorderThickness="0,0,0,1"
                         Foreground="Black"
-                        ToolTipService.ToolTip="syntax style selection">
-                        <System:String>wtf is this?!</System:String>
-                    </ComboBox>
+                        ToolTipService.ToolTip="syntax style selection" MinHeight="25" MinWidth="100" />
                 </StackPanel>
 
                 <ui:TitleBar
@@ -504,13 +621,13 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Rectangle Grid.Column="0" Fill="WhiteSmoke" />
+                <Rectangle Grid.Column="0" Fill="GhostWhite" />
                 <Rectangle
                     Grid.Column="1"
                     Margin="0,0,0,-1"
-                    Fill="#f8f8f8"
+                    Fill="GhostWhite"
                     Stroke="#FFD8D8D8" />
-                <Rectangle Grid.Column="2" Fill="White" />
+                <Rectangle Grid.Column="2" Fill="WhiteSmoke" />
                 <GridSplitter
                     Grid.Column="1"
                     Width="5"
@@ -600,7 +717,7 @@
                         Padding="0,0,0,0"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
-                        Click="Steam_Click"
+                        Click="Epic_Click"
                         Content="E"
                         FontSize="20"
                         ToolTipService.ToolTip="open Epic" />
@@ -616,7 +733,7 @@
                         Margin="0,0,0,5"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Bottom">
-                        <Run Foreground="Gray" Text="v1.8.8" />
+                        <Run Foreground="Gray" Text="v1.9.0" />
                     </ui:TextBlock>
 
                     <ui:Image
@@ -627,7 +744,7 @@
                         VerticalAlignment="Bottom"
                         BorderBrush="#33000000"
                         CornerRadius="4"
-                        Source="/silver_cube.png"
+                        Source="/Assets/visualggpk2.png"
                         ToolTipService.ToolTip="VisualGGPK2 UI" />
                 </StackPanel>
 
@@ -643,7 +760,6 @@
                     VerticalAlignment="Top"
                     HorizontalContentAlignment="Left"
                     VerticalContentAlignment="Center"
-                    Background="WhiteSmoke"
                     BorderThickness="0,0,0,1"
                     FontSize="14"
                     Foreground="Black"
@@ -655,6 +771,7 @@
                     Grid.Column="1"
                     Margin="0,40,6,0"
                     AllowDrop="True"
+                    Background="GhostWhite"
                     PreviewMouseDown="OnTreePreviewMouseDown"
                     SelectedItemChanged="OnTreeSelectedChanged"
                     Style="{DynamicResource TreeViewStyle}"
@@ -662,21 +779,13 @@
                     VirtualizingPanel.IsVirtualizing="True"
                     VirtualizingPanel.VirtualizationMode="Recycling" />
 
-                <!--<ui:ProgressRing
-                x:Name="pRing"
-                Grid.Column="2"
-                VerticalAlignment="Center"
-                IsIndeterminate="False" />-->
-
-
-
-                <search:TextEditor
+                <avalonedit:TextEditor
                     x:Name="TextView"
                     Grid.Column="2"
                     Padding="10,10,0,0"
                     HorizontalContentAlignment="Left"
                     VerticalContentAlignment="Top"
-                    Background="{x:Null}"
+                    Background="White"
                     BorderBrush="#FFD8D8D8"
                     BorderThickness="1,1,0,0"
                     FontFamily="Verdana"
@@ -703,7 +812,18 @@
                             <MenuItem Command="Delete" />
                         </ContextMenu>
                     </search:TextEditor.ContextMenu>
-                </search:TextEditor>
+                </avalonedit:TextEditor>
+                <ui:TextBlock
+                    x:Name="tooltip"
+                    Grid.Column="2"
+                    Margin="0,10,10,0"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top">
+                    <Run
+                        FontSize="14"
+                        Foreground="LightGray"
+                        Text="press Ctrl+F to open search menu on file" />
+                </ui:TextBlock>
 
                 <Canvas
                     x:Name="ImageView"
@@ -721,6 +841,7 @@
                 </Canvas>
 
                 <ui:TextBlock
+                    x:Name="copyright"
                     Grid.Column="2"
                     Margin="0,0,10,5"
                     HorizontalAlignment="Right"
@@ -847,7 +968,7 @@
                 <ui:TextBox
                     x:Name="TextBoxOffset"
                     Grid.Column="0"
-                    Height="24"
+                    Height="25"
                     Margin="5,0,0,0"
                     Padding="0,0,0,0"
                     VerticalAlignment="Center"
@@ -863,7 +984,7 @@
                 <ui:TextBox
                     x:Name="TextBoxSize"
                     Grid.Column="1"
-                    Height="24"
+                    Height="25"
                     Margin="5,0,0,0"
                     Padding="0,0,0,0"
                     VerticalAlignment="Center"
@@ -879,7 +1000,7 @@
                 <ui:TextBox
                     x:Name="TextBoxHash"
                     Grid.Column="2"
-                    Height="24"
+                    Height="25"
                     Margin="5,0,0,0"
                     Padding="0,0,0,0"
                     VerticalAlignment="Center"
@@ -895,7 +1016,7 @@
                 <ui:TextBox
                     x:Name="TextBoxBundle"
                     Grid.Column="3"
-                    Height="24"
+                    Height="25"
                     Margin="5,0,5,0"
                     Padding="0,0,0,0"
                     VerticalAlignment="Center"

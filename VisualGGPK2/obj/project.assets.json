@@ -71,7 +71,7 @@
           }
         }
       },
-      "WPF-UI/3.0.0-preview.5": {
+      "WPF-UI/3.0.0-preview.6": {
         "type": "package",
         "compile": {
           "lib/net7.0-windows7.0/Wpf.Ui.dll": {
@@ -234,10 +234,10 @@
         "version.txt"
       ]
     },
-    "WPF-UI/3.0.0-preview.5": {
-      "sha512": "7OF3MA9X2UPfkqcTI1WACg5laRbWVQSvdk8soCBETMJG/4LtDVyMzERMhrKNJEP+/wTxrZu13qqlrGR4C5rpGA==",
+    "WPF-UI/3.0.0-preview.6": {
+      "sha512": "/tn3OQUucHlNNfyxM9Iyf1I7nEryU95tQr85MKehu5UBRvyPVVhWLrz8IxZS7mPeeIzJnjA04/ryUP4zeKHmPQ==",
       "type": "package",
-      "path": "wpf-ui/3.0.0-preview.5",
+      "path": "wpf-ui/3.0.0-preview.6",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -254,7 +254,7 @@
         "lib/net7.0-windows7.0/Wpf.Ui.dll",
         "lib/net7.0-windows7.0/Wpf.Ui.xml",
         "tools/VisualStudioToolsManifest.xml",
-        "wpf-ui.3.0.0-preview.5.nupkg.sha512",
+        "wpf-ui.3.0.0-preview.6.nupkg.sha512",
         "wpf-ui.nuspec",
         "wpfui.png"
       ]
@@ -289,7 +289,7 @@
       "LibBundle >= 2.7.0",
       "LibDat2 >= 0.16.1",
       "LibGGPK2 >= 0.16.0",
-      "WPF-UI >= 3.0.0-preview.5"
+      "WPF-UI >= 3.0.0-preview.6"
     ]
   },
   "packageFolders": {
@@ -364,7 +364,7 @@
           },
           "WPF-UI": {
             "target": "Package",
-            "version": "[3.0.0-preview.5, )"
+            "version": "[3.0.0-preview.6, )"
           }
         },
         "imports": [

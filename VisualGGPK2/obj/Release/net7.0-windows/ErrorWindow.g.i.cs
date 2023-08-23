@@ -32,7 +32,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Shell;
 using Wpf.Ui;
-using Wpf.Ui.Common;
 using Wpf.Ui.Controls;
 using Wpf.Ui.Converters;
 using Wpf.Ui.Markup;
@@ -98,7 +97,7 @@ namespace VisualGGPK2 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/VisualGGPK2;V1.8.0.0;component/errorwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/VisualGGPK2;component/errorwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ErrorWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

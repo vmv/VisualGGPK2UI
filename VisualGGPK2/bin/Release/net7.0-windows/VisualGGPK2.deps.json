@@ -15,7 +15,7 @@
           "LibBundle": "2.7.0",
           "LibDat2": "0.16.1",
           "LibGGPK2": "0.16.0",
-          "WPF-UI": "3.0.0-preview.5"
+          "WPF-UI": "3.0.0-preview.6"
         },
         "runtime": {
           "VisualGGPK2.dll": {}
@@ -60,7 +60,7 @@
         }
       },
       "System.Runtime.CompilerServices.Unsafe/4.5.2": {},
-      "WPF-UI/3.0.0-preview.5": {
+      "WPF-UI/3.0.0-preview.6": {
         "runtime": {
           "lib/net7.0-windows7.0/Wpf.Ui.dll": {
             "assemblyVersion": "3.0.0.0",
@@ -134,12 +134,12 @@
       "path": "system.runtime.compilerservices.unsafe/4.5.2",
       "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
     },
-    "WPF-UI/3.0.0-preview.5": {
+    "WPF-UI/3.0.0-preview.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7OF3MA9X2UPfkqcTI1WACg5laRbWVQSvdk8soCBETMJG/4LtDVyMzERMhrKNJEP+/wTxrZu13qqlrGR4C5rpGA==",
-      "path": "wpf-ui/3.0.0-preview.5",
-      "hashPath": "wpf-ui.3.0.0-preview.5.nupkg.sha512"
+      "sha512": "sha512-/tn3OQUucHlNNfyxM9Iyf1I7nEryU95tQr85MKehu5UBRvyPVVhWLrz8IxZS7mPeeIzJnjA04/ryUP4zeKHmPQ==",
+      "path": "wpf-ui/3.0.0-preview.6",
+      "hashPath": "wpf-ui.3.0.0-preview.6.nupkg.sha512"
     },
     "DirectXTexWrapper/1.0.0": {
       "type": "project",

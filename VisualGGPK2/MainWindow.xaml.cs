@@ -79,8 +79,6 @@ namespace VisualGGPK2
             }
             InitializeComponent();
             SearchPanel.Install(TextView);
-            //pRing.IsIndeterminate = false;
-            //pRing.Visibility = Visibility.Hidden;
         }        
 
         private async void OnLoaded(object sender, RoutedEventArgs e)
@@ -92,28 +90,7 @@ namespace VisualGGPK2
                 Title += " (SteamMode)";
             if (BundleMode)
                 Title += " (BundleMode)";
-#if !DEBUG
-            // Version Check
-            //try
-            //{
-            //    var http = new HttpClient
-            //    {
-            //        Timeout = TimeSpan.FromSeconds(2)
-            //    };
-            //    http.DefaultRequestHeaders.Add("User-Agent", "VisualGGPK2UI");
-            //    var json = await http.GetStringAsync("https://api.github.com/repos/vmv/VisualGGPK2UI/releases");
-            //    var match = Regex.Match(json, "(?<=\"tag_name\":\"v).*?(?=\")");
-            //    var versionText = $"{currentVersion.Major}.{currentVersion.Minor}.{currentVersion.Build}";
-            //    if (match.Success && match.Value != versionText && MessageBox.Show(this, $"Found a new update on GitHub!\n\nCurrent Version: {versionText}\nLatest Version: {match.Value}\n\nDownload now?", "VisualGGPK2UI", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
-            //    {
-            //        Process.Start(new ProcessStartInfo("https://github.com/vmv/VisualGGPK2UI/releases") { UseShellExecute = true });
-            //        Close();
-            //        return;
-            //    }
-            //    http.Dispose();
-            //}
-            //catch { }
-#endif
+
             // GGPK Selection
             if (FilePath == null)
             {
@@ -145,7 +122,6 @@ namespace VisualGGPK2
                 }
                 else
                 {
-                    //Close();
                     return;
                 }
             }
@@ -186,8 +162,7 @@ namespace VisualGGPK2
             root.IsExpanded = true;
 
             FilterButton.IsEnabled = true;
-            if (!SteamMode)
-                AllowGameOpen.IsEnabled = true;
+            if (!SteamMode) AllowGameOpen.IsEnabled = true;
 
             // Mark the free spaces in data section of dat files
             DatReferenceDataTable.CellStyle = new Style(typeof(DataGridCell));
@@ -198,15 +173,18 @@ namespace VisualGGPK2
             // Make changes to DatContainer after editing DatReferenceDataTable
             DatReferenceDataTable.CellEditEnding += OnDatReferenceDataTableCellEdit;
 
-            TextView.AppendText("\r\nDone!");
+            TextView.AppendText("\r\n Done!");
+
             pRing.IsIndeterminate = false;
             pRing.Visibility = Visibility.Hidden;
+            tooltip.Visibility = Visibility.Hidden;
+            copyright.Visibility = Visibility.Hidden;
         }
 
         private async Task<bool> OfficialLoaded(bool bundleMode = false)
         {
             if (FilePath != null) return true;
-            const string officialPath = "D:\\GAMES\\Official\\Path of Exile";
+            const string officialPath = @"D:\GAMES\Official\Path of Exile";
             var ofd = new OpenFileDialog
             {
                 DefaultExt = "ggpk",
@@ -215,85 +193,75 @@ namespace VisualGGPK2
                 InitialDirectory = setting.officialPath == "" ? officialPath : setting.officialPath
             };
             if (ofd.ShowDialog() != true) return false;
-            Tree.Items.Clear();
 
-            
-            //pRing.Visibility = Visibility.Visible;
-            //pRing.IsIndeterminate = true;
+            // Show the ProgressRing before starting the loading operation
+            pRing.IsIndeterminate = true;
+            pRing.Visibility = Visibility.Visible;
 
-            await Task.Run(() =>
+            try
             {
-                Dispatcher.Invoke(() =>
-                {
-                    try
-                    {
-                        
-                        setting.officialPath = Directory.GetParent(ofd.FileName)?.FullName;
-                        setting.Save();
-                        //pRing.Visibility = Visibility.Visible;
-                        //pRing.IsIndeterminate = true;
-                        ggpkContainer = new GGPKContainer(ofd.FileName, bundleMode);
-                        var root = CreateNode(ggpkContainer.rootDirectory);
-                        Tree.Items.Add(root);
-                        root.IsExpanded = true;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
-                    ggpkContainer.fileStream?.Close();
-                });
-            });
-            //pRing.IsIndeterminate = false;
-            //pRing.Visibility = Visibility.Hidden;
+                setting.officialPath = Directory.GetParent(ofd.FileName)?.FullName;
+                setting.Save();
+
+                // Load the GGPKContainer asynchronously
+                ggpkContainer = await Task.Run(() => new GGPKContainer(ofd.FileName, bundleMode));
+
+                // Populate the TreeView
+                Tree.Items.Clear();
+                var root = CreateNode(ggpkContainer.rootDirectory);
+                Tree.Items.Add(root);
+                root.IsExpanded = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally
+            {
+                // Hide the ProgressRing after the loading operation is done
+                pRing.IsIndeterminate = false;
+                pRing.Visibility = Visibility.Hidden;
+            }
+
             return true;
         }
 
-        private async Task<bool> SteamLoaded()
-        {
+        private async Task<bool> SteamLoaded() {
             if (FilePath != null) return true;
-            var steamPath = GetSteamInstallPath() + "\\steamapps\\common\\Path of Exile\\Bundles2";
-            //const string steamPath = "D:\\GAMES\\Steam\\steamapps\\common\\Path of Exile\\Bundles2";
-            var ofd = new OpenFileDialog
-            {
+            var steamPath = GetSteamInstallPath() + @"\steamapps\common\Path of Exile\Bundles2";
+            var ofd = new OpenFileDialog {
                 DefaultExt = "bin",
                 FileName = "_.index.bin",
                 Filter = "bin file|*.bin",
                 InitialDirectory = setting.steamPath == "" ? steamPath : setting.steamPath
             };
             if (ofd.ShowDialog() != true) return false;
-            Tree.Items.Clear();
-            //pRing.IsIndeterminate = true;
-            //pRing.Visibility = Visibility.Visible;
-            await Task.Run(() =>
+            pRing.IsIndeterminate = true;
+            pRing.Visibility = Visibility.Visible;
+            try
             {
-                Dispatcher.Invoke(() =>
-                {
-                    try
-                    {
-                        setting.steamPath = Directory.GetParent(ofd.FileName)?.FullName;
-                        setting.Save();
-                        ggpkContainer = new GGPKContainer(ofd.FileName, false, true);
-                        var root = CreateNode(ggpkContainer.rootDirectory);
-                        Tree.Items.Add(root);
-                        root.IsExpanded = true;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
-                });
-            });
-            //pRing.IsIndeterminate = false;
-            //pRing.Visibility = Visibility.Hidden;
+                setting.steamPath = Directory.GetParent(ofd.FileName)?.FullName;
+                setting.Save();
+                ggpkContainer = await Task.Run(() => new GGPKContainer(ofd.FileName, false, true));
+                Tree.Items.Clear();
+                var root = CreateNode(ggpkContainer.rootDirectory);
+                Tree.Items.Add(root);
+                root.IsExpanded = true;
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally {
+                pRing.IsIndeterminate = false;
+                pRing.Visibility = Visibility.Hidden;
+            }
             return true;
         }
 
         private async Task<bool> GarenaLoaded()
         {
             if (FilePath != null) return true;
-            const string garenaPath = "C:\\Garena\\Games\\32808";
-            //const string garenaPath = "D:\\GAMES\\Garena\\32808";
+            const string garenaPath = @"C:\Garena\Games\32808";
             var ofd = new OpenFileDialog
             {
                 DefaultExt = "ggpk",
@@ -302,38 +270,43 @@ namespace VisualGGPK2
                 InitialDirectory = setting.garenaPath == "" ? garenaPath : setting.garenaPath
             };
             if (ofd.ShowDialog() != true) return false;
-            Tree.Items.Clear();
-            //pRing.IsIndeterminate = true;
-            //pRing.Visibility = Visibility.Visible;
-            await Task.Run(() =>
+
+            // Show the ProgressRing before starting the loading operation
+            pRing.IsIndeterminate = true;
+            pRing.Visibility = Visibility.Visible;
+
+            try
             {
-                Dispatcher.Invoke(() =>
-                {
-                    try
-                    {
-                        setting.garenaPath = ofd.FileName;
-                        setting.Save();
-                        ggpkContainer = new GGPKContainer(ofd.FileName);
-                        var root = CreateNode(ggpkContainer.rootDirectory);
-                        Tree.Items.Add(root);
-                        root.IsExpanded = true;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
-                    ggpkContainer.fileStream?.Close();
-                });
-            });
-            //pRing.IsIndeterminate = false;
-            //pRing.Visibility = Visibility.Hidden;
+                setting.garenaPath = ofd.FileName;
+                setting.Save();
+
+                // Load the GGPKContainer asynchronously
+                ggpkContainer = await Task.Run(() => new GGPKContainer(ofd.FileName));
+
+                // Populate the TreeView
+                Tree.Items.Clear();
+                var root = CreateNode(ggpkContainer.rootDirectory);
+                Tree.Items.Add(root);
+                root.IsExpanded = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally
+            {
+                // Hide the ProgressRing after the loading operation is done
+                pRing.IsIndeterminate = false;
+                pRing.Visibility = Visibility.Hidden;
+            }
+
             return true;
         }
 
         private async Task<bool> TencentLoaded()
         {
             if (FilePath != null) return true;
-            const string tencentPath = "D:\\GAMES\\Tencent\\POE";
+            const string tencentPath = @"D:\GAMES\Tencent\POE";
             var ofd = new OpenFileDialog
             {
                 DefaultExt = "ggpk",
@@ -342,39 +315,82 @@ namespace VisualGGPK2
                 InitialDirectory = setting.tencentPath == "" ? tencentPath : setting.tencentPath
             };
             if (ofd.ShowDialog() != true) return false;
-            Tree.Items.Clear();
-            //pRing.IsIndeterminate = true;
-            //pRing.Visibility = Visibility.Visible;
-            await Task.Run(() =>
+
+            // Show the ProgressRing before starting the loading operation
+            pRing.IsIndeterminate = true;
+            pRing.Visibility = Visibility.Visible;
+
+            try
             {
-                Dispatcher.Invoke(() =>
-                {
-                    try
-                    {
-                        setting.tencentPath = ofd.FileName;
-                        setting.Save();
-                        ggpkContainer = new GGPKContainer(setting.tencentPath);
-                        var root = CreateNode(ggpkContainer.rootDirectory);
-                        Tree.Items.Add(root);
-                        root.IsExpanded = true;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                    }
-                    ggpkContainer.fileStream?.Close();
-                });
-            });
-            //pRing.IsIndeterminate = false;
-            //pRing.Visibility = Visibility.Hidden;
+                setting.tencentPath = ofd.FileName;
+                setting.Save();
+
+                // Load the GGPKContainer asynchronously
+                ggpkContainer = await Task.Run(() => new GGPKContainer(setting.tencentPath));
+
+                // Populate the TreeView
+                Tree.Items.Clear();
+                var root = CreateNode(ggpkContainer.rootDirectory);
+                Tree.Items.Add(root);
+                root.IsExpanded = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally
+            {
+                // Hide the ProgressRing after the loading operation is done
+                pRing.IsIndeterminate = false;
+                pRing.Visibility = Visibility.Hidden;
+            }
+
             return true;
         }
 
-        private static string GetSteamInstallPath()
+        private async Task<bool> EpicLoaded()
         {
+            if (FilePath != null) return true;
+            const string epicPath = @"C:\Program Files\Epic Games\PathOfExile\Bundles2";
+            var ofd = new OpenFileDialog
+            {
+                DefaultExt = "bin",
+                FileName = "_.index.bin",
+                Filter = "bin file|*.bin",
+                InitialDirectory = setting.epicPath == "" ? epicPath : setting.epicPath
+            };
+            if (ofd.ShowDialog() != true) return false;
+            pRing.IsIndeterminate = true;
+            pRing.Visibility = Visibility.Visible;
+            try
+            {
+                setting.epicPath = Directory.GetParent(ofd.FileName)?.FullName;
+                setting.Save();
+                ggpkContainer = await Task.Run(() => new GGPKContainer(ofd.FileName, false, true));
+                Tree.Items.Clear();
+                var root = CreateNode(ggpkContainer.rootDirectory);
+                Tree.Items.Add(root);
+                root.IsExpanded = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            finally
+            {
+                pRing.IsIndeterminate = false;
+                pRing.Visibility = Visibility.Hidden;
+            }
+            return true;
+        }
+
+        private static string GetSteamInstallPath() {
             const string defaultPath = @"C:\Program Files (x86)\Steam";
-            var installPath = (string)Registry.GetValue(@"HKEY_LOCAL_MACHINE\Software\Valve\Steam", "InstallPath", defaultPath);
-            return installPath ?? defaultPath;
+            var baseKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32);
+            using var key = baseKey.OpenSubKey(@"Software\Valve\Steam");
+            if (key == null) return defaultPath;
+            var installPath = (string)key.GetValue("InstallPath");
+            return !string.IsNullOrEmpty(installPath) ? installPath : defaultPath;
         }
 
         /// <summary>
@@ -429,10 +445,7 @@ namespace VisualGGPK2
             {
                 ImageView.Visibility = Visibility.Hidden;
                 TextView.Visibility = Visibility.Hidden;
-                //OGGView.Visibility = Visibility.Hidden;
                 DatView.Visibility = Visibility.Hidden;
-                //BK2View.Visibility = Visibility.Hidden;
-                //BANKView.Visibility = Visibility.Hidden;
                 //ButtonSave.Visibility = Visibility.Hidden;
                 if (tvi.Tag is RecordTreeNode rtn)
                 {
@@ -473,11 +486,6 @@ namespace VisualGGPK2
                                 ButtonSave.Visibility = Visibility.Visible;
                                 break;
 
-                            case IFileRecord.DataFormats.OGG:
-                                //TODO
-                                //OGGView.Visibility = Visibility.Visible;
-                                break;
-
                             case IFileRecord.DataFormats.Dat:
                                 try
                                 {
@@ -515,16 +523,6 @@ namespace VisualGGPK2
                                     TextView.IsReadOnly = true;
                                     TextView.Visibility = Visibility.Visible;
                                 }
-                                break;
-
-                            case IFileRecord.DataFormats.BK2:
-                                //TODO
-                                //BK2View.Visibility = Visibility.Visible;
-                                break;
-
-                            case IFileRecord.DataFormats.BANK:
-                                //TODO
-                                //BANKView.Visibility = Visibility.Visible;
                                 break;
                         }
                     }
@@ -1725,30 +1723,35 @@ namespace VisualGGPK2
             if (e.LeftButton == MouseButtonState.Pressed) DragMove();
         }
 
-        private async void International_Click(object sender, RoutedEventArgs e)
-        {
-            if (!await OfficialLoaded()) return;
-            //DialogResult = true;
+        private async void International_Click(object sender, RoutedEventArgs e) {
+            try { if (!await OfficialLoaded()) return; }
+            catch { //...
+            }
         }
 
-        private async void Steam_Click(object sender, RoutedEventArgs e)
-        {
-            if (!await SteamLoaded()) return;
-            //DialogResult = true;
+        private async void Steam_Click(object sender, RoutedEventArgs e) {
+            try { if (!await SteamLoaded()) return; }
+            catch { //...
+            }
         }
 
-        private async void Garena_Click(object sender, RoutedEventArgs e)
-        {
-            if (!await GarenaLoaded()) return;
-            //DialogResult = true;
+        private async void Garena_Click(object sender, RoutedEventArgs e) {
+            try { if (!await GarenaLoaded()) return; }
+            catch { //...
+            }
         }
 
-        private async void Tencent_Click(object sender, RoutedEventArgs e)
-        {
-            if (!await TencentLoaded()) return;
-            //DialogResult = true;
+        private async void Tencent_Click(object sender, RoutedEventArgs e) {
+            try { if (!await SteamLoaded()) return; }
+            catch { //...
+            }
         }
 
+        private async void Epic_Click(object sender, RoutedEventArgs e) {
+            try { if (!await EpicLoaded()) return; }
+            catch { //...
+            }
+        }
         #endregion wpf.ui
     }
 }
